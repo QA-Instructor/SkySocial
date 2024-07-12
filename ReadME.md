@@ -14,3 +14,7 @@ Prefixes for commit messages:
 ## Branch Naming Conventions
 Lowercase, hyphenated and descriptive.
 Include ticket IDs at start of branch.
+
+## CSS files
+Naming convention: Component.css
+className attribute: component-childcomponent (i.e. 'navbar-item')
