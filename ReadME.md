@@ -18,3 +18,4 @@ Include ticket IDs at start of branch.
 ## CSS files
 Naming convention: Component.css
 className attribute: component-childcomponent (i.e. 'navbar-item')
+All tickets regarding the creation of components will include CSS files.
