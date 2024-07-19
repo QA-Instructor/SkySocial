@@ -1,7 +1,7 @@
 import React from 'react';
 import { create } from 'react-test-renderer';
 
-import Header from '../Components/Header';
+import Header from './Header';
 
 describe('Header Snapshot tests',()=>{
     test(`Header matches snapshot`, () => {
