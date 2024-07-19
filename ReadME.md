@@ -20,6 +20,7 @@ Naming convention: Component.css
 className attribute: component-childcomponent (i.e. 'navbar-item')
 id attribute: camel case
 
+
 ## Java and Javascript
 Class names: first letter of each wrod is Capitilised ( Preferebly nouns )
 Method names: Pereferebly verbs, camel case
@@ -30,3 +31,4 @@ Comments: follow Javadoc. Only comment logic where neccessary
 ## React Specific
 Components: Capitalised
 Prefer arrow functions where possible
+
