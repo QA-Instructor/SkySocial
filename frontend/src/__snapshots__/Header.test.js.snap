@@ -1,0 +1,102 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header Snapshot tests Header matches snapshot 1`] = `
+<header>
+  <div
+    className="header-logo-section"
+  >
+    <img
+      alt="Sky Social"
+    />
+  </div>
+  <nav
+    className="navbar navbar navbar-expand navbar-light"
+  >
+    <div
+      className="nav navbar-nav"
+      onKeyDown={[Function]}
+    >
+      <ul
+        className="nav-list-left"
+      >
+        <li
+          className="navbar-item"
+          id="home"
+        >
+          <a
+            className="nav-link"
+            href="/home"
+            onClick={[Function]}
+          >
+            Home
+          </a>
+        </li>
+        <li
+          className="navbar-item"
+          id="createEvent"
+        >
+          <a
+            className="nav-link"
+            href="/createEvent"
+            onClick={[Function]}
+          >
+            Create Event
+          </a>
+        </li>
+        <li
+          className="navbar-item"
+          id="myEvents"
+        >
+          <a
+            className="nav-link"
+            href="/myEvents"
+            onClick={[Function]}
+          >
+            My Events
+          </a>
+        </li>
+      </ul>
+      <ul
+        className="nav-list-right"
+      >
+        <li
+          className="navbar-item"
+          id="search"
+        >
+          <a
+            className="nav-link"
+            href="/search"
+            onClick={[Function]}
+          >
+            Search
+          </a>
+        </li>
+        <li
+          className="navbar-item"
+          id="profile"
+        >
+          <a
+            className="nav-link"
+            href="/profile"
+            onClick={[Function]}
+          >
+            Profile
+          </a>
+        </li>
+        <li
+          className="navbar-item"
+          id="login"
+        >
+          <a
+            className="nav-link"
+            href="/login"
+            onClick={[Function]}
+          >
+            Logout
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
+`;
