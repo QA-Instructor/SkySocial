@@ -31,7 +31,7 @@ describe('LoginForm test suite', () => {
 
             const heading = testInstance.findByType('h1');
             expect(heading).toBeTruthy();
-            expect(heading.children).toContain('Welcome to SkySocial');  
+            expect(heading.children).toContain('Welcome to Sky Social');
         });
 
         test('it should render a paragraph with the required text', () => {
