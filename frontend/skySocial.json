@@ -1,0 +1,74 @@
+{ "events" :
+[
+  {
+    "id": 1,
+    "eventTitle": "Football",
+    "eventDiscription": "football wednesday at sky, everyone is welcome, please signup by monday 18/12/24",
+    "eventLocation": "Goals",
+    "image": "./src/resources/e619f4e1-c156-419e-8d26-f2cc46235e76.jpg",
+    "startDateTime": "20/12/24 12:00:00",
+    "endDateTime": "20/12/24 14:00:00",
+    "minParticipants": 5,
+    "maxParticipants": 10,
+    "tags": ["footballatsky","footballforeveryone","footy"],
+    "pricing": 10.00,
+    "emailConfirmation": true
+  },
+  {
+    "id": 2,
+    "eventTitle": "Pub Social",
+    "eventDiscription": "Come enjoy a feew pints with colleges are sky.",
+    "eventLocation": "Spoons",
+    "image": "./src/resources/1W6A8835-scaled.jpg",
+    "startDateTime": "25/12/24 12:00:00",
+    "endDateTime": "25/12/24 14:00:00",
+    "minParticipants": 4,
+    "maxParticipants": 15,
+    "tags": ["chillfirdays","coldones","social"],
+    "pricing": 0,
+    "emailConfirmation": false
+  },
+    {
+    "id": 3,
+    "eventTitle": "Coffee chats with local coffe beans toaster",
+    "eventDiscription": "Coffee chat with a local coffe beans toaster, try new brews and get a discount on hand toasted coffee beans",
+    "eventLocation": "Sky Central",
+    "image": "./src/resources/pexels-august-de-richelieu-4427813.jpg",
+    "startDateTime": "29/12/24 12:00:00",
+    "endDateTime": "29/12/24 14:00:00",
+    "minParticipants": 10,
+    "maxParticipants": 20,
+    "tags": ["coffeelovers","sustainablecoffee","coffeebrews"],
+    "pricing": 0,
+    "emailConfirmation": true
+  },
+  {
+    "id": 4,
+    "eventTitle": "watch party for wimbledon",
+    "eventDiscription": "Come enjoy a feew pints with colleges are sky and watch wimbledon together, open to everyone",
+    "eventLocation": "Courtyard",
+    "image": "./src/resources/pexels-august-de-richelieu-4427813.jpg",
+    "startDateTime": "18/12/24 17:00:00",
+    "endDateTime": "18/12/24 18:00:00",
+    "minParticipants": 5,
+    "maxParticipants": 40,
+    "tags": ["tennis","sports","social"],
+    "pricing": 0,
+    "emailConfirmation": true
+  },
+  {
+    "id": 5,
+    "eventTitle": "2k run for children in need",
+    "eventDiscription": "join us for a short run near osterley, and raise money for charity. please email for more information.keep on moving",
+    "eventLocation": "invovation center",
+    "image": "./src/resources/download (1).jpeg",
+    "startDateTime": "30/12/24 15:00:00",
+    "endDateTime": "30/12/24 16:00:00",
+    "minParticipants": 5,
+    "maxParticipants": 10,
+    "tags": ["giveback","skycommunity","unitedsky"],
+    "pricing": 0,
+    "emailConfirmation": true
+  }
+]
+}
