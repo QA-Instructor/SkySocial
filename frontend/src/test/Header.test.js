@@ -1,6 +1,5 @@
 import React from 'react';
 import { create } from 'react-test-renderer';
-
 import Header from '../Components/Header';
 
 describe('Header Snapshot tests',()=>{

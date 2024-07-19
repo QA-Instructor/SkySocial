@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footer Snapshot tests Footer matches snapshot 1`] = `
+<footer
+  className="footer-container"
+>
+  © SKY Ltd 2024-2024
+</footer>
+`;
