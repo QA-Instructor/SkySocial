@@ -11,7 +11,7 @@
     "minParticipants": 5,
     "maxParticipants": 10,
     "tags": ["footballatsky","footballforeveryone","footy"],
-    "pricing": 10.00,
+    "ticketPrice": 10.00,
     "emailConfirmation": true
   },
   {
@@ -25,7 +25,7 @@
     "minParticipants": 4,
     "maxParticipants": 15,
     "tags": ["chillfirdays","coldones","social"],
-    "pricing": 0,
+    "ticketPrice": 0,
     "emailConfirmation": false
   },
     {
@@ -39,7 +39,7 @@
     "minParticipants": 10,
     "maxParticipants": 20,
     "tags": ["coffeelovers","sustainablecoffee","coffeebrews"],
-    "pricing": 0,
+    "ticketPrice": 0,
     "emailConfirmation": true
   },
   {
@@ -53,13 +53,13 @@
     "minParticipants": 5,
     "maxParticipants": 40,
     "tags": ["tennis","sports","social"],
-    "pricing": 0,
+    "ticketPrice": 0,
     "emailConfirmation": true
   },
   {
     "id": 5,
     "eventTitle": "2k run for children in need",
-    "eventDescription": "join us for a short run near osterley, and raise money for charity. please email for more information.keep on moving",
+    "eventDescription": "join us for a short run near osterley, and raise money for charity. please email for more information. price of the ticket is given to charity",
     "eventLocation": "invovation center",
     "image": "./src/resources/download (1).jpeg",
     "startDateTime": "30/12/24 15:00:00",
@@ -67,7 +67,7 @@
     "minParticipants": 5,
     "maxParticipants": 10,
     "tags": ["giveback","skycommunity","unitedsky"],
-    "pricing": 0,
+    "ticketPrice": 5,
     "emailConfirmation": true
   }
 ]
