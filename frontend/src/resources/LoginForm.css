@@ -1,0 +1,21 @@
+.login-form-input-field {
+    margin-bottom: 2%;
+}
+
+.login-form-input-container {
+    align-items: center;
+    width: 40%;
+    margin-left: 30%;
+}
+
+.login-form-container {
+    align-content: center;
+}
+
+.create-account-container {
+    margin: 30px;
+}
+
+.form-submit-button {
+    float: right;
+}
