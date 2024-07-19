@@ -1,0 +1,31 @@
+header{
+    width: 90%;
+    margin-left:5%;
+    margin-top:2px;
+}
+.nav-list-left,.nav-list-right{
+    width:50%;
+    list-style: none;
+    display:flex;
+    flex-direction: row;
+    padding: 0;
+    margin:0;
+}
+.nav-list-right{
+    justify-content: right;
+}
+.navbar{
+    padding: 0;
+}
+.nav{
+    width:100%;
+    border: black  solid 2px;
+}
+
+.header-logo-section{
+    display: flex;
+    justify-content: center;
+    padding: 20px 0px;
+    border: black solid 2px;
+    border-bottom: none;
+}
