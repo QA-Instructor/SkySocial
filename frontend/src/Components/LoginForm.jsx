@@ -5,7 +5,7 @@ import "../resources/LoginForm.css";
 const LoginForm = () => {
   return (
     <div className='form-container'>
-        <h1>Welcome to SkySocial</h1>
+        <h1>Welcome to Sky Social</h1>
         <br />
         <form method='post'>
             <div className='input-container'>
