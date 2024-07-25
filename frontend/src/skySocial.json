@@ -10,6 +10,7 @@
     "endDateTime": "20/12/24 14:00:00",
     "minParticipants": 5,
     "maxParticipants": 10,
+    "currentParticipants" : 7,
     "tags": ["footballatsky","footballforeveryone","footy"],
     "ticketPrice": 10.00,
     "emailConfirmation": true
@@ -24,6 +25,7 @@
     "endDateTime": "25/12/24 14:00:00",
     "minParticipants": 4,
     "maxParticipants": 15,
+    "currentParticipants" : 7,
     "tags": ["chillfirdays","coldones","social"],
     "ticketPrice": 0,
     "emailConfirmation": false
@@ -38,6 +40,7 @@
     "endDateTime": "29/12/24 14:00:00",
     "minParticipants": 10,
     "maxParticipants": 20,
+    "currentParticipants" : 17,
     "tags": ["coffeelovers","sustainablecoffee","coffeebrews"],
     "ticketPrice": 0,
     "emailConfirmation": true
@@ -52,6 +55,7 @@
     "endDateTime": "18/12/24 18:00:00",
     "minParticipants": 5,
     "maxParticipants": 40,
+    "currentParticipants" : 25,
     "tags": ["tennis","sports","social"],
     "ticketPrice": 0,
     "emailConfirmation": true
@@ -66,6 +70,7 @@
     "endDateTime": "30/12/24 16:00:00",
     "minParticipants": 5,
     "maxParticipants": 10,
+    "currentParticipants" : 6,
     "tags": ["giveback","skycommunity","unitedsky"],
     "ticketPrice": 5,
     "emailConfirmation": true

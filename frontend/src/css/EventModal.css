@@ -1,0 +1,13 @@
+.eventmodal-image{
+    width : 100%;
+    aspect-ratio: 2/1;
+}
+
+.eventmodal-time-info{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+}
+h1{
+    text-align: center;
+}
