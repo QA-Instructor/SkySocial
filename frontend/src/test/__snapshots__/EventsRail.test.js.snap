@@ -1,0 +1,70 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Event Tile Snapshot tests EventTile snapshot test 1`] = `
+<div
+  className="item-slider-container container-fluid"
+>
+  <div
+    className="item-slider"
+  >
+    <div
+      className="left-arrow-left is-disabled-hide"
+      onClick={[Function]}
+    >
+      <svg
+        fill="currentColor"
+        height="70px"
+        stroke="currentColor"
+        strokeWidth="0"
+        style={
+          Object {
+            "color": undefined,
+          }
+        }
+        viewBox="0 0 24 24"
+        width="70px"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M0 0h24v24H0z"
+          fill="none"
+        />
+        <path
+          d="M11.67 3.87 9.9 2.1 0 12l9.9 9.9 1.77-1.77L3.54 12z"
+        />
+      </svg>
+    </div>
+    <div
+      className="item-container"
+      onScroll={[Function]}
+    />
+    <div
+      className="right-arrow-right "
+      onClick={[Function]}
+    >
+      <svg
+        fill="currentColor"
+        height="70px"
+        stroke="currentColor"
+        strokeWidth="0"
+        style={
+          Object {
+            "color": undefined,
+          }
+        }
+        viewBox="0 0 24 24"
+        width="70px"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M0 0h24v24H0V0z"
+          fill="none"
+        />
+        <path
+          d="M6.23 20.23 8 22l10-10L8 2 6.23 3.77 14.46 12z"
+        />
+      </svg>
+    </div>
+  </div>
+</div>
+`;

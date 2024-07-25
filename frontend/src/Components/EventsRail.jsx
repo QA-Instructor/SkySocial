@@ -34,13 +34,13 @@ export const EventsRail = ({children}) => {
     return (
       <Container fluid className='item-slider-container'>
         <div className='item-slider'>
-          <div onClick={() => slide(-230)} className={`left-arrow-left ${(scrollX < 1) ? 'is-disabled-hide' : ''}`}>
+          <div  onClick={() => slide(-230)} className={`left-arrow-left ${(scrollX < 1) ? 'is-disabled-hide' : ''}`}>
             <MdArrowBackIos size="70px" />
           </div>
           <div ref={scrl} onScroll={checkScrollIsAtEnd} className="item-container">
             {children}
           </div>
-          <div className={`right-arrow-right ${(!scrollEnd) ? '' : 'is-disabled-hide'}`} onClick={() => slide(+230)}>
+          <div data-testid ="right" className={`right-arrow-right ${(!scrollEnd) ? '' : 'is-disabled-hide'}`} onClick={() => slide(+230)}>
             <MdArrowForwardIos size="70px" />
           </div>
         </div>
