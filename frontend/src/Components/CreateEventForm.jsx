@@ -37,24 +37,25 @@ const CreateEventForm = () => {
             <div className='create-event-form-time-input-fields'>
                 <FloatingLabel className='create-event-form-datepicker'>Start Time: 
                     <LocalizationProvider dateAdapter={AdapterDayjs}>
-                        <DesktopDateTimePicker defaultValue={dayjs('2022-04-17T15:30')} width="50"/>
+                        <DesktopDateTimePicker defaultValue={dayjs('2022-04-17T15:30')} />
                     </LocalizationProvider>
                 </FloatingLabel>
                 
-                <FloatingLabel>End Time: 
+                <FloatingLabel className='create-event-form-datepicker'>End Time: 
                     <LocalizationProvider dateAdapter={AdapterDayjs}>
-                        <DesktopDateTimePicker defaultValue={dayjs('2022-04-17T15:30')}/>
+                        <DesktopDateTimePicker defaultValue={dayjs('2022-04-17T15:30')} />
                     </LocalizationProvider>
                 </FloatingLabel>
             </div>
 
             <br />
+            <br />
             <div>
-                <FloatingLabel controlId="floatingInput" label="Minimum number of participants" className="mb-3">
-                    <Form.Control type="number" name="minParticipantCount" min={0} />
+                <FloatingLabel controlId="floatingInput" label="Minimum number of participants" className="mb-3 create-event-form-participant-count">
+                    <Form.Control type="number" name="minParticipantCount" min={0} size='sm' />
                 </FloatingLabel>
-                <FloatingLabel controlId="floatingInput" label="Maximum number of participants" className="mb-3">
-                    <Form.Control type="number" name="maxParticipantCount" min={2}/>
+                <FloatingLabel controlId="floatingInput" label="Maximum number of participants" className="mb-3 create-event-form-participant-count">
+                    <Form.Control type="number" name="maxParticipantCount" min={2} size='sm' />
                 </FloatingLabel>
             </div>
             <br />
@@ -68,8 +69,7 @@ const CreateEventForm = () => {
             <FloatingLabel>
                 Email confirmations: <input type='checkbox' name='emailConfirmations'/>
             </FloatingLabel>
-            <br />
-            <Button variant="success">Create Event</Button>{' '}
+            <Button variant="success" className='create-event-form-button' >Create Event</Button>{' '}
         </Form>
       </div>
     </>

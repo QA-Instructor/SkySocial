@@ -1,0 +1,22 @@
+.create-event-component-container {
+    width: 75%;
+    margin-left: 10%;
+    border: 2px solid red;
+}
+
+.create-event-form-datepicker {
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+.create-event-form-button {
+    float: right;
+}
+
+.create-event-form-participant-count {
+    width: 45%;
+}
+
+.create-event-form-time-input-fields {
+    border: 2px green solid;
+}
