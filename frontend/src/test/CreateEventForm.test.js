@@ -37,6 +37,14 @@ describe('CreateEventForm test suite', () => {
             expect(eventLocationInputField).toBeTruthy();
             expect(eventLocationInputField.props.placeholder).toBe('Event Location');
          })
-         
+
+         test('it should render the input field for the minimum number of participants', () => { 
+            const testRenderer = create(<CreateEventForm/>);
+            const testInstance = testRenderer.root;
+            const minParticipantInputField = testInstance.findByProps({ name: 'minParticipantCount'});
+            expect(minParticipantInputField).toBeTruthy();
+            expect(minParticipantInputField.props.placeholder).toBe('0');
+         })
+
      })
  })
