@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import FloatingLabel from 'react-bootstrap/FloatingLabel';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
@@ -6,8 +6,9 @@ import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import { DesktopDateTimePicker } from '@mui/x-date-pickers/DesktopDateTimePicker';
 import dayjs from 'dayjs';
-import { styled } from '@mui/material'
+import { styled } from '@mui/material';
 import CurrencyInput from 'react-currency-input-field';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 import "../resources/CreateEventForm.css";
 
@@ -16,20 +17,6 @@ const CreateEventForm = () => {
       <>
           <h1 name='heading'>Create an Event</h1>
           <Form method='post'>
-            
-                 <div class="form-floating mb-3">
-                <input type="text" class="form-control" id="floatingInput" placeholder="Event Title" />
-                <label for="floatingInput">Event Title</label>
-                </div>
-              
-                 <FloatingLabel
-                    controlId="floatingTextarea"
-                    label="Comments"
-                    className="mb-3"
-                >
-                    <Form.Control as="textarea" placeholder="Leave a comment here" />
-                </FloatingLabel>
-              
               <FloatingLabel controlId="floatingInput" label="Event Title" className="mb-3">
                 <Form.Control type="text" placeholder="Event Title" name="eventTitle" />
             </FloatingLabel>
