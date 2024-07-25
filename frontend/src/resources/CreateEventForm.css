@@ -1,14 +1,20 @@
 .create-event-form-container {
-    width: 90%;
-    margin-left: 5%;
-    float: center;
-}
-
-.create-event-form-event-text-container {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
     align-items: center;
+    margin-left: 20%;
 }
 
-.create-event-form-time-input-fields {
-    width: 50%;
-    vertical-align:top;
+.create-event-form-input-container {
+    width: 60%;
+
+}
+
+p {
+    margin-top: 10px;
+}
+
+.rcreate-event-form-button {
+    float: right;
 }

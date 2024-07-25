@@ -13,15 +13,24 @@ import "../resources/CreateEventForm.css";
 
 const CreateEventForm = () => {
   return (
-    <div className='create-event-form-container'>
-        <h1 name='heading'>Create an Event</h1>
-        <form method='post'>
-            <div className='create-event-form-event-text-container'>
+      <div className='create-event-form-container'>
+          <h1 name='heading'>Create an Event</h1>
+          <Form method='post' className='create-event-form-input-container'>
+            <FloatingLabel controlId="floatingInput" label="Event Title" className="mb-3">
                 <Form.Control type="text" placeholder="Event Title" name="eventTitle" />
+            </FloatingLabel>
+
+            <FloatingLabel controlId="floatingInput" label="Event Description" className="mb-3">
                 <Form.Control as="textarea" placeholder="Event Description" name="eventDescription" rows={7}/>
+            </FloatingLabel>
+
+            <FloatingLabel controlId="floatingInput" label="Upload an image" className="mb-3">
                 <Form.Control type="file" placeholder="Upload an image" name="imageUpload" accept="image/*" />
+            </FloatingLabel>
+
+            <FloatingLabel controlId="floatingInput" label="Event Location" className="mb-3">
                 <Form.Control type="text" placeholder="Event Location" name="eventLocation" />
-            </div>
+            </FloatingLabel>
             <br />
             <div className='create-event-form-time-input-fields'>
                 <FloatingLabel>Start Time
@@ -37,10 +46,9 @@ const CreateEventForm = () => {
                 </FloatingLabel>
             </div>
             <br />
-            <div>
-                <FloatingLabel>
-                    Minimum number of participants: 
-                    <Form.Control type="number" name="minParticipantCount" min={0}/>
+              <div>
+                <FloatingLabel controlId="floatingInput" label="Minimum number of participants:" className="mb-3">
+                      <Form.Control type="number" name="minParticipantCount" min={0} />
                 </FloatingLabel>
                 <FloatingLabel>
                     Maximum number of participants: 
@@ -58,7 +66,7 @@ const CreateEventForm = () => {
             <br />
             <br />
             <Button variant="success">Create Event</Button>{' '}
-        </form>
+        </Form>
     </div>
   )
 }
