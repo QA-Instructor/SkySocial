@@ -8,17 +8,25 @@ describe('CreateEventForm test suite', () => {
         test('it should render the input field for the event title', () => { 
             const testRenderer = create(<CreateEventForm/>);
             const testInstance = testRenderer.root;
-            const eventtitleInputField = testInstance.findByProps({ name: 'eventTitle'});
-            expect(eventtitleInputField).toBeTruthy();
-            expect(eventtitleInputField.props.placeholder).toBe('Event Title');
+            const eventTitleInputField = testInstance.findByProps({ name: 'eventTitle'});
+            expect(eventTitleInputField).toBeTruthy();
+            expect(eventTitleInputField.props.placeholder).toBe('Event Title');
          })
 
          test('it should render the input field for the event description', () => { 
             const testRenderer = create(<CreateEventForm/>);
             const testInstance = testRenderer.root;
-            const eventdescriptionInputField = testInstance.findByProps({ name: 'eventDescription'});
-            expect(eventdescriptionInputField).toBeTruthy();
-            expect(eventdescriptionInputField.props.placeholder).toBe('Event Description');
+            const eventDescriptionInputField = testInstance.findByProps({ name: 'eventDescription'});
+            expect(eventDescriptionInputField).toBeTruthy();
+            expect(eventDescriptionInputField.props.placeholder).toBe('Event Description');
+         })
+
+         test('it should render the input field for the event location', () => { 
+            const testRenderer = create(<CreateEventForm/>);
+            const testInstance = testRenderer.root;
+            const eventLocationInputField = testInstance.findByProps({ name: 'eventLocation'});
+            expect(eventLocationInputField).toBeTruthy();
+            expect(eventLocationInputField.props.placeholder).toBe('Event Location');
          })
      })
  })

@@ -11,6 +11,7 @@ const CreateEventForm = () => {
             <div>
           <Form.Control type="text" placeholder="Event Title" name="eventTitle" />
           <Form.Control as="textarea" placeholder="Event Description" name="eventDescription" rows={7}/>
+          <Form.Control type="text" placeholder="Event Location" name="eventLocation" />
             </div>
         </form>
     </div>
