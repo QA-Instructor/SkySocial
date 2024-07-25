@@ -70,5 +70,36 @@
     "ticketPrice": 5,
     "emailConfirmation": true
   }
+],
+"profiles" :
+[
+  {
+    "firstname": "Bob",
+    "lastname": "Marley",
+    "email": "Bobmarley@gmail.com",
+    "phoneNo": 45455202410,
+    "password": "password123"
+  },
+  {
+    "firstname": "Lewis",
+    "lastname": "Hamilton",
+    "email": "Lewishamilton@gmail.com",
+    "phoneNo": 45455202410,
+    "password": "password123"
+  },
+  {
+    "firstname": "Brad",
+    "lastname": "Pitt",
+    "email": "Bradpitt@gmail.com",
+    "phoneNo": 45455202410,
+    "password": "password123"
+  },
+  {
+    "firstname": "Kim",
+    "lastname": "Kardashian",
+    "email": "Kimkardashian@gmail.com",
+    "phoneNo": 45455202410,
+    "password": "password123"
+  }
 ]
 }
