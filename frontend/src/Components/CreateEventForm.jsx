@@ -9,18 +9,21 @@ import dayjs from 'dayjs';
 import { styled } from '@mui/material'
 import CurrencyInput from 'react-currency-input-field';
 
+import "../resources/CreateEventForm.css";
+
 const CreateEventForm = () => {
   return (
-    <div>
+    <div className='create-event-form-container'>
         <h1 name='heading'>Create an Event</h1>
-        <form className='create-event-form-input-container'>
-            <div>
+        <form method='post'>
+            <div className='create-event-form-event-text-container'>
                 <Form.Control type="text" placeholder="Event Title" name="eventTitle" />
                 <Form.Control as="textarea" placeholder="Event Description" name="eventDescription" rows={7}/>
                 <Form.Control type="file" placeholder="Upload an image" name="imageUpload" accept="image/*" />
                 <Form.Control type="text" placeholder="Event Location" name="eventLocation" />
             </div>
-            <div>
+            <br />
+            <div className='create-event-form-time-input-fields'>
                 <FloatingLabel>Start Time
                     <LocalizationProvider dateAdapter={AdapterDayjs}>
                         <DesktopDateTimePicker defaultValue={dayjs('2022-04-17T15:30')}/>
@@ -33,6 +36,7 @@ const CreateEventForm = () => {
                     </LocalizationProvider>
                 </FloatingLabel>
             </div>
+            <br />
             <div>
                 <FloatingLabel>
                     Minimum number of participants: 
@@ -43,13 +47,16 @@ const CreateEventForm = () => {
                     <Form.Control type="number" name="maxParticipantCount" min={2}/>
                 </FloatingLabel>
             </div>
+            <br />
             <div>
                 <CurrencyInput name="ticketPrice" placeholder="Ticket price" prefix='£' decimalsLimit={2} />
-                <Form.Control type="text" placeholder="Tags" name="tags" />
+                <Form.Control type="text" placeholder="Tags (Social,Football,Allages) " name="eventTags" />
             </div>
             <FloatingLabel>
                 Email confirmations: <input type='checkbox' name='emailConfirmations'/>
             </FloatingLabel>
+            <br />
+            <br />
             <Button variant="success">Create Event</Button>{' '}
         </form>
     </div>

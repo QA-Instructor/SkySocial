@@ -1,0 +1,14 @@
+.create-event-form-container {
+    width: 90%;
+    margin-left: 5%;
+    float: center;
+}
+
+.create-event-form-event-text-container {
+    align-items: center;
+}
+
+.create-event-form-time-input-fields {
+    width: 50%;
+    vertical-align:top;
+}
