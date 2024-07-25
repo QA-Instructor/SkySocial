@@ -2,7 +2,8 @@
 
 exports[`Event Tile Snapshot tests EventTile snapshot test 1`] = `
 <div
-  className="item-slider-container container-fluid"
+  className="item-slider-container"
+  fluid={true}
 >
   <div
     className="item-slider"
@@ -37,7 +38,62 @@ exports[`Event Tile Snapshot tests EventTile snapshot test 1`] = `
     <div
       className="item-container"
       onScroll={[Function]}
-    />
+    >
+      <div
+        height="200px"
+        width="200px"
+      >
+        1
+      </div>
+      <div
+        height="200px"
+        width="200px"
+      >
+        2
+      </div>
+      <div
+        height="200px"
+        width="200px"
+      >
+        3
+      </div>
+      <div
+        height="200px"
+        width="200px"
+      >
+        4
+      </div>
+      <div
+        height="200px"
+        width="200px"
+      >
+        5
+      </div>
+      <div
+        height="200px"
+        width="200px"
+      >
+        6
+      </div>
+      <div
+        height="200px"
+        width="200px"
+      >
+        7
+      </div>
+      <div
+        height="200px"
+        width="200px"
+      >
+        8
+      </div>
+      <div
+        height="200px"
+        width="200px"
+      >
+        9
+      </div>
+    </div>
     <div
       className="right-arrow-right "
       onClick={[Function]}
