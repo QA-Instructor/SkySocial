@@ -9,7 +9,8 @@ const CreateEventForm = () => {
         <h1 name='heading'>Create an Event</h1>
         <form className='create-event-form-input-container'>
             <div>
-                <Form.Control type="text" placeholder="Event Title" name="eventTitle"/>
+          <Form.Control type="text" placeholder="Event Title" name="eventTitle" />
+          <Form.Control as="textarea" placeholder="Event Description" name="eventDescription" rows={7}/>
             </div>
         </form>
     </div>

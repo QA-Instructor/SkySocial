@@ -12,5 +12,13 @@ describe('CreateEventForm test suite', () => {
             expect(eventtitleInputField).toBeTruthy();
             expect(eventtitleInputField.props.placeholder).toBe('Event Title');
          })
+
+         test('it should render the input field for the event description', () => { 
+            const testRenderer = create(<CreateEventForm/>);
+            const testInstance = testRenderer.root;
+            const eventdescriptionInputField = testInstance.findByProps({ name: 'eventDescription'});
+            expect(eventdescriptionInputField).toBeTruthy();
+            expect(eventdescriptionInputField.props.placeholder).toBe('Event Description');
+         })
      })
  })
