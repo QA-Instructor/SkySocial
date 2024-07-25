@@ -21,12 +21,22 @@ describe('CreateEventForm test suite', () => {
             expect(eventDescriptionInputField.props.placeholder).toBe('Event Description');
          })
 
-         test('it should render the input field for the event location', () => { 
+        // TODO: Refactor this test to work for the PictureUpload component
+        test('it should render the input field for uploading an image', () => { 
+            const testRenderer = create(<CreateEventForm/>);
+            const testInstance = testRenderer.root;
+            const eventLocationInputField = testInstance.findByProps({ name: 'imageUpload'});
+            expect(eventLocationInputField).toBeTruthy();
+            expect(eventLocationInputField.props.placeholder).toBe('Upload an image');
+        })
+
+        test('it should render the input field for the event location', () => { 
             const testRenderer = create(<CreateEventForm/>);
             const testInstance = testRenderer.root;
             const eventLocationInputField = testInstance.findByProps({ name: 'eventLocation'});
             expect(eventLocationInputField).toBeTruthy();
             expect(eventLocationInputField.props.placeholder).toBe('Event Location');
          })
+         
      })
  })
