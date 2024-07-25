@@ -6,7 +6,6 @@ import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import { DesktopDateTimePicker } from '@mui/x-date-pickers/DesktopDateTimePicker';
 import dayjs from 'dayjs';
-import { styled } from '@mui/material';
 import CurrencyInput from 'react-currency-input-field';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -15,9 +14,10 @@ import "../resources/CreateEventForm.css";
 const CreateEventForm = () => {
   return (
       <>
-          <h1 name='heading'>Create an Event</h1>
-          <Form method='post'>
-              <FloatingLabel controlId="floatingInput" label="Event Title" className="mb-3">
+      <div className='create-event-component-container'>
+        <h1 className='create-event-form-heading'>Create an Event</h1>
+        <Form method='post'>
+            <FloatingLabel controlId="floatingInput" label="Event Title" className="mb-3">
                 <Form.Control type="text" placeholder="Event Title" name="eventTitle" />
             </FloatingLabel>
 
@@ -33,41 +33,45 @@ const CreateEventForm = () => {
                 <Form.Control type="text" placeholder="Event Location" name="eventLocation" />
             </FloatingLabel>
             <br />
+
             <div className='create-event-form-time-input-fields'>
-                <FloatingLabel>Start Time
+                <FloatingLabel className='create-event-form-datepicker'>Start Time: 
                     <LocalizationProvider dateAdapter={AdapterDayjs}>
-                        <DesktopDateTimePicker defaultValue={dayjs('2022-04-17T15:30')}/>
+                        <DesktopDateTimePicker defaultValue={dayjs('2022-04-17T15:30')} width="50"/>
                     </LocalizationProvider>
                 </FloatingLabel>
                 
-                <FloatingLabel>End Time
+                <FloatingLabel>End Time: 
                     <LocalizationProvider dateAdapter={AdapterDayjs}>
                         <DesktopDateTimePicker defaultValue={dayjs('2022-04-17T15:30')}/>
                     </LocalizationProvider>
                 </FloatingLabel>
             </div>
+
             <br />
-              <div>
-                <FloatingLabel controlId="floatingInput" label="Minimum number of participants:" className="mb-3">
-                      <Form.Control type="number" name="minParticipantCount" min={0} />
+            <div>
+                <FloatingLabel controlId="floatingInput" label="Minimum number of participants" className="mb-3">
+                    <Form.Control type="number" name="minParticipantCount" min={0} />
                 </FloatingLabel>
-                <FloatingLabel>
-                    Maximum number of participants: 
+                <FloatingLabel controlId="floatingInput" label="Maximum number of participants" className="mb-3">
                     <Form.Control type="number" name="maxParticipantCount" min={2}/>
                 </FloatingLabel>
             </div>
             <br />
+
             <div>
                 <CurrencyInput name="ticketPrice" placeholder="Ticket price" prefix='£' decimalsLimit={2} />
                 <Form.Control type="text" placeholder="Tags (Social,Football,Allages) " name="eventTags" />
             </div>
+            <br />
+            
             <FloatingLabel>
                 Email confirmations: <input type='checkbox' name='emailConfirmations'/>
             </FloatingLabel>
             <br />
-            <br />
             <Button variant="success">Create Event</Button>{' '}
         </Form>
+      </div>
     </>
   )
 }
