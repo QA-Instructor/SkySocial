@@ -13,10 +13,24 @@ import "../resources/CreateEventForm.css";
 
 const CreateEventForm = () => {
   return (
-      <div className='create-event-form-container'>
+      <>
           <h1 name='heading'>Create an Event</h1>
-          <Form method='post' className='create-event-form-input-container'>
-            <FloatingLabel controlId="floatingInput" label="Event Title" className="mb-3">
+          <Form method='post'>
+            
+                 <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="floatingInput" placeholder="Event Title" />
+                <label for="floatingInput">Event Title</label>
+                </div>
+              
+                 <FloatingLabel
+                    controlId="floatingTextarea"
+                    label="Comments"
+                    className="mb-3"
+                >
+                    <Form.Control as="textarea" placeholder="Leave a comment here" />
+                </FloatingLabel>
+              
+              <FloatingLabel controlId="floatingInput" label="Event Title" className="mb-3">
                 <Form.Control type="text" placeholder="Event Title" name="eventTitle" />
             </FloatingLabel>
 
@@ -28,7 +42,7 @@ const CreateEventForm = () => {
                 <Form.Control type="file" placeholder="Upload an image" name="imageUpload" accept="image/*" />
             </FloatingLabel>
 
-            <FloatingLabel controlId="floatingInput" label="Event Location" className="mb-3">
+            <FloatingLabel controlId="floatingTextarea" label="Event Location" className="mb-3">
                 <Form.Control type="text" placeholder="Event Location" name="eventLocation" />
             </FloatingLabel>
             <br />
@@ -67,7 +81,7 @@ const CreateEventForm = () => {
             <br />
             <Button variant="success">Create Event</Button>{' '}
         </Form>
-    </div>
+    </>
   )
 }
 
