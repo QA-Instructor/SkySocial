@@ -1,0 +1,24 @@
+{ "users" :
+[
+  {
+    "id": 1,
+    "firstname" : "Oliver",
+    "lastname" : "Sinnassamy",
+    "username" : "olliesinnassamy",
+    "password" : "passwordToBeHashed",
+    "email" : "oliver@example.com",
+    "phone" : "",
+    "image" : "https://cdn.vectorstock.com/i/1000v/56/98/wild-lion-icon-logo-template-vector-22025698.jpg"
+  },
+  {
+    "id": 1,
+    "firstname" : "Dave",
+    "lastname" : "Smith",
+    "username" : "davesmith",
+    "password" : "PasswordToBeHASHED",
+    "email" : "dave@example.com",
+    "phone" : "02030405960",
+    "image" : ""
+  }
+]
+}
