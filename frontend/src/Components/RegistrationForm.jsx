@@ -8,7 +8,9 @@ const RegistrationForm = () => {
   return (
     <div className='registration-form-container'>
         <h1 name='heading'>Create an account</h1>
-        <imgage>Upload a pic </imgage>
+            <FloatingLabel controlId="floatingInput" label="Upload an image" className="mb-3">
+                <Form.Control type="file" placeholder="Upload an profile photo" name="imageUpload" accept="image/*" />
+            </FloatingLabel>
         <form className='registration-form-input-container'>
             <FloatingLabel
                 controlId="floatingInput"
