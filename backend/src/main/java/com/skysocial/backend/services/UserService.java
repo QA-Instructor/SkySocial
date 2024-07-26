@@ -1,22 +1,21 @@
 package com.skysocial.backend.services;
 
-
-import com.skysocial.backend.dtos.event.EventDTO;
-import com.skysocial.backend.dtos.user.LoginDTO;
 import com.skysocial.backend.dtos.user.ProfileDTO;
 import com.skysocial.backend.entities.user.User;
 import com.skysocial.backend.repos.UserRepo;
 import org.springframework.stereotype.Service;
+import org.modelmapper.ModelMapper;
 
-import java.util.List;
 import java.util.Optional;
 
 @Service
 public class UserService {
 
     private final UserRepo repo;
+    private ModelMapper mapper;
 
-    public UserService(UserRepo repo) {
+    public UserService(ModelMapper mapper, UserRepo repo) {
+        this.mapper = mapper;
         this.repo = repo;
     }
 
@@ -47,5 +46,6 @@ public class UserService {
 
     public ProfileDTO createAccount(User user) {
         User savedUser = this.repo.save(user);
+        return this.mapper.map(savedUser, ProfileDTO.class);
     }
 }
