@@ -1,6 +1,9 @@
 package com.skysocial.backend.services;
 
 
+import com.skysocial.backend.dtos.event.EventDTO;
+import com.skysocial.backend.dtos.user.LoginDTO;
+import com.skysocial.backend.dtos.user.ProfileDTO;
 import com.skysocial.backend.entities.user.User;
 import com.skysocial.backend.repos.UserRepo;
 import org.springframework.stereotype.Service;
@@ -17,24 +20,13 @@ public class UserService {
         this.repo = repo;
     }
 
-    public void getLoginCredentials() {
-        // Service call for getting login credentials
+    public boolean getLoginCredentials(String email, String password) {
+        User user = this.repo.findByEmail(email);
+        return user.getPassword().equals(password);
     }
 
     public User getProfileByEmail(String email) {
         return this.repo.findByEmail(email);
-    }
-
-    //list of events
-    public List<String> getRegisteredUserEvents() {
-        // Service call for getting events the user is registered to
-        return null;
-    }
-
-    //list of events
-    public List<String> getCreatedUserEvents() {
-        // Service call for getting events the user is registered to
-        return null;
     }
 
     public User updateUserAccount(Long id, User user) {
@@ -53,9 +45,7 @@ public class UserService {
         return !this.repo.existsById(id);
     }
 
-    public User createAccount(User user) {
-        // Change to profileDTO
+    public ProfileDTO createAccount(User user) {
         User savedUser = this.repo.save(user);
-        return savedUser;
     }
 }
