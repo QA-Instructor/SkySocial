@@ -22,7 +22,6 @@ public class UserService {
     }
 
     public User getProfileByEmail(String email) {
-        // Service call for getting profiles from email
         return this.repo.findByEmail(email);
     }
 
@@ -54,8 +53,9 @@ public class UserService {
         return !this.repo.existsById(id);
     }
 
-    public User createAccount() {
-        // Service call for creating user account
-        return null;
+    public User createAccount(User user) {
+        // Change to profileDTO
+        User savedUser = this.repo.save(user);
+        return savedUser;
     }
 }
