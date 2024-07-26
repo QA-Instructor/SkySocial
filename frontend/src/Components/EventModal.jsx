@@ -20,7 +20,7 @@ const EventModal = (props) => {
     return (
         <>
             <Button data-testid='button' variant="primary" onClick={handleShow}>
-                Launch demo modal
+                View Example Modal - Testing Only
             </Button>
             <Modal data-testid="modal" show={show} centered scrollable animation size='lg' >
                 <ModalHeader className='' closeLabel>
