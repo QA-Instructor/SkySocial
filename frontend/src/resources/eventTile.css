@@ -9,3 +9,8 @@
 .clickable{
     cursor: pointer;
 }
+
+.card{
+    min-width: 200px;
+    margin: 30px 15px;
+}
