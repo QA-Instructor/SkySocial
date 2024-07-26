@@ -11,3 +11,15 @@
 h1{
     text-align: center;
 }
+
+.event-modal-contact-image-container{
+    margin-right: 100px;
+}
+.event-modal-contact-container{
+    display: flex;
+    flex-direction: row;
+}
+
+.event-modal-contact-image{
+    width : 10vw;
+}

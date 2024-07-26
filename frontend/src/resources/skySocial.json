@@ -10,10 +10,16 @@
     "endDateTime": "20/12/24 14:00:00",
     "minParticipants": 5,
     "maxParticipants": 10,
-    "currentParticipants" : 7,
     "tags": ["footballatsky","footballforeveryone","footy"],
     "ticketPrice": 10.00,
-    "emailConfirmation": true
+    "emailConfirmation": true,
+    "organiser" : {
+      "firstName" : "Dave",
+      "lastName" : "Smith",
+      "email" : "dave@example.com",
+      "phone" : "07968345321",
+      "profileImage" : "https://cdn-icons-png.flaticon.com/512/3135/3135715.png"
+    }
   },
   {
     "id": 2,
@@ -25,10 +31,16 @@
     "endDateTime": "25/12/24 14:00:00",
     "minParticipants": 4,
     "maxParticipants": 15,
-    "currentParticipants" : 7,
     "tags": ["chillfirdays","coldones","social"],
     "ticketPrice": 0,
-    "emailConfirmation": false
+    "emailConfirmation": false,
+    "organiser" : {
+      "firstName" : "Dave",
+      "lastName" : "Smith",
+      "email" : "dave@example.com",
+      "phone" : "07968345321",
+      "profileImage" : "https://cdn-icons-png.flaticon.com/512/3135/3135715.png"
+    }
   },
     {
     "id": 3,
@@ -40,7 +52,6 @@
     "endDateTime": "29/12/24 14:00:00",
     "minParticipants": 10,
     "maxParticipants": 20,
-    "currentParticipants" : 17,
     "tags": ["coffeelovers","sustainablecoffee","coffeebrews"],
     "ticketPrice": 0,
     "emailConfirmation": true
@@ -55,7 +66,6 @@
     "endDateTime": "18/12/24 18:00:00",
     "minParticipants": 5,
     "maxParticipants": 40,
-    "currentParticipants" : 25,
     "tags": ["tennis","sports","social"],
     "ticketPrice": 0,
     "emailConfirmation": true
@@ -70,41 +80,9 @@
     "endDateTime": "30/12/24 16:00:00",
     "minParticipants": 5,
     "maxParticipants": 10,
-    "currentParticipants" : 6,
     "tags": ["giveback","skycommunity","unitedsky"],
     "ticketPrice": 5,
     "emailConfirmation": true
-  }
-],
-"profiles" :
-[
-  {
-    "firstname": "Bob",
-    "lastname": "Marley",
-    "email": "Bobmarley@gmail.com",
-    "phoneNo": 45455202410,
-    "password": "password123"
-  },
-  {
-    "firstname": "Lewis",
-    "lastname": "Hamilton",
-    "email": "Lewishamilton@gmail.com",
-    "phoneNo": 45455202410,
-    "password": "password123"
-  },
-  {
-    "firstname": "Brad",
-    "lastname": "Pitt",
-    "email": "Bradpitt@gmail.com",
-    "phoneNo": 45455202410,
-    "password": "password123"
-  },
-  {
-    "firstname": "Kim",
-    "lastname": "Kardashian",
-    "email": "Kimkardashian@gmail.com",
-    "phoneNo": 45455202410,
-    "password": "password123"
   }
 ]
 }
