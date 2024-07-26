@@ -3,6 +3,7 @@ import Header from './Components/Header'
 import EventsRail from './Components/EventsRail';
 import EventTile from './Components/EventTile'
 import { BrowserRouter } from 'react-router-dom';
+import RegistrationForm from './Components/RegistrationForm';
 function App() {
   return (
     <BrowserRouter>
