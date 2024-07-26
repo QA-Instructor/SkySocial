@@ -17,34 +17,22 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Users implements java.io.Serializable {
-    public Users() {
-    }
-
-    public Users(String firstName, String lastName, String userName, String password, String email, int phone, String profileImage) {
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.password = password;
-        this.email = email;
-        this.phone = phone;
-        this.profileImage = profileImage;
-
-    }
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Size(min = 2 , max =50)
+    @Size(min = 2 , max = 50)
     private String firstName;
-    @Size(min = 2 , max =50)
+    @Size(min = 2 , max = 50)
     private String lastName;
-    @Size(min = 8 , max =20)
+    @Size(min = 8 , max = 20)
     private String password;
-    @Size(min = 7 , max =50)
+    @Size(min = 7 , max = 50)
     private String email;
     @Size(min = 11 , max = 11)
     private int phone;
-    @Size(min = 5 , max =300)
+    @Size(min = 5 , max = 300)
     private String profileImage;
 
 }
