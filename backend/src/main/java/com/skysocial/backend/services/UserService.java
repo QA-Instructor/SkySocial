@@ -1,8 +1,8 @@
 package com.skysocial.backend.services;
 
 
-import com.skysocial.backend.entities.User;
-import com.skysocial.backend.entities.UserRepo;
+import com.skysocial.backend.entities.user.User;
+import com.skysocial.backend.repos.UserRepo;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
