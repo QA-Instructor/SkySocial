@@ -1,0 +1,37 @@
+.create-event-component-container {
+    width:50%;
+    margin-left: 20%;
+}
+
+.create-event-form-datepicker {
+    margin-left: 3%;
+    margin-bottom: 2%;
+    width: 80%;
+}
+
+.create-event-form-button {
+    float: right;
+}
+
+.create-event-form-fields {
+    display: grid;
+    grid-template-columns: 40% 50%;
+    margin-left: 3%;
+}
+
+.create-event-form-participant-fields {
+    display: flex;
+    justify-content: space-between;
+    width: 110%;
+    margin-top: 6%;
+}
+
+.create-event-form-participant-field {
+    width: 50%;
+    margin-left: 1%;
+}
+
+.create-event-form-ticket-price {
+    width: 110%;
+    margin-top: 9%;
+}
