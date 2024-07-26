@@ -29,15 +29,15 @@ const EventModal = (props) => {
                 </ModalHeader>
                 <Modal.Body>
                     <h1>{props.event.eventTitle}</h1>
-                    <div className='eventmodal-time-info'>
+                    <div className='event-modal-time-info'>
                         <p id="eventModalDate">Date: {date} </p>
                         <p id="eventModalTime">Time: {time} </p>
                         <p id="eventModalSpaces">Spaces Remaining:  {props.event.currentParticipants} / {props.event.maxParticipants}</p> 
                     </div>
 
-                    <img className="eventmodal-image" src={props.event.image} alt='Image of event'></img>
+                    <img className="event-modal-image" src={props.event.image} alt='Image of event'></img>
 
-                    <div className='eventmodal-location'>
+                    <div className='event-modal-location'>
                         <p>Event Info: {props.event.eventDescription}</p>
                         <p>Address: {props.event.eventLocation}</p>
                     </div>
