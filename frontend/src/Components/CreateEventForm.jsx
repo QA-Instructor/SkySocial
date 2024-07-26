@@ -33,33 +33,36 @@ const CreateEventForm = () => {
                 <Form.Control type="text" placeholder="Event Location" name="eventLocation" />
             </FloatingLabel>
 
-            <div className='create-event-form-time-input-fields'>
-                <FloatingLabel className='create-event-form-datepicker'>Start Time: 
+            <div className='create-event-form-fields'>
+                <FloatingLabel className='create-event-form-datepicker'>Start Time: &nbsp;
                     <LocalizationProvider dateAdapter={AdapterDayjs}>
                         <DesktopDateTimePicker defaultValue={dayjs('2022-04-17T15:30')} />
                     </LocalizationProvider>
-                </FloatingLabel>
-
-                <FloatingLabel controlId="floatingInput" label="Minimum number of participants" className="mb-3">
-                    <Form.Control type="number" name="minParticipantCount" min={0} size='sm' />
                 </FloatingLabel>
                 
-                <FloatingLabel className='create-event-form-datepicker'>End Time: 
+                <div className='create-event-form-participant-fields'>
+                    <FloatingLabel controlId="floatingInput" label="Min participants" className="mb-3 create-event-form-participant-field">
+                        <Form.Control type="number" name="minParticipantCount" min={0} size='sm' />
+                    </FloatingLabel>
+
+                    <FloatingLabel controlId="floatingInput" label="Max participants" className="mb-3 create-event-form-participant-field">
+                        <Form.Control type="number" name="maxParticipantCount" min={2} size='sm' />
+                    </FloatingLabel>
+                </div>
+                
+                <FloatingLabel className='create-event-form-datepicker'>End Time: &nbsp; &nbsp;
                     <LocalizationProvider dateAdapter={AdapterDayjs}>
                         <DesktopDateTimePicker defaultValue={dayjs('2022-04-17T15:30')} />
                     </LocalizationProvider>
                 </FloatingLabel>
 
-                <FloatingLabel controlId="floatingInput" label="Maximum number of participants" className="mb-3">
-                    <Form.Control type="number" name="maxParticipantCount" min={2} size='sm' />
-                </FloatingLabel>
-            </div>
-            <br />
+                <div className='create-event-form-ticket-price'>
+                    <CurrencyInput name="ticketPrice" placeholder="Ticket price" prefix='£' decimalsLimit={2} className='form-control'/>
+                </div>
+                <br />
 
-            <div>
-                <CurrencyInput name="ticketPrice" placeholder="Ticket price" prefix='£' decimalsLimit={2} />
-                <Form.Control type="text" placeholder="Tags (Social,Football,Allages) " name="eventTags" />
             </div>
+            <Form.Control type="text" placeholder="Tags (Social,Football,Allages) " name="eventTags" />
             <br />
             
             <FloatingLabel>
