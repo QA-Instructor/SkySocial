@@ -34,7 +34,7 @@ const RegistrationForm = () => {
                   <Form.Control type="text" placeholder="Last Name" name='lastname' required/>
             </FloatingLabel>
               <FloatingLabel
-                  controlId="Floating Password"
+                  controlId="floatingPassword"
                   label="Password"
                   className="mb-3">
                   <Form.Control type="password" placeholder="Password" name='password' required/>
