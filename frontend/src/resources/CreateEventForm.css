@@ -1,22 +1,18 @@
 .create-event-component-container {
-    width: 75%;
-    margin-left: 10%;
-    border: 2px solid red;
+    width: 60%;
+    margin-left: 20%;
 }
 
 .create-event-form-datepicker {
-    margin-left: 20%;
-    margin-right: 20%;
+    margin-left: 3%;
+    margin-bottom: 2%;
 }
 
 .create-event-form-button {
     float: right;
 }
 
-.create-event-form-participant-count {
-    width: 45%;
-}
-
 .create-event-form-time-input-fields {
-    border: 2px green solid;
+    display:grid;
+    grid-template-columns: 50% 50%;
 }

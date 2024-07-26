@@ -32,7 +32,6 @@ const CreateEventForm = () => {
             <FloatingLabel controlId="floatingTextarea" label="Event Location" className="mb-3">
                 <Form.Control type="text" placeholder="Event Location" name="eventLocation" />
             </FloatingLabel>
-            <br />
 
             <div className='create-event-form-time-input-fields'>
                 <FloatingLabel className='create-event-form-datepicker'>Start Time: 
@@ -40,21 +39,18 @@ const CreateEventForm = () => {
                         <DesktopDateTimePicker defaultValue={dayjs('2022-04-17T15:30')} />
                     </LocalizationProvider>
                 </FloatingLabel>
+
+                <FloatingLabel controlId="floatingInput" label="Minimum number of participants" className="mb-3">
+                    <Form.Control type="number" name="minParticipantCount" min={0} size='sm' />
+                </FloatingLabel>
                 
                 <FloatingLabel className='create-event-form-datepicker'>End Time: 
                     <LocalizationProvider dateAdapter={AdapterDayjs}>
                         <DesktopDateTimePicker defaultValue={dayjs('2022-04-17T15:30')} />
                     </LocalizationProvider>
                 </FloatingLabel>
-            </div>
 
-            <br />
-            <br />
-            <div>
-                <FloatingLabel controlId="floatingInput" label="Minimum number of participants" className="mb-3 create-event-form-participant-count">
-                    <Form.Control type="number" name="minParticipantCount" min={0} size='sm' />
-                </FloatingLabel>
-                <FloatingLabel controlId="floatingInput" label="Maximum number of participants" className="mb-3 create-event-form-participant-count">
+                <FloatingLabel controlId="floatingInput" label="Maximum number of participants" className="mb-3">
                     <Form.Control type="number" name="maxParticipantCount" min={2} size='sm' />
                 </FloatingLabel>
             </div>
