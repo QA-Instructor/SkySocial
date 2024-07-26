@@ -6,6 +6,7 @@ import com.skysocial.backend.entities.UserRepo;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class UserService {
@@ -20,9 +21,9 @@ public class UserService {
         // Service call for getting login credentials
     }
 
-    public User getProfileByEmail() {
+    public User getProfileByEmail(String email) {
         // Service call for getting profiles from email
-        return null;
+        return this.repo.findByEmail(email);
     }
 
     //list of events
