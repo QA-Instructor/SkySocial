@@ -25,6 +25,9 @@ Class names: first letter of each wrod is Capitilised ( Preferebly nouns )
 Method names: Pereferebly verbs, camel case
 Constants: All capitals with underscores(as space)
 Spacing: Ensure code is readbale and consistent
+
+## Postman
+Naming convention: camel case for endpoints (with name of endpoint)
 Comments: follow Javadoc. Only comment logic where neccessary
 
 ## React Specific
