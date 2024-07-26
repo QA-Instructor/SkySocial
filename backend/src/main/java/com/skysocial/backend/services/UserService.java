@@ -38,9 +38,15 @@ public class UserService {
         return null;
     }
 
-    public boolean updateUserAccount() {
-        // Service call for updating user account
-        return true;
+    public User updateUserAccount(Long id, User user) {
+        Optional<User> optional = this.repo.findById(id);
+        User existingUser = optional.get();
+        existingUser.setFirstName(user.getFirstName());
+        existingUser.setLastName(user.getLastName());
+        existingUser.setPassword(user.getPassword());
+        existingUser.setEmail(user.getEmail());
+        existingUser.setPhone(user.getPhone());
+        return this.repo.save(existingUser);
     }
 
     public boolean deleteUserAccount(Long id) {
