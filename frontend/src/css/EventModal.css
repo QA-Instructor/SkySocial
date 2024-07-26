@@ -1,0 +1,25 @@
+.event-modal-image{
+    width : 100%;
+    aspect-ratio: 2/1;
+}
+
+.event-modal-time-info{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+}
+h1{
+    text-align: center;
+}
+
+.event-modal-contact-image-container{
+    margin-right: 100px;
+}
+.event-modal-contact-container{
+    display: flex;
+    flex-direction: row;
+}
+
+.event-modal-contact-image{
+    width : 10vw;
+}
