@@ -43,9 +43,9 @@ public class UserService {
         return true;
     }
 
-    public boolean deleteUserAccount() {
-        // Service call for deleting user account
-        return true;
+    public boolean deleteUserAccount(Long id) {
+        this.repo.deleteById(id);
+        return !this.repo.existsById(id);
     }
 
     public User createAccount() {
