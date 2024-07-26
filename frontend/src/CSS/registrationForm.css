@@ -1,0 +1,20 @@
+.registration-form-container {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    align-items: center;
+    margin-left: 20%;
+}
+
+.registration-form-input-container {
+    width: 60%;
+    
+}
+
+p {
+    margin-top: 10px;
+}
+
+.registration-form-button {
+    float: right;
+}
