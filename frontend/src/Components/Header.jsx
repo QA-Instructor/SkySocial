@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import "bootstrap/dist/css/bootstrap.min.css"
-import "./header.css"
+import "../resources/header.css"
 
 export const Header = () => {
   return (

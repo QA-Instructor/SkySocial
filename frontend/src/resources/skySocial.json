@@ -12,7 +12,14 @@
     "maxParticipants": 10,
     "tags": ["footballatsky","footballforeveryone","footy"],
     "ticketPrice": 10.00,
-    "emailConfirmation": true
+    "emailConfirmation": true,
+    "organiser" : {
+      "firstName" : "Dave",
+      "lastName" : "Smith",
+      "email" : "dave@example.com",
+      "phone" : "07968345321",
+      "profileImage" : "https://cdn-icons-png.flaticon.com/512/3135/3135715.png"
+    }
   },
   {
     "id": 2,
@@ -26,7 +33,14 @@
     "maxParticipants": 15,
     "tags": ["chillfirdays","coldones","social"],
     "ticketPrice": 0,
-    "emailConfirmation": false
+    "emailConfirmation": false,
+    "organiser" : {
+      "firstName" : "Dave",
+      "lastName" : "Smith",
+      "email" : "dave@example.com",
+      "phone" : "07968345321",
+      "profileImage" : "https://cdn-icons-png.flaticon.com/512/3135/3135715.png"
+    }
   },
     {
     "id": 3,
