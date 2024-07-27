@@ -24,8 +24,9 @@ public class UserService {
         return user.getPassword().equals(password);
     }
 
-    public User getProfileByEmail(String email) {
-        return this.repo.findByEmail(email);
+    public ProfileDTO getProfileByEmail(String email) {
+        User savedUser = this.repo.findByEmail(email);
+        return this.mapper.map(savedUser, ProfileDTO.class);
     }
 
     public User updateUserAccount(Long id, User user) {
