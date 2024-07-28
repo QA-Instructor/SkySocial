@@ -1,6 +1,7 @@
 package com.skysocial.backend;
 
 import com.skysocial.backend.entities.event.Event;
+import com.skysocial.backend.entities.user.User;
 import com.skysocial.backend.enums.EventSorter;
 import com.skysocial.backend.repos.EventRepo;
 import jakarta.validation.Valid;
@@ -53,6 +54,12 @@ public class EventController {
     @GetMapping("/geteventscreatedby")
     public List<Event> getEventsCreatedBy(@PathParam("id") Long id) {
         // return this.service.getEventsCreatedBy(id);
+        return null;
+    }
+
+    @GetMapping("/getregisteredevents")
+    public List<Event> getEventsRegisteredTo(@PathParam("id") Long userId) {
+        // return this.service.getRegisteredEvents(userId);
         return null;
     }
 }
