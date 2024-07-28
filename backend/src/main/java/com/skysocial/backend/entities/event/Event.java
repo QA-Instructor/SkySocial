@@ -14,6 +14,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
+import java.util.List;
 
 @Entity
 @Data
@@ -60,6 +61,8 @@ public class Event implements Serializable {
 
     @NotNull
     private ProfileDTO organiser;
+
+    private List<Long> participantIds;
 
 }
 
