@@ -1,6 +1,7 @@
 package com.skysocial.backend;
 
 import com.skysocial.backend.entities.event.Event;
+import com.skysocial.backend.enums.EventSorter;
 import com.skysocial.backend.repos.EventRepo;
 import jakarta.validation.Valid;
 import jakarta.websocket.server.PathParam;
@@ -25,7 +26,7 @@ public class EventController {
         return null;
     }
 
-    @GetMapping("/")
+    @GetMapping("/getEventById")
     public Event getEventById(@PathParam("id") Long id) {
         // return this.service.getEventById(id);
         return null;
@@ -44,8 +45,8 @@ public class EventController {
     }
 
     @GetMapping("/sortevents")
-    public List<Event> sortEvents() {
-        // return this.service.sortEventsBy();
+    public List<Event> sortEvents(@RequestParam(name = "sortBy", defaultValue = "ALPHABETICAL") EventSorter sorter) {
+        // return this.service.sortEventsBy(sorter);
         return null;
     }
 }
