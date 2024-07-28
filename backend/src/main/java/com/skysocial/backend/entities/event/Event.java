@@ -60,6 +60,8 @@ public class Event implements Serializable {
 
     @NotNull
     private ProfileDTO organiser;
+    
+    private Long[] participantIds;
 
 }
 
