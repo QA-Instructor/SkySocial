@@ -3,12 +3,14 @@ package com.skysocial.backend.services;
 import com.skysocial.backend.dtos.user.ProfileDTO;
 import com.skysocial.backend.entities.user.User;
 import com.skysocial.backend.repos.UserRepo;
+import lombok.Data;
 import org.springframework.stereotype.Service;
 import org.modelmapper.ModelMapper;
 
 import java.util.Optional;
 
 @Service
+@Data
 public class UserService {
 
     private final UserRepo repo;
