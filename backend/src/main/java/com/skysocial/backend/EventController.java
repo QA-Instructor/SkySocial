@@ -49,4 +49,10 @@ public class EventController {
         // return this.service.sortEventsBy(sorter);
         return null;
     }
+
+    @GetMapping("/geteventscreatedby")
+    public List<Event> getEventsCreatedBy(@PathParam("id") Long id) {
+        // return this.service.getEventsCreatedBy(id);
+        return null;
+    }
 }
