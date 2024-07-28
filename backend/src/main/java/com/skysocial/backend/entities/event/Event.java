@@ -1,7 +1,6 @@
 package com.skysocial.backend.entities.event;
 
 import com.skysocial.backend.dtos.user.ProfileDTO;
-import com.skysocial.backend.entities.user.User;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -14,6 +13,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
+import java.util.List;
 
 @Entity
 @Data
@@ -61,7 +61,7 @@ public class Event implements Serializable {
     @NotNull
     private ProfileDTO organiser;
     
-    private Long[] participantIds;
+    private List<Long> participantIds;
 
 }
 
