@@ -12,5 +12,4 @@ public interface UserRepo extends JpaRepository<User, Long> {
 
     User findByEmail(String email);
 
-    List<EventDTO> getCreatedEvents();
 }
