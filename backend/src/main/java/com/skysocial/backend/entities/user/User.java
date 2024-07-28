@@ -1,4 +1,4 @@
-package com.skysocial.backend.entities;
+package com.skysocial.backend.entities.user;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
