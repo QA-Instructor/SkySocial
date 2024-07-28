@@ -14,7 +14,6 @@ import java.util.List;
 public class EventController {
 
     // private EventService service;
-    private EventRepo repo;
 
     @GetMapping("/eventcontrollerhealth")
     public String health() {
@@ -46,8 +45,8 @@ public class EventController {
     }
 
     @GetMapping("/sortevents")
-    public List<Event> sortEvents(@RequestParam(name = "sortBy", defaultValue = "ALPHABETICAL") EventSorter sorter) {
-        // return this.service.sortEventsBy(sorter);
+    public List<Event> sortEvents(@RequestParam(name = "sortBy", defaultValue = "ALPHABETICAL") EventSorter sorter, @RequestParam boolean ascending) {
+        // return this.service.sortEventsBy(sorter, ascending);
         return null;
     }
 
