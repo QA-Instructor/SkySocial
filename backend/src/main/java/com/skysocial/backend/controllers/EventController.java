@@ -1,9 +1,7 @@
-package com.skysocial.backend;
+package com.skysocial.backend.controllers;
 
 import com.skysocial.backend.entities.event.Event;
-import com.skysocial.backend.entities.user.User;
 import com.skysocial.backend.enums.EventSorter;
-import com.skysocial.backend.repos.EventRepo;
 import jakarta.validation.Valid;
 import jakarta.websocket.server.PathParam;
 import org.springframework.web.bind.annotation.*;
