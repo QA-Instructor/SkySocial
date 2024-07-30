@@ -7,7 +7,7 @@ import LoginPage from '../Components/LoginPage';
 
 describe('Login Page Snapshot tests',()=>{
     test(`Login Page matches snapshot`, () => {
-        const header = create(LoginPage);
-        expect(header.toJSON()).toMatchSnapshot();
+        const loginPage = create(LoginPage);
+        expect(loginPage.toJSON()).toMatchSnapshot();
     });
 });
