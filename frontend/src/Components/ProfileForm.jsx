@@ -10,14 +10,16 @@ const ProfileForm = ({user}) => {
 
   const handleEditable = () => setEditable(!isDisabled);
 
-  console.log(user.image);
+  //Add function to save changes to profile.
+  const saveProfile = () => {};
+
   return (
     <div className='profile-form-container'>
          
         <form className='profile-form-form-container'>
         <div class="profile-form-btn-container">
-            <a id="editBtn" className='editBtn' onClick={handleEditable}>
-                <span id="editBtnText"><FaPencilAlt/></span>
+            <a id="editBtn" className='profile-form-edit-button profile-form-save-text' onClick={handleEditable}>
+                {!isDisabled ? <span onClick={saveProfile}>Save</span> : <span id="editBtnText"><FaPencilAlt/></span>}
             </a>
         </div>
         <div>

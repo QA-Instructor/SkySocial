@@ -6,7 +6,7 @@ import ProfileForm from "../Components/ProfileForm";
 describe("ProfileForm component test suit", () => {
     test('should render a disabled first name and last name component with filled in values', () => {
         const user = userData.users[0];
-        const testRenderer = create(<ProfileForm userData={user}/>);
+        const testRenderer = create(<ProfileForm user={user}/>);
         const testInstance = testRenderer.root;
 
         const firstNameField = testInstance.findByProps({ name: 'firstname'});
@@ -22,7 +22,7 @@ describe("ProfileForm component test suit", () => {
 
     test('should render disabled email and phone number inputs with filled in values', () => {
         const user = userData.users[0];
-        const testRenderer = create(<ProfileForm userData={user}/>);
+        const testRenderer = create(<ProfileForm user={user}/>);
         const testInstance = testRenderer.root;
 
         const emailField = testInstance.findByProps({ name: 'email'});
@@ -39,7 +39,7 @@ describe("ProfileForm component test suit", () => {
 
     test('should render a profile image', () => {
         const user = userData.users[0];
-        const testRenderer = create(<ProfileForm userData={user}/>);
+        const testRenderer = create(<ProfileForm user={user}/>);
         const testInstance = testRenderer.root;
 
         const image = testInstance.findByType('img');
@@ -48,23 +48,22 @@ describe("ProfileForm component test suit", () => {
 
     test('should render a default profile image', () => {
         const user = userData.users[1];
-        const defaultURL = "https://images.rawpixel.com/image_png_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIzLTAxL3JtNjA5LXNvbGlkaWNvbi13LTAwMi1wLnBuZw.png";
-        const testRenderer = create(<ProfileForm userData={user}/>);
+        const defaultURL =  "https://uxwing.com/wp-content/themes/uxwing/download/peoples-avatars/person-profile-image-icon.png";
+        const testRenderer = create(<ProfileForm user={user}/>);
         const testInstance = testRenderer.root;
 
         const image = testInstance.findByType('img');
-        expect(image.props.src).toBe("https://images.rawpixel.com/image_png_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIzLTAxL3JtNjA5LXNvbGlkaWNvbi13LTAwMi1wLnBuZw.png");
+        expect(image.props.src).toBe( "https://uxwing.com/wp-content/themes/uxwing/download/peoples-avatars/person-profile-image-icon.png");
     });
 
     test('should render an edit profile button', () => {
         const user = userData.users[0];
-        const testRenderer = create(<ProfileForm userData={user}/>);
+        const testRenderer = create(<ProfileForm user={user}/>);
         const testInstance = testRenderer.root;
 
         const editBtn = testInstance.findByProps({id : "editBtn"});
         const firstNameField = testInstance.findByProps({name : "firstname"});
         expect(editBtn).toBeTruthy();
-        expect(editBtn.children).toContain("Edit Profile");
         act(() => editBtn.props.onClick());
         expect(firstNameField.props.disabled).toBe(false);
         expect(editBtn.children).toContain("Save");
@@ -73,7 +72,7 @@ describe("ProfileForm component test suit", () => {
     describe('test suite for delete and log out buttons', () => { 
         test('should render an delete button', () => {
             const user = userData.users[0];
-            const testRenderer = create(<ProfileForm userData={user}/>);
+            const testRenderer = create(<ProfileForm user={user}/>);
             const testInstance = testRenderer.root;
 
             const deleteBtn = testInstance.findByProps({id : "deleteBtn"});
@@ -82,7 +81,7 @@ describe("ProfileForm component test suit", () => {
         });
         test('should render an logout button', () => {
             const user = userData.users[0];
-            const testRenderer = create(<ProfileForm userData={user}/>);
+            const testRenderer = create(<ProfileForm user={user}/>);
             const testInstance = testRenderer.root;
 
             const logoutBtn = testInstance.findByProps({id : "logoutBtn"});

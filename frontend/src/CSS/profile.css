@@ -66,3 +66,7 @@ body {
 .profile-form-edit-button {
     background-color: none;
 }
+.profile-form-save-text{
+    text-decoration: none;
+    cursor: pointer;
+}
