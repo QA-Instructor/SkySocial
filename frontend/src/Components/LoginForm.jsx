@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import "../resources/LoginForm.css";
 import "bootstrap/dist/css/bootstrap.min.css"
 import { useNavigate } from 'react-router-dom';
