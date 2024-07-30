@@ -5,21 +5,14 @@
     box-sizing: border-box;
 }
 
-/* Body styling */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh; /* Full viewport height */
-    margin: 0; /* Remove default margin */
-}
+
 
 /* Container for the profile form */
 .profile-form-form-container {
     background-color: #fff;
-    width: 30vw; /* Width relative to viewport width */
+    width: 40%; /* Width relative to viewport width */
+    margin-left: 30%;
+    margin-top: 20px;
     height: 60vh;
     max-width: 60vw;
     min-width: 30vw;
