@@ -2,7 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import "../resources/LoginForm.css";
 import "bootstrap/dist/css/bootstrap.min.css"
+import { useNavigate } from 'react-router-dom';
 const LoginForm = () => {
+  const navigate = useNavigate();
   return (
     <div className='login-form-container'>
         <h1>Welcome to Sky Social</h1>
@@ -11,7 +13,7 @@ const LoginForm = () => {
             <div className='login-form-input-container'>
                 <input type="text" placeholder='Email or username' name='username' className='form-control login-form-input-field' id='username'/>
                 <input type="password" name='password' id='password' placeholder='Password' className='form-control login-form-input-field'/>
-                <input type="submit" value="Log in" name='login' className='btn btn-outline-primary form-submit-button'/>
+                <input type="submit" value="Log in" name='login' className='btn btn-outline-primary form-submit-button' onClick={()=>navigate("/")}/>
             </div>
         </form>
         <br />
