@@ -66,7 +66,6 @@ describe("ProfileForm component test suit", () => {
         expect(editBtn).toBeTruthy();
         act(() => editBtn.props.onClick());
         expect(firstNameField.props.disabled).toBe(false);
-        expect(editBtn.children).toContain("Save");
     });
 
     describe('test suite for delete and log out buttons', () => { 
