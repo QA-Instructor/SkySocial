@@ -1,8 +1,4 @@
-import React from 'react';
 import { create } from 'react-test-renderer';
-import { BrowserRouter } from 'react-router-dom';
-
-
 import LoginPage from '../Components/LoginPage';
 
 describe('Login Page Snapshot tests',()=>{
@@ -11,3 +7,4 @@ describe('Login Page Snapshot tests',()=>{
         expect(loginPage.toJSON()).toMatchSnapshot();
     });
 });
+
