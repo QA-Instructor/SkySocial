@@ -40,10 +40,8 @@ public class EventService {
         return this.eventRepo.findEventById(id);
     }
 
-    public EventDTO createEvent(EventDTO event) {
-        Event toSave = this.mapFromDTO(event);
-        Event saved = this.eventRepo.save(toSave);
-        return this.mapToDTO(saved);
+    public Event createEvent(Event event) {
+        return this.eventRepo.save(event);
     }
 
     public boolean addParticipantToEvent(Long eventId, Long userId) {

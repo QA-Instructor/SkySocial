@@ -33,8 +33,7 @@ public class EventController {
 
     @PostMapping("/createEvent")
     public Event createNewEvent(@RequestBody @Valid Event event) {
-        // return this.service.addEvent(event);
-        return null;
+         return this.service.createEvent(event);
     }
 
     @PutMapping("/addparticipant")
