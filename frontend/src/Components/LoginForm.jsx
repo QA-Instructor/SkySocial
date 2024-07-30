@@ -18,7 +18,7 @@ const LoginForm = () => {
         <br />
         <div className='create-account-container'>
             <p>OR</p>
-            <button type="button" name='create-account' className='btn btn-outline-success'>Create an Account</button>
+            <button type="button" name='create-account' className='btn btn-outline-success' onClick={()=>navigate("/Registration")}>Create an Account</button>
         </div>
     </div>
   )

@@ -1,18 +1,18 @@
-.loginPage{
+.loginRegPage{
     display: inline-flex;
-    margin-top: 150px;
-    height: 450px;
+    margin-top: 50px;
     overflow: hidden;
 }
-.loginPage-form-container{
+.loginRegPage-form-container{
     width: 60%;
 }
-.loginPage-logo-container{
+.loginRegPage-logo-container{
     width: 40%;
     height:200px;
     top:0;
 }
-.loginPage-logo{
+.loginRegPage-logo{
+    margin-top: 100px;
     font-size: 40px;
     border: solid black 2px;
     border-radius: 5px;
@@ -22,18 +22,17 @@
     line-height: 100px;
     text-align: center;
 }
-.loginPage-info{
+.loginRegPage-info{
     font-size: 20px;
     border: solid black 2px;
     border-radius: 5px;
     width: 99%;
     margin-top: 20px;
-    height: 330px;
+    height: 380px;
     line-height: 40px;
     padding:20px;
 }
-.loginPage-form-container{
-    border: solid black 2px;
+.loginRegPage-form-container{
     width: 50%;
     margin-left: 10%;
 }

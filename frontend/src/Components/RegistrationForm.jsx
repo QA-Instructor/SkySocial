@@ -1,10 +1,11 @@
 import React from 'react'
 import FloatingLabel from 'react-bootstrap/FloatingLabel';
 import Form from 'react-bootstrap/Form';
-import Button from 'react-bootstrap/Button';
+import { useNavigate } from 'react-router-dom';
 import '../CSS/registrationForm.css';
 
 const RegistrationForm = () => {
+    const navigate = useNavigate();
   return (
     <div className='registration-form-container'>
         <h1 name='heading'>Create an account</h1>
@@ -45,9 +46,10 @@ const RegistrationForm = () => {
                   className="mb-3">
                   <Form.Control type="password" placeholder="Confirm Password" name='confirmPassword' required/>
               </FloatingLabel>
-              <Button type="submit" className='registration-form-button' name="create">Create Account</Button>
+              <button type="submit" className='btn btn-outline-primary form-submit-button' name="create" onClick={()=>navigate("/")}>Create Account</button>
         </form>
-        <p>If you already have an account go to Log in page</p>
+        <p>If you already have an account:</p>
+        <button type="submit" className='btn btn-outline-success' name="login" onClick={()=>navigate("/Login")}>Login</button>
     </div>
   )
 }

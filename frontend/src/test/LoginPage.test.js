@@ -1,5 +1,5 @@
 import { create } from 'react-test-renderer';
-import LoginPage from '../Components/LoginPage';
+import LoginPage from '../Components/LoginRegPage';
 
 describe('Login Page Snapshot tests',()=>{
     test(`Login Page matches snapshot`, () => {

@@ -1,5 +1,5 @@
 .login-form-input-field {
-    margin-bottom: 2%;
+    margin-bottom: 10px;
 }
 
 .login-form-input-container {
@@ -8,13 +8,12 @@
 }
 
 .login-form-container {
-    padding-top: 30px;
+    margin-top: 100px;
+    padding: 75px 0;
     text-align: center;
+    border: black solid 2px
 }
 
-.create-account-container {
-    margin: 30px;
-}
 
 .form-submit-button {
     margin-top: 20px;

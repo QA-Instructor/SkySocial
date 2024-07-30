@@ -3,7 +3,7 @@ import Header from './Components/Header'
 import EventsRail from './Components/EventsRail';
 import EventTile from './Components/EventTile'
 import {BrowserRouter, Routes,Route} from 'react-router-dom';
-import LoginPage from './Components/LoginPage';
+import LoginPage from './Components/LoginRegPage';
 import CreateEventForm from './Components/CreateEventForm';
 function App() {
   var isLogin = true;
@@ -27,8 +27,8 @@ function App() {
           <Route path="/Profile" element={<h1>Profile Page Goes here</h1>}/>
           <Route path="/Search" element={<h1>Search Bar Goes here</h1>}/>
         </Route>
-        <Route path="/Login" element={<LoginPage/>}/>
-        <Route path="/Registration" element={<h1>RegistrationPage Goes here</h1>}/>
+        <Route path="/Login" element={<LoginPage displayLoginRegPage={true}/>}/>
+        <Route path="/Registration" element={<LoginPage displayLoginRegPage= {false}/>}/>
       </Routes>
     </div>
     </BrowserRouter>
