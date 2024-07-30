@@ -2,6 +2,7 @@ package com.skysocial.backend.controllers;
 
 import com.skysocial.backend.entities.event.Event;
 import com.skysocial.backend.enums.EventSorter;
+import com.skysocial.backend.services.EventService;
 import jakarta.validation.Valid;
 import jakarta.websocket.server.PathParam;
 import org.springframework.web.bind.annotation.*;
@@ -11,7 +12,7 @@ import java.util.List;
 @RestController
 public class EventController {
 
-    // private EventService service;
+     private EventService service;
 
     @GetMapping("/eventcontrollerhealth")
     public String health() {
