@@ -17,6 +17,7 @@ public class UserService {
     private ModelMapper mapper;
 
     public UserService(ModelMapper mapper, UserRepo repo) {
+        super();
         this.mapper = mapper;
         this.repo = repo;
     }

@@ -1,7 +1,6 @@
 package com.skysocial.backend.entities.event;
 
 import com.skysocial.backend.dtos.user.ProfileDTO;
-import com.skysocial.backend.entities.user.User;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
