@@ -4,6 +4,7 @@ import EventsRail from './Components/EventsRail';
 import EventTile from './Components/EventTile'
 import {BrowserRouter, Routes,Route} from 'react-router-dom';
 import LoginPage from './Components/LoginPage';
+import CreateEventForm from './Components/CreateEventForm';
 function App() {
   var isLogin = true;
 
@@ -22,7 +23,7 @@ function App() {
           </EventsRail>
           }/>
           <Route path="/MyEvents" element={<h1>My Events Page Goes here</h1>}/>
-          <Route path="/CreateEvent" element={<h1>Create Event Page Goes here</h1>}/>
+          <Route path="/CreateEvent" element={<CreateEventForm/>}/>
           <Route path="/Profile" element={<h1>Profile Page Goes here</h1>}/>
           <Route path="/Search" element={<h1>Search Bar Goes here</h1>}/>
         </Route>

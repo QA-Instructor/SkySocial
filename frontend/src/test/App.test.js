@@ -23,7 +23,7 @@ describe('Navigation tests',()=>{
     const createEventButton = screen.getByText(/Create Event/i);
     expect(createEventButton).toBeInTheDocument();
     fireEvent.click(createEventButton);
-    const createEventText = screen.getByText(/Create Event Page Goes here/i)
+    const createEventText = screen.getByText(/Create an Event/i)
     expect(createEventText).toBeInTheDocument();
   })
   test('My Events is naviagted',()=>{
