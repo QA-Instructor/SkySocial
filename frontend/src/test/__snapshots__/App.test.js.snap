@@ -1,0 +1,384 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshot tests App renders 1`] = `
+<div
+  className="App"
+>
+  <header>
+    <div
+      className="header-logo-section"
+    >
+      <img
+        alt="Sky Social"
+      />
+    </div>
+    <nav
+      className="navbar navbar navbar-expand navbar-light"
+    >
+      <div
+        className="nav navbar-nav"
+        onKeyDown={[Function]}
+      >
+        <ul
+          className="nav-list-left"
+        >
+          <li
+            className="navbar-item"
+            id="home"
+          >
+            <a
+              className="nav-link"
+              href="/"
+              onClick={[Function]}
+            >
+              Home
+            </a>
+          </li>
+          <li
+            className="navbar-item"
+            id="createEvent"
+          >
+            <a
+              className="nav-link"
+              href="/CreateEvent"
+              onClick={[Function]}
+            >
+              Create Event
+            </a>
+          </li>
+          <li
+            className="navbar-item"
+            id="myEvents"
+          >
+            <a
+              className="nav-link"
+              href="/MyEvents"
+              onClick={[Function]}
+            >
+              My Events
+            </a>
+          </li>
+        </ul>
+        <ul
+          className="nav-list-right"
+        >
+          <li
+            className="navbar-item"
+            id="search"
+          >
+            <a
+              className="nav-link"
+              href="/Search"
+              onClick={[Function]}
+            >
+              Search
+            </a>
+          </li>
+          <li
+            className="navbar-item"
+            id="profile"
+          >
+            <a
+              className="nav-link"
+              href="/Profile"
+              onClick={[Function]}
+            >
+              Profile
+            </a>
+          </li>
+          <li
+            className="navbar-item"
+            id="login"
+          >
+            <a
+              className="nav-link"
+              href="/Login"
+              onClick={[Function]}
+            >
+              Logout
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <div
+    className="item-slider-container"
+    fluid={true}
+  >
+    <div
+      className="item-slider"
+    >
+      <div
+        className="left-arrow-left is-disabled-hide"
+        onClick={[Function]}
+      >
+        <svg
+          fill="currentColor"
+          height="70px"
+          stroke="currentColor"
+          strokeWidth="0"
+          style={
+            Object {
+              "color": undefined,
+            }
+          }
+          viewBox="0 0 24 24"
+          width="70px"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M0 0h24v24H0z"
+            fill="none"
+          />
+          <path
+            d="M11.67 3.87 9.9 2.1 0 12l9.9 9.9 1.77-1.77L3.54 12z"
+          />
+        </svg>
+      </div>
+      <div
+        className="item-container"
+        onScroll={[Function]}
+      >
+        <div
+          className="card shadow bg-white rounded zoom clickable"
+          id="cardContainer"
+          onClick={[Function]}
+          style={
+            Object {
+              "width": "18rem",
+            }
+          }
+        >
+          <img
+            alt="Card image cap"
+            className="card-img-top"
+            src="e619f4e1-c156-419e-8d26-f2cc46235e76.jpg"
+          />
+          <div
+            className="card-body"
+          >
+            <h5
+              className="card-title"
+            >
+              Football 5-a-side
+            </h5>
+            <p>
+              <b>
+                #
+                5-a-side
+                 
+              </b>
+              <b>
+                #
+                SkyFootball
+                 
+              </b>
+            </p>
+            <button
+              className="btn btn-outline-primary"
+            >
+              Book
+            </button>
+          </div>
+        </div>
+        <div
+          className="card shadow bg-white rounded zoom clickable"
+          id="cardContainer"
+          onClick={[Function]}
+          style={
+            Object {
+              "width": "18rem",
+            }
+          }
+        >
+          <img
+            alt="Card image cap"
+            className="card-img-top"
+            src="download.jpeg"
+          />
+          <div
+            className="card-body"
+          >
+            <h5
+              className="card-title"
+            >
+              Tennis Doubles
+            </h5>
+            <p>
+              <b>
+                #
+                5-a-side
+                 
+              </b>
+              <b>
+                #
+                SkyFootball
+                 
+              </b>
+            </p>
+            <button
+              className="btn btn-outline-primary"
+            >
+              Book
+            </button>
+          </div>
+        </div>
+        <div
+          className="card shadow bg-white rounded zoom clickable"
+          id="cardContainer"
+          onClick={[Function]}
+          style={
+            Object {
+              "width": "18rem",
+            }
+          }
+        >
+          <img
+            alt="Card image cap"
+            className="card-img-top"
+            src="download (1).jpeg"
+          />
+          <div
+            className="card-body"
+          >
+            <h5
+              className="card-title"
+            >
+              Running
+            </h5>
+            <p>
+              <b>
+                #
+                5-a-side
+                 
+              </b>
+              <b>
+                #
+                SkyFootball
+                 
+              </b>
+            </p>
+            <button
+              className="btn btn-outline-primary"
+            >
+              Book
+            </button>
+          </div>
+        </div>
+        <div
+          className="card shadow bg-white rounded zoom clickable"
+          id="cardContainer"
+          onClick={[Function]}
+          style={
+            Object {
+              "width": "18rem",
+            }
+          }
+        >
+          <img
+            alt="Card image cap"
+            className="card-img-top"
+            src="e619f4e1-c156-419e-8d26-f2cc46235e76.jpg"
+          />
+          <div
+            className="card-body"
+          >
+            <h5
+              className="card-title"
+            >
+              Football 5-a-side
+            </h5>
+            <p>
+              <b>
+                #
+                5-a-side
+                 
+              </b>
+              <b>
+                #
+                SkyFootball
+                 
+              </b>
+            </p>
+            <button
+              className="btn btn-outline-primary"
+            >
+              Book
+            </button>
+          </div>
+        </div>
+        <div
+          className="card shadow bg-white rounded zoom clickable"
+          id="cardContainer"
+          onClick={[Function]}
+          style={
+            Object {
+              "width": "18rem",
+            }
+          }
+        >
+          <img
+            alt="Card image cap"
+            className="card-img-top"
+            src="download.jpeg"
+          />
+          <div
+            className="card-body"
+          >
+            <h5
+              className="card-title"
+            >
+              Tennis Doubles
+            </h5>
+            <p>
+              <b>
+                #
+                5-a-side
+                 
+              </b>
+              <b>
+                #
+                SkyFootball
+                 
+              </b>
+            </p>
+            <button
+              className="btn btn-outline-primary"
+            >
+              Book
+            </button>
+          </div>
+        </div>
+      </div>
+      <div
+        className="right-arrow-right "
+        onClick={[Function]}
+      >
+        <svg
+          fill="currentColor"
+          height="70px"
+          stroke="currentColor"
+          strokeWidth="0"
+          style={
+            Object {
+              "color": undefined,
+            }
+          }
+          viewBox="0 0 24 24"
+          width="70px"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M0 0h24v24H0V0z"
+            fill="none"
+          />
+          <path
+            d="M6.23 20.23 8 22l10-10L8 2 6.23 3.77 14.46 12z"
+          />
+        </svg>
+      </div>
+    </div>
+  </div>
+</div>
+`;
