@@ -1,5 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`Header Snapshot tests Header matches snapshot 1`] = `null`;
-
-exports[`Login Page Snapshot tests Login Page matches snapshot 1`] = `null`;

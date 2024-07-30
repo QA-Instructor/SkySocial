@@ -10,7 +10,7 @@ describe('Snapshot tests',()=>{
 });
 
 describe('Navigation tests',()=>{
-  test('Profile Page is naviagted',()=>{
+  test('Profile Page is navigated',()=>{
       render( <App/>)
       const profileButton = screen.getByText(/Profile/i);
       expect(profileButton).toBeInTheDocument();
@@ -18,7 +18,7 @@ describe('Navigation tests',()=>{
       const profileText = screen.getByText(/Profile Page Goes here/i)
       expect(profileText).toBeInTheDocument();
   })
-  test('Create Event is naviagted',()=>{
+  test('Create Event is navigated',()=>{
     render( <App/>)
     const createEventButton = screen.getByText(/Create Event/i);
     expect(createEventButton).toBeInTheDocument();
@@ -26,7 +26,7 @@ describe('Navigation tests',()=>{
     const createEventText = screen.getByText(/Create an Event/i)
     expect(createEventText).toBeInTheDocument();
   })
-  test('My Events is naviagted',()=>{
+  test('My Events is navigated',()=>{
     render( <App/>)
     const myEventsButton = screen.getByText(/My Events/i);
     expect(myEventsButton).toBeInTheDocument();

@@ -6,7 +6,6 @@ import {BrowserRouter, Routes,Route} from 'react-router-dom';
 import LoginPage from './Components/LoginRegPage';
 import CreateEventForm from './Components/CreateEventForm';
 function App() {
-  var isLogin = true;
 
   return (
     <BrowserRouter>
