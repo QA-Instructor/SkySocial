@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import "../resources/LoginForm.css";
-
+import "bootstrap/dist/css/bootstrap.min.css"
 const LoginForm = () => {
   return (
     <div className='login-form-container'>
