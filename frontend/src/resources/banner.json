@@ -1,0 +1,19 @@
+{
+  "slides": [
+    {
+      "id": 1,
+      "eventTitle": "Football",
+      "image": "https://www.bscglasgow.co.uk/images/2023/womens5/11.jpg"
+    },
+    {
+      "id": 2,
+      "eventTitle": "Pub Social",
+      "image": "https://www.luxurytravelmag.com.au/wp-content/uploads/2022/11/AudleyPublicHouse_Interior_Sim-Canetty-Clarke.jpg"
+    },
+    {
+      "id": 3,
+      "eventTitle": "Coffee chats with local coffee beans toaster",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/e/e4/Latte_and_dark_coffee.jpg"
+    }
+  ]
+}
