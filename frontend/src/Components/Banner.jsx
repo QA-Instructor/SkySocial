@@ -1,30 +1,43 @@
-import React, { useState } from 'react';
-import './Carousel.css';
+import React from 'react';
+// import '../resources/banner.css';
+import Carousel from 'react-bootstrap/Carousel';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
-const Carousel = ({ slides }) => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  const nextSlide = () => {
-    setCurrentIndex((currentIndex + 1) % slides.length);
-  };
-
-  const prevSlide = () => {
-    setCurrentIndex((currentIndex - 1 + slides.length) % slides.length);
-  };
-
+function Banner() {
   return (
-    <div className="carousel">
-      <button className="carousel-button prev" onClick={prevSlide}>‹</button>
-      <div className="carousel-slide">
-        <img src={slides[currentIndex].image} alt={slides[currentIndex].eventTitle} />
-        <div className="carousel-caption">
-          <h3>{slides[currentIndex].eventTitle}</h3>
-        </div>
-      </div>
-      <button className="carousel-button next" onClick={nextSlide}>›</button>
-    </div>
+    <Carousel>
+      <Carousel.Item>
+        <img
+          className='d-block w-100'
+          src="https://www.bscglasgow.co.uk/images/2023/womens5/11.jpg"
+          alt="First Slide"
+        />
+        <Carousel.Caption>
+          <h3>Football</h3>
+        </Carousel.Caption>
+      </Carousel.Item>
+      <Carousel.Item>
+        <img
+          className='d-block w-100'
+          src="https://www.luxurytravelmag.com.au/wp-content/uploads/2022/11/AudleyPublicHouse_Interior_Sim-Canetty-Clarke.jpg"
+          alt="Second Slide"
+        />
+        <Carousel.Caption>
+         <h3>Pub Social</h3>
+        </Carousel.Caption>
+      </Carousel.Item>
+      <Carousel.Item>
+        <img
+          className='d-block w-100'
+          src="https://upload.wikimedia.org/wikipedia/commons/e/e4/Latte_and_dark_coffee.jpg"
+          alt="Thrid Slide"
+        />
+        <Carousel.Caption>
+          <h3>Coffee chats with local coffee beans toaster</h3>
+        </Carousel.Caption>
+      </Carousel.Item>
+    </Carousel>
   );
-};
+}
 
-export default Carousel;
-
+export default Banner;
