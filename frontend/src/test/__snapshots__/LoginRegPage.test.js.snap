@@ -1,0 +1,160 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Login Page Snapshot tests Login Page matches snapshot 1`] = `
+<div
+  className="loginRegPage"
+>
+  <div
+    className="loginRegPage-logo-container"
+  >
+    <div
+      className="loginRegPage-logo"
+    >
+      Sky Social
+    </div>
+    <div
+      className="loginRegPage-info"
+    >
+      Sky Social is your gateway to a social life at Sky. Explore opportunities to get involved in sports and various socials around Sky.
+    </div>
+  </div>
+  <div
+    className="loginRegPage-form-container"
+  >
+    <div
+      className="registration-form-container"
+    >
+      <h1
+        name="heading"
+      >
+        Create an account
+      </h1>
+      <div
+        className="mb-3 form-floating"
+      >
+        <input
+          accept="image/*"
+          className="form-control"
+          id="floatingInput"
+          name="imageUpload"
+          placeholder="Upload an profile photo"
+          type="file"
+        />
+        <label
+          htmlFor="floatingInput"
+        >
+          Upload an image
+        </label>
+      </div>
+      <form
+        className="registration-form-input-container"
+      >
+        <div
+          className="mb-3 form-floating"
+        >
+          <input
+            className="form-control"
+            id="floatingInput"
+            name="email"
+            placeholder="name@example.com"
+            required={true}
+            type="email"
+          />
+          <label
+            htmlFor="floatingInput"
+          >
+            Email Address
+          </label>
+        </div>
+        <div
+          className="mb-3 form-floating"
+        >
+          <input
+            className="form-control"
+            id="floatingInput"
+            name="firstname"
+            placeholder="First Name"
+            required={true}
+            type="text"
+          />
+          <label
+            htmlFor="floatingInput"
+          >
+            First Name
+          </label>
+        </div>
+        <div
+          className="mb-3 form-floating"
+        >
+          <input
+            className="form-control"
+            id="floatingInput"
+            name="lastname"
+            placeholder="Last Name"
+            required={true}
+            type="text"
+          />
+          <label
+            htmlFor="floatingInput"
+          >
+            Last Name
+          </label>
+        </div>
+        <div
+          className="mb-3 form-floating"
+        >
+          <input
+            className="form-control"
+            id="floatingPassword"
+            name="password"
+            placeholder="Password"
+            required={true}
+            type="password"
+          />
+          <label
+            htmlFor="floatingPassword"
+          >
+            Password
+          </label>
+        </div>
+        <div
+          className="mb-3 form-floating"
+        >
+          <input
+            className="form-control"
+            id="confirmPassword"
+            name="confirmPassword"
+            placeholder="Confirm Password"
+            required={true}
+            type="password"
+          />
+          <label
+            htmlFor="confirmPassword"
+          >
+            Confirm Password
+          </label>
+        </div>
+        <button
+          className="btn btn-outline-primary form-submit-button"
+          name="create"
+          onClick={[Function]}
+          type="submit"
+        >
+          Create Account
+        </button>
+      </form>
+      <p>
+        If you already have an account:
+      </p>
+      <button
+        className="btn btn-outline-success"
+        name="login"
+        onClick={[Function]}
+        type="submit"
+      >
+        Login
+      </button>
+    </div>
+  </div>
+</div>
+`;

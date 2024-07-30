@@ -1,21 +1,20 @@
 .login-form-input-field {
-    margin-bottom: 2%;
+    margin-bottom: 10px;
 }
 
 .login-form-input-container {
-    align-items: center;
-    width: 40%;
-    margin-left: 30%;
+    width: 60%;
+    margin-left: 20%;
 }
 
 .login-form-container {
-    align-content: center;
+    margin-top: 100px;
+    padding: 75px 0;
+    text-align: center;
+    border: black solid 2px
 }
 
-.create-account-container {
-    margin: 30px;
-}
 
 .form-submit-button {
-    float: right;
+    margin-top: 20px;
 }

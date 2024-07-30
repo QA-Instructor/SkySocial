@@ -1,0 +1,38 @@
+.loginRegPage{
+    display: inline-flex;
+    margin-top: 50px;
+    overflow: hidden;
+}
+.loginRegPage-form-container{
+    width: 60%;
+}
+.loginRegPage-logo-container{
+    width: 40%;
+    height:200px;
+    top:0;
+}
+.loginRegPage-logo{
+    margin-top: 100px;
+    font-size: 40px;
+    border: solid black 2px;
+    border-radius: 5px;
+    width: 70%;
+    margin-left: 15%;
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+}
+.loginRegPage-info{
+    font-size: 20px;
+    border: solid black 2px;
+    border-radius: 5px;
+    width: 99%;
+    margin-top: 20px;
+    height: 380px;
+    line-height: 40px;
+    padding:20px;
+}
+.loginRegPage-form-container{
+    width: 50%;
+    margin-left: 10%;
+}
