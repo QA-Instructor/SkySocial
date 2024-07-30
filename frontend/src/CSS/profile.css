@@ -22,6 +22,7 @@ body {
     width: 30vw; /* Width relative to viewport width */
     height: 60vh;
     max-width: 60vw;
+    min-width: 30vw;
     padding: 2vh 2vw 2vh; /* Padding relative to viewport dimensions */
     border-radius: 1.5vw; /* Border radius relative to viewport width */
     box-shadow: 0 0 1vw rgba(0, 0, 0, 0.1); /* Box shadow relative to viewport width */

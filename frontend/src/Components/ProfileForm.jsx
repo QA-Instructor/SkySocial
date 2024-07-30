@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import '../profile.css';
+import '../CSS/profile.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { FaPencilAlt } from "react-icons/fa";
 
 const ProfileForm = ({user}) => {
-  const defaultImage = "https://images.rawpixel.com/image_png_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIzLTAxL3JtNjA5LXNvbGlkaWNvbi13LTAwMi1wLnBuZw.png";
+  const defaultImage = "https://uxwing.com/wp-content/themes/uxwing/download/peoples-avatars/person-profile-image-icon.png";
 
   const [isDisabled, setEditable] = useState(true);
 
@@ -22,7 +22,7 @@ const ProfileForm = ({user}) => {
         </div>
         <div>
           {/* Integrate PictureUpload component */}
-          { user.image === "" ? <img className="profile-form-image" src={defaultImage}/> : <img className="profile-form-image" src={user.image}/> }
+          { user.image === "" ? <img className="profile-form-image" src={defaultImage} alt="Profile"/> : <img className="profile-form-image" src={user.image} alt="Profile"/> }
         </div>
 
             <div className='profile-form-input-container'>
@@ -34,8 +34,8 @@ const ProfileForm = ({user}) => {
               <input type='tel' className="form-control profile-form-input-field" name="phone" disabled={isDisabled} value={user.phone} />
             </div>
             <div className='profile-control-button-container'>
-              <button id="deleteBtn" type="button" className='btn btn-danger'>Delete Account</button>
-              <button id="logoutBtn" className='btn btn-warning'>Logout</button>
+              <button id="deleteBtn" type="button" className='btn btn-danger profile-form-control-btn'>Delete Account</button>
+              <button id="logoutBtn" className='btn btn-warning rofile-form-control-btn'>Logout</button>
             </div>
             
         </form>
