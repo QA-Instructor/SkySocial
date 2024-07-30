@@ -1,27 +1,67 @@
-.profile-form-image{
-    height: 10em;
-    width: 10em;
-    border-radius: 50%;
-}
-.profile-form-input-field {
-    margin-bottom: 10px;
+/* General reset for padding and margins */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.profile-form-input-container {
-    align-items: center;
-    width: 40%;
-    margin-left: 30%;
-    margin-bottom: 10px;
-    margin-top: 10px;
-}
-
-.profile-form-container {
-    align-content: center;
-}
-.profile-control-button-container{
-    width: 40%;
-    margin-left: 30%;
+/* Body styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
     display: flex;
-    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    margin: 0; /* Remove default margin */
+}
+
+/* Container for the profile form */
+.profile-form-form-container {
+    background-color: #fff;
+    width: 30vw; /* Width relative to viewport width */
+    height: 60vh;
+    max-width: 60vw;
+    padding: 2vh 2vw 2vh; /* Padding relative to viewport dimensions */
+    border-radius: 1.5vw; /* Border radius relative to viewport width */
+    box-shadow: 0 0 1vw rgba(0, 0, 0, 0.1); /* Box shadow relative to viewport width */
+    position: relative; /* Allows for absolute positioning of the button */
+    text-align: center; /* Center-align content inside the container */
+}
+
+/* Profile image styling */
+.profile-form-image {
+    display: block;
+    width: 20vmin; /* Width relative to the smaller viewport dimension */
+    height: 20vmin; /* Height relative to the smaller viewport dimension */
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto 2vh; /* Center image and provide spacing */
+    border: 0.5vmin solid #007BFF; /* Border width relative to the smaller viewport dimension */
+}
+
+/* Container for input fields */
+.profile-form-input-container {
+    display: flex;
+    flex-direction: column; /* Stack inputs vertically */
+    gap: 2vh; /* Spacing between input fields relative to viewport height */
+    margin-bottom: 2vh;
+}
+
+/* Container for control buttons */
+.profile-control-button-container {
+    display: flex;
     justify-content: space-between;
+    margin-top: 2vh;
+}
+
+/* Container for the edit button */
+.profile-form-btn-container {
+    position: absolute;
+    top: 2vw; /* Distance from top edge of the form relative to viewport width */
+    right: 2vw; /* Distance from right edge of the form relative to viewport width */
+}
+
+.profile-form-edit-button {
+    background-color: none;
 }
