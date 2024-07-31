@@ -45,10 +45,13 @@ public class EventService {
         return this.mapToDTO(savedEvent);
     }
 
-    public boolean addParticipantToEvent(Long eventId, Long userId) {
+    public Event addParticipantToEvent(Long eventId, Long participantId) {
         Event event = getEventById(eventId);
-        return event.getParticipantIds().add(userId);
-    };
+        List<Long> participants = event.getParticipantIds();
+        participants.add(participantId);
+        event.setParticipantIds(participants);
+        return this.eventRepo.save(event);
+    }
 
     public List<Event> sortEvents(EventSorter sorter, boolean ascending) {
         List<Event> eventToSort = getAllEvents();

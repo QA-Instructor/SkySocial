@@ -45,9 +45,8 @@ public class EventController {
     }
 
     @PutMapping("/addparticipant")
-    public boolean addParticipant(@PathParam("eventId") Long eventId, @PathParam("userId") Long userId) {
-        // return this.service.addParticipantToEvent(eventId, userId);
-        return false;
+    public Event addParticipant(@PathParam("eventId") Long eventId, @PathParam("participantId") Long participantId) {
+        return this.service.addParticipantToEvent(eventId, participantId);
     }
 
     @GetMapping("/sortevents")
