@@ -65,8 +65,7 @@ public class EventController {
     }
 
     @GetMapping("/getregisteredevents")
-    public List<Event> getEventsRegisteredTo(@PathParam("id") Long userId) {
-        // return this.service.getRegisteredEvents(userId);
-        return null;
+    public List<Event> getEventsRegisteredTo(@PathParam("userId") Long userId) {
+         return this.service.getRegisteredEvents(userId);
     }
 }
