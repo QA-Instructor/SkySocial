@@ -8,7 +8,9 @@ import lombok.Data;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.time.temporal.ChronoUnit;
 import java.util.*;
 
 @Service
@@ -56,11 +58,15 @@ public class EventService {
 
     public List<Event> sortEvents(EventSorter sorter, boolean ascending) {
         List<Event> eventToSort = getAllEvents();
-        DateTimeFormatter timeFormatter = DateTimeFormatter.ofPattern("yyyy-mm-dd-hh-mm");
+        DateTimeFormatter timeFormatter = DateTimeFormatter.ofPattern("dd/MM/yy HH:mm:ss");
 
         switch (sorter) {
-            case ALPHABETICAL -> eventToSort.sort(Comparator.comparing(event -> event.getEventTitle()));
-            case CLOSEST_START_TIME -> eventToSort.sort(Comparator.comparing(event -> event.getStartTime()));
+            case ALPHABETICAL -> eventToSort.sort(Comparator.comparing(Event::getEventTitle));
+            case CLOSEST_START_TIME -> eventToSort.sort(Comparator.comparing(event -> {
+                LocalDateTime currentTime = LocalDateTime.now();
+                LocalDateTime eventStart = LocalDateTime.parse(event.getStartTime(), timeFormatter);
+                return ChronoUnit.SECONDS.between(eventStart, currentTime);
+            }));
             case NUMBER_OF_PARTICIPANTS ->
                     eventToSort.sort(Comparator.comparing(event -> event.getParticipantIds().size()));
         }
