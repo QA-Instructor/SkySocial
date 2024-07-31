@@ -1,0 +1,67 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Container for the profile form */
+.profile-form-form-container {
+    background-color: #fff;
+    width: 40%; /* Width relative to parent width */
+    margin-left: 30%;
+    margin-top: 20px;
+    height: 600px; /* Height in pixels */
+    max-width: 60%; /* Maximum width relative to parent width */
+    min-width: 30%; /* Minimum width relative to parent width */
+    padding: 20px 2%; /* Padding in pixels for height and percentage for width */
+    border-radius: 10%; /* Border radius relative to parent width */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Box shadow in pixels */
+    position: relative; /* Allows for absolute positioning of the button */
+    text-align: center; /* Center-align content inside the container */
+}
+/* Profile image styling */
+.profile-form-image {
+    display: block;
+    width: 20vmin; /* Width relative to the smaller viewport dimension */
+    height: 20vmin; /* Height relative to the smaller viewport dimension */
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto 20px; /* Center image and provide spacing */
+    border: 0.5vmin solid #007BFF; /* Border width relative to the smaller viewport dimension */
+}
+
+/* Container for input fields */
+.profile-form-input-container {
+    display: flex;
+    flex-direction: column; /* Stack inputs vertically */
+    gap: 20px; /* Spacing between input fields in pixels */
+    margin-bottom: 20px;
+}
+
+/* Container for control buttons */
+.profile-control-button-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+/* Container for the edit button */
+.profile-form-btn-container {
+    position: absolute;
+    top: 2%; /* Distance from top edge of the form relative to parent width */
+    right: 2%; /* Distance from right edge of the form relative to parent width */
+}
+
+.profile-form-edit-button {
+    background-color: none;
+    margin-right: 20px;
+}
+
+.profile-form-save-text {
+    text-decoration: none;
+    cursor: pointer;
+}
+.profile-form-btn-container{
+    margin-top: 20px;
+    margin-right: 20px;
+}
