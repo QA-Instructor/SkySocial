@@ -1,0 +1,7 @@
+.carousel-img{
+    background-position: center center;
+    height:400px;
+    width: 100%;
+    object-fit: cover;
+
+}
