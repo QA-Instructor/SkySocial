@@ -67,7 +67,10 @@ public class EventService {
     }
 
     public List<Event> getEventsCreatedBy(Long userId) {
-        return getAllEvents().stream().filter(event -> event.getOrganiser().getId() == userId).toList();
+        return getAllEvents().stream().filter(event -> event.getOrganiser().getId().equals(userId)).toList();
+    }
+    public List<Event> getEventsCreatedByEmail(String email) {
+        return getAllEvents().stream().filter(event -> event.getOrganiser().getEmail() == (email)).toList();
     }
 
     public List<Event> getRegisteredEvents(Long userId) {
