@@ -2,8 +2,8 @@ import React, { useRef } from 'react';
 import '../resources/eventsRail.css';
 import { MdArrowForwardIos, MdArrowBackIos } from "react-icons/md";
 import { Container } from 'react-bootstrap';
-
-export const EventsRail = ({children}) => {
+import PropTypes from 'prop-types'
+export const EventsRail = ({children,props}) => {
     let scrl = useRef(null);
     const [scrollX, setScrollX] = React.useState(0);
     const [scrollEnd, setScrollEnd] = React.useState(false);
@@ -33,6 +33,7 @@ export const EventsRail = ({children}) => {
           <div  onClick={() => slide(-230)} className={`left-arrow-left ${(scrollX < 1) ? 'is-disabled-hide' : ''}`}>
             <MdArrowBackIos size="70px" />
           </div>
+          
           <div ref={scrl} onScroll={checkScrollIsAtEnd} className="item-container">
             {children}
           </div>
@@ -43,5 +44,6 @@ export const EventsRail = ({children}) => {
       </div>
     );
 };
+
 
 export default EventsRail;

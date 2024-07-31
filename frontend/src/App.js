@@ -8,6 +8,7 @@ import CreateEventForm from './Components/CreateEventForm';
 import ProfileForm from './Components/ProfileForm';
 import userData from './userData.json';
 import events from './resources/skySocial.json';
+import MyEvents from './Components/MyEvents';
 
 function App() {
   const eventTiles = events.events.map((event) => {
@@ -24,7 +25,7 @@ function App() {
                 {eventTiles}
           </EventsRail>
           }/>
-          <Route path="/MyEvents" element={<h1>My Events Page Goes here</h1>}/>
+          <Route path="/MyEvents" element={<MyEvents/>}/>
           <Route path="/CreateEvent" element={<CreateEventForm/>}/>
           <Route path="/Profile" element={<ProfileForm user={userData.users[1]}/>}/>
           <Route path="/Search" element={<h1>Search Bar Goes here</h1>}/>
