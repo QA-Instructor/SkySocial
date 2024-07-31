@@ -24,7 +24,7 @@ public class UserService {
 
     public boolean getLoginCredentials(String email, String password) {
         User user = this.repo.findByEmail(email);
-        return user.getPassword().equals(password);
+        return user.getUserPassword().equals(password);
     }
 
     public ProfileDTO getProfileByEmail(String email) {
@@ -37,7 +37,7 @@ public class UserService {
         User existingUser = optional.get();
         existingUser.setFirstName(user.getFirstName());
         existingUser.setLastName(user.getLastName());
-        existingUser.setPassword(user.getPassword());
+        existingUser.setUserPassword(user.getUserPassword());
         existingUser.setEmail(user.getEmail());
         existingUser.setPhone(user.getPhone());
         return this.repo.save(existingUser);
