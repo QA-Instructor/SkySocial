@@ -49,7 +49,7 @@ public class UserController {
 
     @PostMapping("/login")
     public boolean login(@RequestBody LoginDTO credentials){
-        return this.service.getLoginCredentials(credentials.getEmail(), credentials.getPassword());
+        return this.service.getLoginCredentials(credentials.getEmail(), credentials.getUserPassword());
     }
 
 }
