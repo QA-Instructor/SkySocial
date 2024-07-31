@@ -1,40 +1,27 @@
 import React from 'react';
-import EventRails from '/EventTile.jsx';
 import '../resources/banner.json';
+import events from '../resources/skySocial.json';
+import EventTile from './EventTile'
+import Banner from './Banner';
+import EventsRail from './EventsRail';
+import '../CSS/DiscoveryPage.css';
 
-const Discovery = () => {
-  return (
-   function UncontrolledExample() {
-  return (
-    <Carousel>
-      <Carousel.Item>
-        <ExampleCarouselImage text="First slide" />
-        <Carousel.Caption>
-          <h3>First slide label</h3>
-          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-        </Carousel.Caption>
-      </Carousel.Item>
-      <Carousel.Item>
-        <ExampleCarouselImage text="Second slide" />
-        <Carousel.Caption>
-          <h3>Second slide label</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </Carousel.Caption>
-      </Carousel.Item>
-      <Carousel.Item>
-        <ExampleCarouselImage text="Third slide" />
-        <Carousel.Caption>
-          <h3>Third slide label</h3>
-          <p>
-            Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-          </p>
-        </Carousel.Caption>
-      </Carousel.Item>
-    </Carousel>
-  );
-}
 
+const DiscoveryPage = () => {
+  const eventTiles = events.events.map((event) => {
+                        return <EventTile title={event.eventTitle} image={event.image} tags = {event.tags}/>
+                    });
+  return (
+    <>
+    <Banner className = 'banner' />
+    <EventsRail>
+      {eventTiles}
+    </EventsRail>
+    <EventsRail>
+      {eventTiles}
+    </EventsRail>
+    </>
   );
 };
 
-export default Footer;
+export default DiscoveryPage;

@@ -6,6 +6,7 @@ import {BrowserRouter, Routes,Route} from 'react-router-dom';
 import LoginPage from './Components/LoginRegPage';
 import CreateEventForm from './Components/CreateEventForm';
 import events from './resources/skySocial.json';
+import DiscoveryPage from './Components/DiscoveryPage.jsx'
 
 function App() {
   const eventTiles = events.events.map((event) => {
@@ -18,10 +19,8 @@ function App() {
       <Routes>
         <Route element = {<Header/>}>
           <Route path="/" element={
-            <EventsRail>
-                {eventTiles}
-          </EventsRail>
-          }/>
+            <DiscoveryPage/>
+          } />
           <Route path="/MyEvents" element={<h1>My Events Page Goes here</h1>}/>
           <Route path="/CreateEvent" element={<CreateEventForm/>}/>
           <Route path="/Profile" element={<h1>Profile Page Goes here</h1>}/>
@@ -36,3 +35,4 @@ function App() {
 }
 
 export default App;
+
