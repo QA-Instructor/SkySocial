@@ -2,7 +2,7 @@ import React from 'react';
 import { render, screen, fireEvent} from '@testing-library/react';
 import { create } from 'react-test-renderer';
 import EventModal from '../Components/EventModal';
-import eventData from '../skySocial.json';
+import eventData from '../resources/skySocial.json';
 import Modal from 'react-bootstrap/Modal';
 
 describe('Testing modal apperance', () => {

@@ -1,12 +1,12 @@
 import React from "react";
 import { create, act } from "react-test-renderer";
-
+import { BrowserRouter } from "react-router-dom";
 import LoginForm from '../Components/LoginForm';
 
 describe('LoginForm test suite', () => { 
     describe('input field tests', () => { 
         test('it should render an input field for the username or email address', () => { 
-            const testRenderer = create(<LoginForm/>);
+            const testRenderer = create(<BrowserRouter><LoginForm/></BrowserRouter>);
             const testInstance = testRenderer.root;
 
             const usernameInputField = testInstance.findByProps({ name: 'username'});
@@ -14,7 +14,7 @@ describe('LoginForm test suite', () => {
             expect(usernameInputField.props.placeholder).toBe('Email or username');
          });
          test('it should render an input field for the password', () => { 
-            const testRenderer = create(<LoginForm/>);
+            const testRenderer = create(<BrowserRouter><LoginForm/></BrowserRouter>);
             const testInstance = testRenderer.root;
 
             const passwordInputField = testInstance.findByProps({ name: 'password'});
@@ -26,7 +26,7 @@ describe('LoginForm test suite', () => {
 
      describe('all on-screen text appears', () => { 
         test('it should render a heading with the required text', () => {
-            const testRenderer = create(<LoginForm/>);
+            const testRenderer = create(<BrowserRouter><LoginForm/></BrowserRouter>);
             const testInstance = testRenderer.root;
 
             const heading = testInstance.findByType('h1');
@@ -35,7 +35,7 @@ describe('LoginForm test suite', () => {
         });
 
         test('it should render a paragraph with the required text', () => {
-            const testRenderer = create(<LoginForm/>);
+            const testRenderer = create(<BrowserRouter><LoginForm/></BrowserRouter>);
             const testInstance = testRenderer.root;
 
             const paragraph = testInstance.findByType('p');
@@ -46,7 +46,7 @@ describe('LoginForm test suite', () => {
 
       describe('clickable buttons appear', () => { 
         test('it should render a Log In button', () => {
-            const testRenderer = create(<LoginForm/>);
+            const testRenderer = create(<BrowserRouter><LoginForm/></BrowserRouter>);
             const testInstance = testRenderer.root;
 
             const logInButton = testInstance.findByProps({ name: "login" });
@@ -55,9 +55,8 @@ describe('LoginForm test suite', () => {
         });
 
         test('it should render a Create an Account button', () => { 
-            const testRenderer = create(<LoginForm/>);
+            const testRenderer = create(<BrowserRouter><LoginForm/></BrowserRouter>);
             const testInstance = testRenderer.root;
-
             const createAccountButton = testInstance.findByProps({ name: "create-account" });
             expect(createAccountButton).toBeTruthy();
             expect(createAccountButton.children).toContain('Create an Account');            

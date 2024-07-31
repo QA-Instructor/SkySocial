@@ -1,8 +1,7 @@
 import React from 'react';
 import { create } from 'react-test-renderer';
 import EventTile from '../Components/EventTile';
-import image from '../resources/download.jpeg';
-import eventData from '../skySocial.json';
+import eventData from '../resources/skySocial.json';
 
 
 describe("card appearance test suite", () => {
