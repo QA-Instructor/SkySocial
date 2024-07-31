@@ -29,7 +29,7 @@ const ProfileForm = ({user}) => {
 
             <div className='profile-form-input-container'>
               <input type='text' className="form-control profile-form-input-field" name="firstname" disabled={isDisabled} value={user.firstname} />
-              <input type='text' className="form-control profile-form-input-field"name="lastname" disabled={isDisabled} value={user.lastname} />
+              <input type='text' className="form-control profile-form-input-field" name="lastname" disabled={isDisabled} value={user.lastname} />
             </div>           
             <div className='profile-form-input-container'>
               <input type='email' className="form-control profile-form-input-field" name="email" disabled={isDisabled} value={user.email} />
