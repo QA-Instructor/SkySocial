@@ -55,8 +55,8 @@ public class EventController {
     }
 
     @GetMapping("/geteventscreatedby")
-    public List<Event> getEventsCreatedBy(@PathParam("id") Long id) {
-        return this.service.getEventsCreatedBy(id);
+    public List<Event> getEventsCreatedBy(@PathParam("id") Long creatorId) {
+        return this.service.getEventsCreatedBy(creatorId);
     }
 
     @GetMapping("/geteventscreatedbyEmail")
