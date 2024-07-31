@@ -5,11 +5,14 @@ import EventTile from './EventTile'
 import '../resources/myEvents.css'
 export const MyEvents = () => {
 
-    const top3Events = [events.events[0],events.events[1],events.events[2]]
-    const upcomingEventTiles = top3Events.map((event) => {
+    const topThreeEvents = [events.events[0], events.events[1], events.events[2]]
+    const upcomingEventTiles = topThreeEvents.map((event) => {
         return <EventTile title={event.eventTitle} image={event.image} tags = {event.tags} width = {"30%"}/>
     });
-    const eventTiles = events.events.map((event) => {
+    const bookedEventTiles = events.events.map((event) => {
+        return <EventTile title={event.eventTitle} image={event.image} tags = {event.tags} width = {"200px"}/>
+    });
+    const createdEventTiles = events.events.map((event) => {
         return <EventTile title={event.eventTitle} image={event.image} tags = {event.tags} width = {"200px"}/>
     });
   return (
@@ -23,13 +26,13 @@ export const MyEvents = () => {
         <div className='my-events-container'>
             <h1>Booked Events</h1>
             <EventsRail>
-            {eventTiles}
+            {bookedEventTiles}
             </EventsRail>  
         </div>
         <div className='my-events-container'>
             <h1>Created Events</h1>
             <EventsRail>
-            {eventTiles}
+            {createdEventTiles}
             </EventsRail> 
         </div> 
     </div>
