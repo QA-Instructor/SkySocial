@@ -1,10 +1,7 @@
 package com.skysocial.backend.entities.event;
 
 import com.skysocial.backend.dtos.user.ProfileDTO;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
@@ -59,10 +56,10 @@ public class Event implements Serializable {
     private boolean emailConfirmation;
 
     @NotNull
+    @Lob
     private ProfileDTO organiser;
-
+    
     private List<Long> participantIds;
 
+
 }
-
-
