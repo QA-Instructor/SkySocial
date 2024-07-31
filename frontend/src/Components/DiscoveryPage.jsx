@@ -7,13 +7,14 @@ import EventsRail from './EventsRail';
 import '../CSS/DiscoveryPage.css';
 
 
-const DiscoveryPage = () => {
+const DiscoveryPage = ( ) => {
   const eventTiles = events.events.map((event) => {
                         return <EventTile title={event.eventTitle} image={event.image} tags = {event.tags}/>
-                    });
-  return (
+  });
+
+  return (  
     <>
-    <Banner className = 'banner' />
+      <Banner/>
     <EventsRail>
       {eventTiles}
     </EventsRail>

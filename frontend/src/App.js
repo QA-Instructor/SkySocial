@@ -1,25 +1,19 @@
 import './App.css';
 import Header from './Components/Header'
-import EventsRail from './Components/EventsRail';
-import EventTile from './Components/EventTile'
 import {BrowserRouter, Routes,Route} from 'react-router-dom';
 import LoginPage from './Components/LoginRegPage';
 import CreateEventForm from './Components/CreateEventForm';
-import events from './resources/skySocial.json';
 import DiscoveryPage from './Components/DiscoveryPage.jsx'
 
-function App() {
-  const eventTiles = events.events.map((event) => {
-                        return <EventTile title={event.eventTitle} image={event.image} tags = {event.tags}/>
-                    });
 
+function App() {
   return (
     <BrowserRouter>
     <div className="App">
       <Routes>
         <Route element = {<Header/>}>
           <Route path="/" element={
-            <DiscoveryPage/>
+              <DiscoveryPage/>
           } />
           <Route path="/MyEvents" element={<h1>My Events Page Goes here</h1>}/>
           <Route path="/CreateEvent" element={<CreateEventForm/>}/>
