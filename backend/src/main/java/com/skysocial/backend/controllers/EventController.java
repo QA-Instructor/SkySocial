@@ -50,9 +50,8 @@ public class EventController {
     }
 
     @GetMapping("/sortevents")
-    public List<Event> sortEvents(@RequestParam(name = "sortBy", defaultValue = "ALPHABETICAL") EventSorter sorter, @RequestParam boolean ascending) {
-        // return this.service.sortEventsBy(sorter, ascending);
-        return null;
+    public List<Event> sortEvents(@RequestParam(name = "sortBy", defaultValue = "ALPHABETICAL") EventSorter sorter, @RequestParam(name = "ascending", defaultValue = "false") boolean ascending) {
+         return this.service.sortEvents(sorter, ascending);
     }
 
     @GetMapping("/geteventscreatedby")

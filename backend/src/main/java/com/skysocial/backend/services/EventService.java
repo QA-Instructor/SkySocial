@@ -8,6 +8,7 @@ import lombok.Data;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 
+import java.time.format.DateTimeFormatter;
 import java.util.*;
 
 @Service
@@ -55,13 +56,17 @@ public class EventService {
 
     public List<Event> sortEvents(EventSorter sorter, boolean ascending) {
         List<Event> eventToSort = getAllEvents();
+        DateTimeFormatter timeFormatter = DateTimeFormatter.ofPattern("yyyy-mm-dd-hh-mm");
+
         switch (sorter) {
             case ALPHABETICAL -> eventToSort.sort(Comparator.comparing(event -> event.getEventTitle()));
             case CLOSEST_START_TIME -> eventToSort.sort(Comparator.comparing(event -> event.getStartTime()));
-            case NUMBER_OF_PARTICIPANTS -> eventToSort.sort(Comparator.comparing(event -> event.getParticipantIds().size()));
+            case NUMBER_OF_PARTICIPANTS ->
+                    eventToSort.sort(Comparator.comparing(event -> event.getParticipantIds().size()));
         }
+
         if (!ascending) {
-            Collections.sort(eventToSort, Collections.reverseOrder());
+           Collections.reverse(eventToSort);
         }
         return eventToSort;
     }
