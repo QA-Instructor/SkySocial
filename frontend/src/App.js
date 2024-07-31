@@ -5,6 +5,7 @@ import EventTile from './Components/EventTile'
 import {BrowserRouter, Routes,Route} from 'react-router-dom';
 import LoginPage from './Components/LoginRegPage';
 import CreateEventForm from './Components/CreateEventForm';
+import MyEvents from './Components/MyEvents';
 function App() {
 
   return (
@@ -21,7 +22,7 @@ function App() {
             <EventTile title ="Tennis Doubles" image = "download.jpeg" tags = {["5-a-side","SkyFootball"]}/>
           </EventsRail>
           }/>
-          <Route path="/MyEvents" element={<h1>My Events Page Goes here</h1>}/>
+          <Route path="/MyEvents" element={<MyEvents/>}/>
           <Route path="/CreateEvent" element={<CreateEventForm/>}/>
           <Route path="/Profile" element={<h1>Profile Page Goes here</h1>}/>
           <Route path="/Search" element={<h1>Search Bar Goes here</h1>}/>
