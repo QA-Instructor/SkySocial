@@ -24,11 +24,6 @@ public class EventController {
         this.service = service;
     }
 
-    @GetMapping("/eventcontrollerhealth")
-    public String health() {
-        return "Event Controller is up and running";
-    }
-
     @GetMapping("/getAllEvents")
     public List<Event> getAllEvents() {
          return this.service.getAllEvents();
@@ -44,27 +39,27 @@ public class EventController {
         return this.service.createEvent(event);
     }
 
-    @PutMapping("/addparticipant")
+    @PutMapping("/addParticipant")
     public Event addParticipant(@PathParam("eventId") Long eventId, @PathParam("participantId") Long participantId) {
         return this.service.addParticipantToEvent(eventId, participantId);
     }
 
-    @GetMapping("/sortevents")
+    @GetMapping("/sortEvents")
     public List<Event> sortEvents(@RequestParam(name = "sortBy", defaultValue = "ALPHABETICAL") EventSorter sorter, @RequestParam(name = "ascending", defaultValue = "false") boolean ascending) {
          return this.service.sortEvents(sorter, ascending);
     }
 
-    @GetMapping("/geteventscreatedby")
+    @GetMapping("/getEventsCreatedBy")
     public List<Event> getEventsCreatedBy(@PathParam("id") Long creatorId) {
         return this.service.getEventsCreatedBy(creatorId);
     }
 
-    @GetMapping("/geteventscreatedbyEmail")
+    @GetMapping("/getEventsCreatedByEmail")
     public List<Event> getEventsCreatedByEmail(@PathParam("email") String email) {
         return this.service.getEventsCreatedByEmail(email);
     }
 
-    @GetMapping("/getregisteredevents")
+    @GetMapping("/getRegisteredEvents")
     public List<Event> getEventsRegisteredTo(@PathParam("userId") Long userId) {
          return this.service.getRegisteredEvents(userId);
     }
