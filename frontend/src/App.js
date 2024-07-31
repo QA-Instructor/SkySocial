@@ -6,6 +6,7 @@ import {BrowserRouter, Routes,Route} from 'react-router-dom';
 import LoginPage from './Components/LoginRegPage';
 import CreateEventForm from './Components/CreateEventForm';
 import events from './resources/skySocial.json';
+import MyEvents from './Components/MyEvents';
 
 function App() {
   const eventTiles = events.events.map((event) => {

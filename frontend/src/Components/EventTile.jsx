@@ -7,7 +7,7 @@ const EventTile = (props) => {
       return <b key={tag}>#{tag} </b>
     });
     return (
-      <div id="cardContainer" className="card shadow bg-white rounded zoom clickable" style={{width: "18rem"}} onClick={() => alert(props.title)}>
+      <div id="cardContainer" className="card shadow bg-white rounded zoom clickable" style={{"min-width": props.width?props.width:"200px","max-width":props.width?props.width:"200px"}} onClick={() => alert(props.title)}>
         <img className="card-img-top" src={props.image} alt="Card image cap"/>
       <div className="card-body">
         <h5 className="card-title">{props.title}</h5>
