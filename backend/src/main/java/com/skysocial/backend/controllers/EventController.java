@@ -7,6 +7,7 @@ import com.skysocial.backend.services.EventService;
 import jakarta.validation.Valid;
 import jakarta.websocket.server.PathParam;
 import lombok.NoArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -15,8 +16,9 @@ import java.util.List;
 @RestController
 public class EventController {
 
-     private EventService service;
+    private EventService service;
 
+    @Autowired
     public EventController(EventService service) {
         super();
         this.service = service;
@@ -29,19 +31,17 @@ public class EventController {
 
     @GetMapping("/getAllEvents")
     public List<Event> getAllEvents() {
-        // return this.service.getAllEvents();
-        return null;
+         return this.service.getAllEvents();
     }
 
     @GetMapping("/getEventById")
     public Event getEventById(@PathParam("id") Long id) {
-        // return this.service.getEventById(id);
-        return null;
+         return this.service.getEventById(id);
     }
 
     @PostMapping("/createEvent")
     public EventDTO createNewEvent(@RequestBody @Valid Event event) {
-         return this.service.createEvent(event);
+        return this.service.createEvent(event);
     }
 
     @PutMapping("/addparticipant")
