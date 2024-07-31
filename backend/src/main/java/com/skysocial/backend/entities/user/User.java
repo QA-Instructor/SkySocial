@@ -1,6 +1,7 @@
 package com.skysocial.backend.entities.user;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -11,19 +12,22 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Table(name = "Users")
+@Table(name = "User")
 public class User implements java.io.Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @NotNull
     @Size(min = 2 , max = 50)
     private String firstName;
     @Size(min = 2 , max = 50)
     private String lastName;
+    @NotNull
     @Size(min = 8 , max = 20)
-    private String password;
+    private String userPassword;
+    @NotNull
     @Size(min = 7 , max = 50)
     private String email;
     @Size(min = 11 , max = 11)
