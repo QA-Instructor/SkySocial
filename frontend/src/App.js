@@ -7,7 +7,12 @@ import LoginPage from './Components/LoginRegPage';
 import CreateEventForm from './Components/CreateEventForm';
 import ProfileForm from './Components/ProfileForm';
 import userData from './userData.json';
+import events from './resources/skySocial.json';
+
 function App() {
+  const eventTiles = events.events.map((event) => {
+                        return <EventTile title={event.eventTitle} image={event.image} tags = {event.tags}/>
+                    });
 
   return (
     <BrowserRouter>
@@ -16,11 +21,7 @@ function App() {
         <Route element = {<Header/>}>
           <Route path="/" element={
             <EventsRail>
-            <EventTile title ="Football 5-a-side" image = "e619f4e1-c156-419e-8d26-f2cc46235e76.jpg" tags = {["5-a-side","SkyFootball"]}/>
-            <EventTile title ="Tennis Doubles" image = "download.jpeg" tags = {["5-a-side","SkyFootball"]}/>
-            <EventTile title ="Running" image = "download (1).jpeg" tags = {["5-a-side","SkyFootball"]}/>
-            <EventTile title ="Football 5-a-side" image = "e619f4e1-c156-419e-8d26-f2cc46235e76.jpg" tags = {["5-a-side","SkyFootball"]}/>
-            <EventTile title ="Tennis Doubles" image = "download.jpeg" tags = {["5-a-side","SkyFootball"]}/>
+                {eventTiles}
           </EventsRail>
           }/>
           <Route path="/MyEvents" element={<h1>My Events Page Goes here</h1>}/>
