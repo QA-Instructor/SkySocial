@@ -11,13 +11,13 @@ export const MyEvents = () => {
     const [createdEventList, setCreatedEventList] = useState([]);
 
     const upcomingEventTiles = events.events.map((event) => {
-        return <EventTile title={event.eventTitle} image={event.image} tags = {event.tags} width = {"30%"}/>
+        return <EventTile title={event.eventTitle} image={event.image} tags = {event.tags} width = {"350px"}/>
     });
     const bookedEventTiles = events.events.map((event) => {
-        return <EventTile title={event.eventTitle} image={event.image} tags = {event.tags} width = {"200px"}/>
+        return <EventTile title={event.eventTitle} image={event.image} tags = {event.tags} width = {"250px"}/>
     });
     const createdEventTiles = events.events.map((event) => {
-        return <EventTile title={event.eventTitle} image={event.image} tags = {event.tags} width = {"200px"}/>
+        return <EventTile title={event.eventTitle} image={event.image} tags = {event.tags} width = {"250px"}/>
     });
   return (
     <div className='my-events-page'>

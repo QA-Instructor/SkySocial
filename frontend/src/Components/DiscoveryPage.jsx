@@ -21,11 +21,11 @@ const DiscoveryPage = ( ) => {
     <div className='discovery-page-container'>
         <Banner/>
         <div className='discovery-page-content'>
-          <div className='discoverySport-rail-container'>
+          <div className='discovery-rail-container'>
             <h1>Sports</h1>
             <EventsRail>{eventTiles}</EventsRail>
           </div>
-          <div className='discoverySocial-rail-container'>
+          <div className='discovery-rail-container'>
           <h1>Social</h1>
             <EventsRail>{eventTiles}</EventsRail>
           </div>

@@ -26,11 +26,13 @@
     justify-content: space-between;
     width: 110%;
     margin-top: 6%;
+    
 }
 
 .create-event-form-participant-field {
     width: 100%;
     margin-left: 1%;
+    overflow: hidden;
 }
 
 .create-event-form-ticket-price {
@@ -50,4 +52,12 @@
     background: linear-gradient(90deg, rgba(2, 35, 255, 1) 25%, rgba(141, 39, 255, 1) 75%) padding-box, linear-gradient(white, white)border-box;
     color: white;
     border: 1px solid transparent;
+
+@media (max-width: 768px) {
+    .create-event-component-container {
+        width:100%;
+        margin-left: 0;
+        padding:30px 2.5%;
+    }
+}
 }
