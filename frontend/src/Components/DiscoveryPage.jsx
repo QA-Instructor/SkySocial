@@ -1,4 +1,5 @@
 import React from 'react';
+import { useState } from 'react';
 import '../resources/banner.json';
 import events from '../resources/skySocial.json';
 import EventTile from './EventTile'
@@ -8,7 +9,10 @@ import '../CSS/DiscoveryPage.css';
 
 
 const DiscoveryPage = ( ) => {
-  const eventTiles = events.events.map((event) => {
+
+  const [eventList, setEventList] = useState([]);
+
+  const eventTiles = eventList.map((event) => {
                         return <EventTile title={event.eventTitle} image={event.image} tags = {event.tags}/>
   });
 

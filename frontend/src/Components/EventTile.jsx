@@ -1,19 +1,32 @@
 import React from 'react';
+import { useState, useEffect } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../resources/eventTile.css';
 
 const EventTile = (props) => {
+
+    const [event, setEvent] = useState({});
+
+  
     const tags = props.tags.map((tag) => {
       return <b key={tag}>#{tag} </b>
     });
+
+    const onTileClick = () => {
+      //add useEffect to make the request
+    }
+
     return (
-      <div id="cardContainer" className="card shadow bg-white rounded zoom clickable" style={{"min-width": props.width?props.width:"200px","max-width":props.width?props.width:"200px"}} onClick={() => alert(props.title)}>
-        <img className="card-img-top" src={props.image} alt="Card image cap"/>
-      <div className="card-body">
-        <h5 className="card-title">{props.title}</h5>
-        <p>{tags}</p>
-        <button className='btn btn-outline-primary'>Book</button>
-      </div>
+      <div id="cardContainer"   
+          className="card shadow bg-white rounded zoom clickable" 
+          style={{"min-width": props.width?props.width:"200px","max-width":props.width?props.width:"200px"}} 
+          onClick={() => alert(props.title)}>
+          <img className="card-img-top" src={props.image} alt="Card image cap"/>
+          <div className="card-body">
+            <h5 className="card-title">{props.title}</h5>
+            <p>{tags}</p>
+            <button className='btn btn-outline-primary'>Book</button>
+          </div>
     </div>
     )
 }
