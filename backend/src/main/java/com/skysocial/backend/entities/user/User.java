@@ -1,5 +1,6 @@
 package com.skysocial.backend.entities.user;
 
+import jakarta.annotation.Nullable;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
@@ -25,14 +26,15 @@ public class User implements java.io.Serializable {
     @Size(min = 2 , max = 50)
     private String lastName;
     @NotNull
-    @Size(min = 8 , max = 20)
+    @Size(min = 8)
     private String userPassword;
     @NotNull
     @Size(min = 7 , max = 50)
     private String email;
     @Size(min = 11 , max = 11)
     private String phone;
-    @Size(min = 5 , max = 300)
+    @Size(max = 300)
+    @Nullable
     private String profileImage;
 
 }

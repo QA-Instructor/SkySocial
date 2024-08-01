@@ -14,6 +14,7 @@ import java.util.List;
 
 @NoArgsConstructor
 @RestController
+@CrossOrigin(origins = "http://localhost:3000")
 public class EventController {
 
     private EventService service;
