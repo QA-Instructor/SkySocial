@@ -9,7 +9,6 @@ public class JwtUtil {
     private static final String SECRET_KEY = "just_move_to_next_slide";
 
     public static String generateToken(String username){
-        System.out.println("Trying to generate token");
         return Jwts.builder()
                 .setSubject(username)
                 .setIssuedAt(new Date())

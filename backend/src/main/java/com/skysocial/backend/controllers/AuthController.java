@@ -36,14 +36,9 @@ public class AuthController {
 
     @PostMapping("/authLogin")
     public ResponseEntity<?> login(@RequestBody LoginDTO credentials){
-        System.out.println("Trying to get user");
-        System.out.println(credentials.getUserPassword()+ " --  " + credentials.getEmail());
         LoginDTO existingUser = this.authService.getProfileByEmail(credentials.getEmail());
-        System.out.println(existingUser.getUserPassword());
         if (existingUser != null && this.authService.getPasswordEncoder().matches(credentials.getUserPassword(), existingUser.getUserPassword())){
-            System.out.println("Trying to log in");
             String token = JwtUtil.generateToken(existingUser.getEmail());
-            System.out.println("token = " + token);
             return ResponseEntity.ok(token);
         }
         return ResponseEntity.status(401).body("Invalid Credentials");

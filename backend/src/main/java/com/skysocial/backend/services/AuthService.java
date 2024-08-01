@@ -34,9 +34,7 @@ public class AuthService {
     }
 
     public LoginDTO getProfileByEmail(String email) {
-        System.out.println("email = " + email);
         User savedUser = this.userRepo.findByEmail(email);
-        System.out.println("savedUser.getEmail() = " + savedUser.getEmail());
         return this.mapper.map(savedUser, LoginDTO.class);
     }
 }
