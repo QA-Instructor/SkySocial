@@ -1,8 +1,11 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import FloatingLabel from 'react-bootstrap/FloatingLabel';
 import Form from 'react-bootstrap/Form';
 import { useNavigate } from 'react-router-dom';
 import '../CSS/registrationForm.css';
+import axios from 'axios';
+
+const URL = "http://localhost:8080"
 
 const RegistrationForm = () => {
     const navigate = useNavigate();
@@ -21,10 +24,9 @@ const RegistrationForm = () => {
   
     const onFormSubmit = () => {
       console.log(registerData)
-      //Make axios request
-      
-
-      navigate('/Login')
+      useEffect(() => {
+        axios.post(URL + "/createAccount", registerData).then(navigate('/Login')).catch(alert("Your account has not been created"))
+      ,[]})
     }
   
   return (

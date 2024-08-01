@@ -2,7 +2,8 @@ import React, { useRef } from 'react';
 import '../resources/eventsRail.css';
 import { MdArrowForwardIos, MdArrowBackIos } from "react-icons/md";
 import { Container } from 'react-bootstrap';
-import PropTypes from 'prop-types'
+import PropTypes from 'prop-types';
+
 export const EventsRail = ({children,props}) => {
     let scrl = useRef(null);
     const [scrollX, setScrollX] = React.useState(0);
