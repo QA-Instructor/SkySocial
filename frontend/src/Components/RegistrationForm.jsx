@@ -1,30 +1,32 @@
-import React from 'react'
+import React, { useState } from 'react'
 import FloatingLabel from 'react-bootstrap/FloatingLabel';
 import Form from 'react-bootstrap/Form';
 import { useNavigate } from 'react-router-dom';
 import '../CSS/registrationForm.css';
+import axios from "axios";
 
 const RegistrationForm = () => {
     const navigate = useNavigate();
 
-    const registerData = {
+    const [registerData, setRegisterData] = useState({
         firstName : "",
         lastName : "",
         email : "" ,
-        phone : "",
+        phone : "xxxxxxxxxxx",
+        userPassword: "",
         profileImage : ""
-    }
+    })
 
     const onFormChange = (key, value) => {
-        registerData[key] = value;
+        setRegisterData(prevFormData => ({ ...prevFormData, [key]: value, }))
     }
   
     const onFormSubmit = () => {
       console.log(registerData)
+      setRegisterData(registerData)
       //Make axios request
-      
-
-      navigate('/Login')
+      axios.post('http://localhost:8080/createAuthAccount',registerData).then(navigate('/Login')).catch(err => alert(err))
+    //   navigate('/Login')
     }
   
   return (
