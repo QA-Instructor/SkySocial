@@ -26,14 +26,25 @@
     justify-content: space-between;
     width: 110%;
     margin-top: 6%;
+    
 }
 
 .create-event-form-participant-field {
     width: 50%;
     margin-left: 1%;
+    overflow: hidden;
 }
 
 .create-event-form-ticket-price {
     width: 110%;
     margin-top: 9%;
+}
+
+@media (max-width: 768px) {
+    .create-event-component-container {
+        width:100%;
+        margin-left: 0;
+        padding:30px 2.5%;
+    }
+    
 }
