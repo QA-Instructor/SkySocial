@@ -82,28 +82,16 @@ const CreateEventForm = () => {
                     </LocalizationProvider>
                 </FloatingLabel>
 
-                <div className='create-event-form-ticket-price'>
+                <FloatingLabel controlId="floatingInput" label="Ticket Srice (£xx.xx)" className='create-event-form-ticket-price'>
                     <CurrencyInput name="ticketPrice" placeholder="Ticket price" prefix='£' decimalsLimit={2} className='form-control' onChange={e => handleChange(e.target.name, e.target.value)}/>
-                </div>
+                </FloatingLabel>
                 <br />
 
                   </div>
                   <FloatingLabel contentId="floatingInput" label="Tags (Social,Football,Allages) " className="mb-3 create-event-form-participant-field">
                       <Form.Control type="text" placeholder="Tags (Social,Football,Allages) " name="eventTags" onChange={e => handleChange(e.target.name, e.target.value)} />
                       </FloatingLabel>
-                  <br />
-                  <ToggleButtonGroup
-  color="primary"
-  value={alignment}
-  exclusive
-  onChange={handleChange}
-  aria-label="Platform"
->
-  <ToggleButton value="web">Web</ToggleButton>
-  <ToggleButton value="android">Android</ToggleButton>
-  <ToggleButton value="ios">iOS</ToggleButton>
-</ToggleButtonGroup>
-            
+                  <br/>
             <FloatingLabel>
                 Email confirmations: <input type='checkbox' name='emailConfirmations' onChange={e => handleChange(e.target.name, e.target.value)}/>
             </FloatingLabel>
