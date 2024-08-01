@@ -1,5 +1,11 @@
 .my-events-container{
     box-shadow: 0px 0px 16px -8px rgb(0 0 0 / 68%);
-    padding: 20px 20px;
     margin: 20px 0;
+    padding: 30px ;
+}
+
+
+.my-events-page{
+    margin-top:160px;
+    padding: 30px 10%;
 }

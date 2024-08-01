@@ -12,19 +12,25 @@ const DiscoveryPage = ( ) => {
 
   const [eventList, setEventList] = useState([]);
 
-  const eventTiles = eventList.map((event) => {
+  const eventTiles = events.events.map((event) => {
                         return <EventTile title={event.eventTitle} image={event.image} tags = {event.tags}/>
   });
 
   return (  
     <>
-      <Banner/>
-    <EventsRail>
-      {eventTiles}
-    </EventsRail>
-    <EventsRail>
-      {eventTiles}
-    </EventsRail>
+    <div className='discovery-page-container'>
+        <Banner/>
+        <div className='discovery-page-content'>
+          <div className='discoverySport-rail-container'>
+            <h1>Sports</h1>
+            <EventsRail>{eventTiles}</EventsRail>
+          </div>
+          <div className='discoverySocial-rail-container'>
+          <h1>Social</h1>
+            <EventsRail>{eventTiles}</EventsRail>
+          </div>
+        </div>
+    </div>
     </>
   );
 };

@@ -9,7 +9,7 @@
     background-color: #fff;
     width: 40%; /* Width relative to parent width */
     margin-left: 30%;
-    margin-top: 20px;
+    margin-top: 200px;
     height: 600px; /* Height in pixels */
     max-width: 60%; /* Maximum width relative to parent width */
     min-width: 30%; /* Minimum width relative to parent width */

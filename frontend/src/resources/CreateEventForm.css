@@ -1,6 +1,8 @@
 .create-event-component-container {
     width:80%;
     margin-left: 10%;
+    padding:30px 10%;
+    margin-top: 160px;
 }
 
 .create-event-form-datepicker {

@@ -10,17 +10,17 @@ export const MyEvents = () => {
     const [bookedEventList, setBookedEventList] = useState([]);
     const [createdEventList, setCreatedEventList] = useState([]);
 
-    const upcomingEventTiles = upcomingEventList.map((event) => {
+    const upcomingEventTiles = events.events.map((event) => {
         return <EventTile title={event.eventTitle} image={event.image} tags = {event.tags} width = {"30%"}/>
     });
-    const bookedEventTiles = bookedEventList.map((event) => {
+    const bookedEventTiles = events.events.map((event) => {
         return <EventTile title={event.eventTitle} image={event.image} tags = {event.tags} width = {"200px"}/>
     });
-    const createdEventTiles = createdEventList.map((event) => {
+    const createdEventTiles = events.events.map((event) => {
         return <EventTile title={event.eventTitle} image={event.image} tags = {event.tags} width = {"200px"}/>
     });
   return (
-    <div className='my-event-page'>
+    <div className='my-events-page'>
         <div className='my-events-container'>
             <h1>Upcoming Bookings</h1>
             <EventsRail>

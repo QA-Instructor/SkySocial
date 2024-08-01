@@ -11,14 +11,18 @@ export const Header = () => {
         <>
         <header>
             <div className='header-logo-section'>
-                <img alt='Sky Social'/>
+                <img
+                    className='logo-img'
+                    src='skySocialWhite.png'
+                    alt="Second Slide"
+      />
             </div>
 
             <Navbar className='navbar'>
                 <Nav className='nav'>
                     <ul className='nav-list-left'>
                         <li className='navbar-item'id='home'>
-                            <Link className='nav-link' to='/'>Home</Link>
+                            <Link className='nav-link' activeStyle = {{"background-color":"white","color": "#0223FF"}} to='/'>Home</Link>
                         </li>
                         <li className='navbar-item' id='createEvent'>
                             <Link className='nav-link' to='/CreateEvent'>Create Event</Link>

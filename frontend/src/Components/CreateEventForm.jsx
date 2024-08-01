@@ -40,7 +40,7 @@ const CreateEventForm = () => {
   return (
       <>
       <div className='create-event-component-container'>
-        <h1 className='create-event-form-heading'>Create an Event</h1>
+        <h1>Create an Event</h1>
         <Form method='post'>
             <FloatingLabel controlId="floatingInput" label="Event Title" className="mb-3">
                 <Form.Control type="text" placeholder="Event Title" name="eventTitle" onChange={e => handleChange(e.target.name, e.target.value)}/>
