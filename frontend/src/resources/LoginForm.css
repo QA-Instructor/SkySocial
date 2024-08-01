@@ -1,5 +1,5 @@
 .login-form-input-field {
-    margin-bottom: 10px;
+    margin-bottom: 0px;
 }
 
 .login-form-input-container {
@@ -8,13 +8,22 @@
 }
 
 .login-form-container {
-    margin-top: 100px;
-    padding: 75px 0;
+    margin-top: 5%;
+    padding: 100px;
     text-align: center;
-    border: black solid 2px
+    width: 100%;
 }
 
 
 .form-submit-button {
     margin-top: 20px;
+    background: linear-gradient(white, white) padding-box, linear-gradient(90deg, rgba(2, 35, 255, 1) 25%, rgba(141, 39, 255, 1) 75%)border-box;
+    color: rgba(2, 35, 255, 1);
+    border: 1px solid transparent;
+}
+
+.form-submit-button:hover {
+    background: linear-gradient(90deg, rgba(2, 35, 255, 1) 25%, rgba(141, 39, 255, 1) 75%) padding-box,linear-gradient(white, white)border-box ;
+    color: white;
+    border: 1px solid transparent;
 }

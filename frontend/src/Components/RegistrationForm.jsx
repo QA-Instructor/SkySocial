@@ -70,7 +70,7 @@ const RegistrationForm = () => {
               <button type="submit" className='btn btn-outline-primary form-submit-button' name="create" onClick={onFormSubmit}>Create Account</button>
         </form>
         <p>If you already have an account:</p>
-        <button type="submit" className='btn btn-outline-success' name="login" onClick={()=>navigate("/Login")}>Login</button>
+        <button type="submit" className='btn btn-outline-success form-submit-button' name="login" onClick={()=>navigate("/Login")}>Login</button>
     </div>
   )
 }
