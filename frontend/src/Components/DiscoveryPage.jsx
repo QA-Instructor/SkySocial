@@ -92,11 +92,11 @@ const DiscoveryPage = () => {
         <Banner/>
         <div className='discovery-page-content'>
           {show && <EventModal event={event} showFlag={()=>{setShow(false)}} />}
-          <div className='sort-container'>
-                <SortMenu sortFn={sortEvents}/>
-            </div>
           <div className='discovery-rail-container'>
             <h1>Sports</h1>
+            <div className='sort-container'>
+                <SortMenu sortFn={sortEvents}/>
+            </div>
             <EventsRail>{eventTiles}</EventsRail>
           </div>
           <div className='discovery-rail-container'>

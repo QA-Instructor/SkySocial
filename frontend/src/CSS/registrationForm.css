@@ -10,3 +10,9 @@
     border-radius: 5px;
     padding-bottom: 20px;
 }
+
+@media (max-width:868px){
+    .registration-form-container {
+        margin-top:12vh;
+    }
+}

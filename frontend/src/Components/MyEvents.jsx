@@ -61,12 +61,15 @@ export const MyEvents = () => {
 
     
     const bookedEventTiles = bookedEventList.map((event) => {
-        return <EventTile title={event.eventTitle} image={event.image} tags={event.tags} width={"200px"} />
+        return <EventTile title={event.eventTitle} image={event.image} tags={event.tags} width={"250px"} />
     });
     
-    const upcomingEventTiles = [bookedEventTiles[0], bookedEventTiles[1], bookedEventTiles[2]]
+    const upcomingEvents = bookedEventList.slice(0,3)
+    const upcomingEventTiles = upcomingEvents.map((event) => {
+        return <EventTile title={event.eventTitle} image={event.image} tags={event.tags} width={"350px"} />
+    });
     const createdEventTiles = createdEventList.map((event) => {
-        return <EventTile title={event.eventTitle} image={event.image} tags={event.tags} width={"200px"} />
+        return <EventTile title={event.eventTitle} image={event.image} tags={event.tags} width={"250px"} />
     });
   return (
     <div className='my-events-page'>
