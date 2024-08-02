@@ -73,4 +73,8 @@ public class EventService {
         return getAllEvents().stream().filter(event -> event.getOrganiser().equals(userId)).toList();
     }
 
+    public List<Event> getEventsByCategory(String category) {
+        return getAllEvents().stream().filter(event -> event.getCategory().equals(category)).toList();
+    }
+
 }

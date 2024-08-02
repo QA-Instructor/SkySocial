@@ -27,13 +27,11 @@ public class EventController {
 
     @GetMapping("/getAllEvents")
     public List<Event> getAllEvents() {
-        System.out.println("All Events");
          return this.service.getAllEvents();
     }
 
     @GetMapping("/getEventById")
     public Event getEventById(@PathParam("id") Long id) {
-        System.out.println("GetById: " + id);
          return this.service.getEventById(id);
     }
 
@@ -49,8 +47,11 @@ public class EventController {
 
     @GetMapping("/getEventsCreatedBy")
     public List<Event> getEventsCreatedBy(@RequestParam(name="id", defaultValue = "0") Long creatorId) {
-        List<Event> events = this.service.getEventsCreatedBy(creatorId);
-        System.out.println(events.size());
-        return events;
+        return this.service.getEventsCreatedBy(creatorId);
+    }
+
+    @GetMapping("/getEventsByCateogry")
+    public List<Event> getEventsByCategory(@RequestParam(name = "category", defaultValue = "sports") String category) {
+        return this.service.getEventsByCategory(category);
     }
 }
