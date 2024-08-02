@@ -4,6 +4,7 @@ import events from '../resources/skySocial.json'
 import EventsRail from './EventsRail'
 import EventTile from './EventTile'
 import '../resources/myEvents.css'
+import SortMenu from './SortMenu'
 export const MyEvents = () => {
 
     const [upcomingEventList, setUpcomingEventList] = useState([]);
@@ -23,6 +24,10 @@ export const MyEvents = () => {
     <div className='my-events-page'>
         <div className='my-events-container'>
             <h1>Upcoming Bookings</h1>
+            <div className='sort-container'>
+                <SortMenu />
+            </div>
+            
             <EventsRail>
             {upcomingEventTiles}
             </EventsRail>  

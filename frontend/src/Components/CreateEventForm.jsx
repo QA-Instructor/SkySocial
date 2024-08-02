@@ -92,11 +92,11 @@ const CreateEventForm = () => {
 
                   </div>
                   <FloatingLabel contentId="floatingInput" label="Tags (Social,Football,Allages) " className="mb-3 create-event-form-participant-field">
-                      <Form.Control type="text" placeholder="Tags (Social,Football,Allages) " name="eventTags" onChange={e => handleChange(e.target.name, e.target.value)} />
+                      <Form.Control type="text" placeholder="Tags (Social,Football,Allages) " name="tags" onChange={e => handleChange(e.target.name, e.target.value)} />
                       </FloatingLabel>
                   <br/>
             <FloatingLabel>
-                Email confirmations: <input type='checkbox' name='emailConfirmations' onChange={e => handleChange(e.target.name, e.target.value)}/>
+                Email confirmations: <input type='checkbox' name='emailConfirmation' onChange={e => handleChange(e.target.name, e.target.value)}/>
             </FloatingLabel>
             <Button variant="success" className='create-event-form-button' onClick={onSubmitForm}>Create Event</Button>{' '}
         </Form>

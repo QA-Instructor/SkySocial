@@ -40,7 +40,6 @@ const ProfileForm = ({user}) => {
         
         <div className='user-icon'><FaRegUserCircle /></div>
         <h1>Profile</h1>
-
             <div className='profile-form-input-container'>
               <input type='text' className="form-control profile-form-input-field" name="firstName" disabled={isDisabled} defaultValue={user.firstName} onChange={e => onFormChange(e.target.name, e.target.value)} />
               <input type='text' className="form-control profile-form-input-field" name="lastName" disabled={isDisabled} defaultValue={user.lastName} onChange={e => onFormChange(e.target.name, e.target.value)} />
@@ -50,8 +49,8 @@ const ProfileForm = ({user}) => {
               <input type='tel' className="form-control profile-form-input-field" name="phone" disabled={isDisabled} defaultValue={user.phone} onChange={e => onFormChange(e.target.name, e.target.value)} />
             </div>
             <div className='profile-control-button-container'>
-              <button id="deleteBtn" type="button" className='btn btn-danger profile-form-control-btn'>Delete Account</button>
-              <button id="logoutBtn" className='btn btn-warning rofile-form-control-btn'>Logout</button>
+              <button id="deleteBtn" type="button" className='btn btn-danger form-submit-button'>Delete Account</button>
+              <button id="logoutBtn" className='btn form-submit-button'>Logout</button>
             </div>
             
         </form>
