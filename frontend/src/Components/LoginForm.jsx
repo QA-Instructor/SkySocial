@@ -51,7 +51,7 @@ const LoginForm = () => {
                 label="Email Address"
                 className="mb-3"
             >
-                  <Form.Control type="email" placeholder="name@example.com" name="userEmail" onChange={e => onFormChange(e.target.name, e.target.value)} required/>
+                  <Form.Control type="email" placeholder="name@example.com" name="email" onChange={e => onFormChange(e.target.name, e.target.value)} required/>
             </FloatingLabel>      
               <FloatingLabel
                   controlId="floatingPassword"

@@ -3,28 +3,24 @@ import { useState, useEffect } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../resources/eventTile.css';
 import axios from 'axios';
+import config from '../config.json';
 
 const EventTile = (props) => {
 
-    const [event, setEvent] = useState({});
-    const [eventSelected, setEventSelected] = useState(false);
-
-  
     const tags = props.tags.map((tag) => {
       return <b key={tag}>#{tag} </b>
     });
 
     const onTileClick = () => {
-      setEventSelected(!eventSelected);
+      props.onClick(props.id);
     }
 
-    // useEffect(() => {
-    //   if (!eventSelected) return;
+    const headers = {
+      'Authorization': 'Bearer ' + localStorage.getItem('token'),
+      'Content-Type': 'application/json',
+    };
 
-    //   axios.get()
-
-      props.onClick();
-    // }, [eventSelected]);
+    
 
     return (
       <div id="cardContainer"   

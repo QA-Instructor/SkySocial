@@ -18,16 +18,43 @@ const DiscoveryPage = () => {
 
   const [eventList, setEventList] = useState([]);
   const [show, setShow] = useState(false);
+  const [event, setEvent] = useState({});
+  const [selectedId, setSelectedId] = useState(0)
 
-  const eventTiles = events.events.map((event) => {
+  const handleModal = async (eventId) => {
+    console.log("Id in discovery: " + eventId)
+    console.log("show" + show)
+    setSelectedId((eventId));
+  }
 
+  const handleModalClose = () => {
+    setShow(false);
+    setEvent({});
+    setSelectedId(0)
+  }
+
+  const eventTiles = eventList.map((event) => {
+    return <EventTile key={event.eventTitle} id={event.id} title={event.eventTitle} image={event.image} tags={event.tags} onClick={handleModal}  />
+  });
 
   const headers = {
     'Authorization': 'Bearer ' + localStorage.getItem('token'),
     'Content-Type': 'application/json',
   };
 
-  console.log(headers)
+  useEffect(() => {
+    console.log(selectedId)
+    if (selectedId === null || selectedId == 0) return;
+    
+    axios.get(config.backend.SERVER_URL + '/getEventById?id=' + parseInt(selectedId), {headers})
+    .then(response => {
+      console.log(response.data);
+      setEvent(response.data);
+      setShow(true); 
+  })
+
+  }, [selectedId]);
+
 
   useEffect(() => {
     if (!localStorage.getItem("token")) {
@@ -49,17 +76,12 @@ const DiscoveryPage = () => {
 
 
 
-    return <EventTile title={event.eventTitle} image={event.image} tags={event.tags} onClick={() => setShow(true)}  />
-  });
-
-
-
   return (
     <>
     <div className='discovery-page-container'>
         <Banner/>
         <div className='discovery-page-content'>
-          {show && <EventModal event={events.events[1]} showFlag={()=>{setShow(false)}} />}
+          {show && <EventModal event={event} showFlag={()=>{setShow(false)}} />}
           <div className='discovery-rail-container'>
             <h1>Sports</h1>
             <EventsRail>{eventTiles}</EventsRail>
