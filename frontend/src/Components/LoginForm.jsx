@@ -5,6 +5,7 @@ import FloatingLabel from 'react-bootstrap/FloatingLabel';
 import Form from 'react-bootstrap/Form';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import { FaRegUserCircle } from "react-icons/fa";
 const LoginForm = () => {
 
   const [loginData, setLoginData] = useState({

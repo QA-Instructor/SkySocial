@@ -3,6 +3,7 @@
     flex-direction: row;
     height: 100vh;
     width: 100%;
+    overflow: hidden;
 }
 .logo-img{
     height:60px;
@@ -27,6 +28,7 @@
     margin-right: 5%;
     background-color: white;
     margin-bottom: 20px;
+
 }
 .login-img{
     background-position: center center;
