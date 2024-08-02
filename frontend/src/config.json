@@ -1,5 +1,5 @@
 {
     "backend": {
-        "SERVER_URL": "http://localhost:8080"
+        "SERVER_URL": "http://13.41.210.250:8081"
     }
 }
