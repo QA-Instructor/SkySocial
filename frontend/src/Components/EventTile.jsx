@@ -2,20 +2,19 @@ import React from 'react';
 import { useState, useEffect } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../resources/eventTile.css';
+import axios from 'axios';
+import config from '../config.json';
 
 const EventTile = (props) => {
 
-    const [event, setEvent] = useState({});
-  
     const tags = props.tags.map((tag) => {
       return <b key={tag}>#{tag} </b>
     });
 
     const onTileClick = () => {
-      //add useEffect to make the request
-      props.onClick();
+      props.onClick(props.id);
     }
-
+    
     return (
       <div id="cardContainer"   
           className="card shadow bg-white rounded zoom clickable" 

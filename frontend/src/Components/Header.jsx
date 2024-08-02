@@ -36,9 +36,9 @@ export const Header = () => {
                             <Link className='nav-link' onClick={toggle} to='/MyEvents'>My Events</Link>
                         </li>
                         
-                        <li className='navbar-item' id='search'>
+                        {/* <li className='navbar-item' id='search'>
                             <Link className='nav-link' onClick={toggle} to='/Search'>Search</Link>
-                        </li>
+                        </li> */}
                         <li className='navbar-item' onClick={toggle} id='profile'>
                             <Link className='nav-link' onClick={toggle} to='/Profile'>Profile</Link>
                         </li>

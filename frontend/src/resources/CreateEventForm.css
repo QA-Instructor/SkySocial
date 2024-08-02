@@ -3,7 +3,7 @@
     margin-left: 10%;
     padding:30px 10%;
     margin-top: 200px;
-    padding-bottom: 80px;
+    padding-bottom: 180px;
     margin-bottom: 40px;
     text-align: center;
     background: linear-gradient(white, white) padding-box, linear-gradient(90deg, rgba(2, 35, 255, 1) 25%, rgba(141, 39, 255, 1) 75%)border-box;
@@ -71,6 +71,7 @@
         width:100%;
         font-size: 12px;
         padding:40px 10px;
+        padding-bottom: 80px;
         margin-left: 0;
     }
    

@@ -1,32 +1,81 @@
 import React from 'react'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
+import { useNavigate } from 'react-router-dom'
 import events from '../resources/skySocial.json'
 import EventsRail from './EventsRail'
 import EventTile from './EventTile'
-import '../resources/myEvents.css'
+import '../resources/myEvents.css';
+import axios from 'axios';
+import config from '../config.json';
+import { responsiveFontSizes } from '@mui/material'
+
 import SortMenu from './SortMenu'
 export const MyEvents = () => {
+    let navigate = useNavigate();
 
     const [upcomingEventList, setUpcomingEventList] = useState([]);
     const [bookedEventList, setBookedEventList] = useState([]);
     const [createdEventList, setCreatedEventList] = useState([]);
 
-    const upcomingEventTiles = events.events.map((event) => {
-        return <EventTile title={event.eventTitle} image={event.image} tags = {event.tags} width = {"350px"}/>
+  
+
+
+    const headers = {
+        'Authorization': 'Bearer ' + localStorage.getItem('token'),
+        'Content-Type': 'application/json',
+    };
+
+        useEffect(() => {
+            if (!localStorage.getItem("token")) {
+            navigate("/login");
+            }
+            axios.get(config.backend.SERVER_URL + '/getOrganiser?token='+ localStorage.getItem('token'),  {headers})
+            .then(response => { 
+                console.log(response.data)
+                axios.get(config.backend.SERVER_URL + '/getEventsCreatedBy?id=' + response.data, {headers}).then((response) => {
+                    console.log(response);
+                    setCreatedEventList(response.data);})})
+            
+            .catch((err) => {
+                console.log(err)
+        //   if (err.response.status === 403){
+        //     navigate('/login');
+        //   }
+        
+
+        });
+        
+        let userId = axios.get(config.backend.SERVER_URL + '/getOrganiser?token='+ localStorage.getItem('token'),  {headers})
+        .then(response => axios.get(config.backend.SERVER_URL + '/getUserBookedEvents?userId=' + response.data, {headers})
+        .then((response) => {
+            console.log(response.data)
+            setBookedEventList(response.data);}))
+        .catch((err) => {
+            if (err.response.status === 403){
+                navigate('/login');
+            }
+
+        });
+        
+    }, [navigate]);
+
+    
+    const bookedEventTiles = bookedEventList.map((event) => {
+        return <EventTile title={event.eventTitle} image={event.image} tags={event.tags} width={"250px"} />
     });
-    const bookedEventTiles = events.events.map((event) => {
-        return <EventTile title={event.eventTitle} image={event.image} tags = {event.tags} width = {"250px"}/>
+    
+    const upcomingEvents = bookedEventList.slice(0,3)
+    const upcomingEventTiles = upcomingEvents.map((event) => {
+        return <EventTile title={event.eventTitle} image={event.image} tags={event.tags} width={"350px"} />
     });
-    const createdEventTiles = events.events.map((event) => {
-        return <EventTile title={event.eventTitle} image={event.image} tags = {event.tags} width = {"250px"}/>
+    const createdEventTiles = createdEventList.map((event) => {
+        return <EventTile title={event.eventTitle} image={event.image} tags={event.tags} width={"250px"} />
     });
   return (
     <div className='my-events-page'>
         <div className='my-events-container'>
             <h1>Upcoming Bookings</h1>
-            <div className='sort-container'>
-                <SortMenu />
-            </div>
+           
             
             <EventsRail>
             {upcomingEventTiles}

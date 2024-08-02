@@ -6,18 +6,20 @@ import Form from 'react-bootstrap/Form';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import { FaRegUserCircle } from "react-icons/fa";
+import config from '../config.json';
+
 const LoginForm = () => {
 
   const [loginData, setLoginData] = useState({
-    "username" : "",
+    "email" : "",
     "userPassword" : ""
   });
 
   const handleLogin = async () => {
     try {
-      const response = await axios.post('http://localhost:8080/authLogin', loginData);
+      const response = await axios.post(config.backend.SERVER_URL +'/authLogin', loginData);
       localStorage.setItem('token', response.data);
-      alert('Login successful');
+      navigate("/");
   } catch (error) {
       alert('Invalid credentials');
   }
@@ -32,7 +34,7 @@ const LoginForm = () => {
     e.preventDefault()
     setLoginData(loginData)
     //Make axios request
-    handleLogin().then(navigate("/"));
+    handleLogin().then();
   }
 
 
@@ -49,7 +51,7 @@ const LoginForm = () => {
                 label="Email Address"
                 className="mb-3"
             >
-                  <Form.Control type="email" placeholder="name@example.com" name="userEmail" onChange={e => onFormChange(e.target.name, e.target.value)} required/>
+                  <Form.Control type="email" placeholder="name@example.com" name="email" onChange={e => onFormChange(e.target.name, e.target.value)} required/>
             </FloatingLabel>      
               <FloatingLabel
                   controlId="floatingPassword"

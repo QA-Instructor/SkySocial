@@ -11,11 +11,10 @@
     padding:30px 10%;
     margin-top: 200px;
     padding-bottom: 80px;
-    margin-bottom: 40px;
+    margin-bottom: 100px;
     text-align: center;
     background: linear-gradient(white, white) padding-box, linear-gradient(90deg, rgba(2, 35, 255, 1) 25%, rgba(141, 39, 255, 1) 75%)border-box;
     border-top: 10px solid transparent;
-    height: fit-content;
     box-shadow: 0px 0px 16px -8px rgb(0 0 0 / 68%);
     border-radius: 5px;/* Center-align content inside the container */
 }
@@ -47,15 +46,15 @@
 
 /* Container for the edit button */
 .profile-form-btn-container {
-    position: absolute;
-    top: 2%; /* Distance from top edge of the form relative to parent width */
-    right: 2%; /* Distance from right edge of the form relative to parent width */
+    position: fixed;
+    top: 220px; /* Distance from top edge of the form relative to parent width */
+    right: 7%; /* Distance from right edge of the form relative to parent width */
 }
 
-/* .profile-form-edit-button {
+.profile-form-edit-button {
     background-color: none;
     margin-right: 20px;
-} */
+}
 
 .profile-form-save-text {
     text-decoration: none;
@@ -71,5 +70,6 @@
         width: 80%;
         max-width: 100%;
         margin-left: 10%;
+        padding-bottom: 100px;
     }
 }

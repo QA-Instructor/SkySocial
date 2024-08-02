@@ -96,3 +96,16 @@ div {
     }
     
 }
+
+@media (min-width:868px) {
+    .loginRegPage-logo-container{
+        position: fixed;
+    }
+    .loginRegPage{
+        overflow: scroll;
+    }
+    .loginRegPage-form-container{
+        margin-left: 55%;
+        margin-top: 30px;
+    }
+}

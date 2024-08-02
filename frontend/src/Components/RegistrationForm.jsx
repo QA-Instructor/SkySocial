@@ -5,6 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import '../CSS/registrationForm.css';
 import { FaRegUserCircle } from "react-icons/fa";
 import axios from "axios";
+import config from '../config.json';
 
 const RegistrationForm = () => {
     const navigate = useNavigate();
@@ -26,7 +27,7 @@ const RegistrationForm = () => {
       console.log(registerData)
       setRegisterData(registerData)
       //Make axios request
-      axios.post('http://localhost:8080/createAuthAccount',registerData).then(navigate('/Login')).catch(err => alert(err))
+      axios.post(config.backend.SERVER_URL + '/createAuthAccount', registerData).then(navigate('/Login')).catch(err => alert(err))
     //   navigate('/Login')
     }
   
