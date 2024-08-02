@@ -36,12 +36,7 @@ public class EventService {
     }
 
     public List<Event> getAllEvents() {
-        List<Event> events =  this.eventRepo.findAll();
-        for(Event e : events){
-            System.out.println("e = " + e);
-        }
-        return events;
-
+        return this.eventRepo.findAll();
     }
 
     public Event getEventById(Long id) {
@@ -75,11 +70,6 @@ public class EventService {
     }
 
     public List<Event> getEventsCreatedBy(Long userId) {
-        System.out.println("Filtering: " + userId);
-        List<Event> events = getAllEvents();
-        for(Event e : events){
-            System.out.println("e = " + e);
-        }
         return getAllEvents().stream().filter(event -> event.getOrganiser().equals(userId)).toList();
     }
 
