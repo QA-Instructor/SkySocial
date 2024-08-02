@@ -32,7 +32,7 @@
     object-fit: cover;
 }
 
-.form-submit-button {
+.event-tile-submit-button {
     margin-top: 5%;
     background: linear-gradient(white, white) padding-box, linear-gradient(90deg, rgba(2, 35, 255, 1) 25%, rgba(141, 39, 255, 1) 75%)border-box;
     color: rgba(2, 35, 255, 1);
@@ -43,7 +43,7 @@
     margin-left: 60%;
 }
 
-.form-submit-button:hover {
+.event-tile-submit-button:hover {
     background: linear-gradient(90deg, rgba(2, 35, 255, 1) 25%, rgba(141, 39, 255, 1) 75%) padding-box, linear-gradient(white, white)border-box;
     color: white;
     border: 1px solid transparent;

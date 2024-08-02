@@ -25,7 +25,7 @@ const EventTile = (props) => {
           <div className="card-body">
             <h5 className="card-title">{props.title}</h5>
             <p>{tags}</p>
-            <button className='btn btn-outline-primary form-submit-button'>Book</button>
+            <button className='btn btn-outline-primary event-tile-submit-button'>Book</button>
           </div>
     </div>
     )

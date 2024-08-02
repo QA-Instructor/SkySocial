@@ -26,7 +26,7 @@ const DiscoveryPage = ( ) => {
     <div className='discovery-page-container'>
         <Banner/>
         <div className='discovery-page-content'>
-          {show && <EventModal event={events.events[1]} />}
+          {show && <EventModal event={events.events[1]} showFlag={()=>{setShow(false)}} />}
           <div className='discovery-rail-container'>
             <h1>Sports</h1>
             <EventsRail>{eventTiles}</EventsRail>

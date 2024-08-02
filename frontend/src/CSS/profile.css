@@ -52,10 +52,10 @@
     right: 2%; /* Distance from right edge of the form relative to parent width */
 }
 
-.profile-form-edit-button {
+/* .profile-form-edit-button {
     background-color: none;
     margin-right: 20px;
-}
+} */
 
 .profile-form-save-text {
     text-decoration: none;
