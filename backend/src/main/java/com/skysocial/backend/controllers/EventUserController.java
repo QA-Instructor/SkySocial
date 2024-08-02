@@ -1,5 +1,6 @@
 package com.skysocial.backend.controllers;
 
+import com.skysocial.backend.entities.event.Event;
 import com.skysocial.backend.entities.eventUser.EventUser;
 import com.skysocial.backend.services.EventUserService;
 import jakarta.validation.Valid;
@@ -31,6 +32,11 @@ public class EventUserController {
     @GetMapping("/getBookedEvents")
     public int getEventsRegisteredTo(@PathParam("userId") Long userId) {
         return this.service.getAllUserEvent(userId);
+    }
+
+    @GetMapping("/getUserBookedEvents")
+    public List<Event> getBookedEvents(@PathParam("userId") Long userId) {
+        return this.service.getAllBookedEvents(userId);
     }
 
     @GetMapping("/getParticipantCount")

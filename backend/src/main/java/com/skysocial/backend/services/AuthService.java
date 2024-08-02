@@ -11,8 +11,6 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import lombok.Data;
 
-import java.io.Serial;
-
 @Service
 @AllArgsConstructor
 @Data
@@ -34,7 +32,21 @@ public class AuthService {
     }
 
     public LoginDTO getProfileByEmail(String email) {
+        System.out.println("Email: " + email);
         User savedUser = this.userRepo.findByEmail(email);
+
+        //Change for better error handling
+        if (savedUser == null) return new LoginDTO();
+
         return this.mapper.map(savedUser, LoginDTO.class);
     }
+    public ProfileDTO getUserProfileByEmail(String email) {
+        User savedUser = this.userRepo.findByEmail(email);
+
+        //Change for better error handling
+        if (savedUser == null) return new ProfileDTO();
+        return this.mapper.map(savedUser, ProfileDTO.class);
+    }
+
+
 }

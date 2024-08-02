@@ -6,6 +6,7 @@ import com.skysocial.backend.dtos.user.ProfileDTO;
 import com.skysocial.backend.entities.user.User;
 import com.skysocial.backend.security.JwtUtil;
 import com.skysocial.backend.services.AuthService;
+import com.skysocial.backend.services.UserService;
 import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
@@ -22,6 +23,11 @@ public class AuthController {
     @Autowired
     private AuthService authService;
 
+    @Autowired
+    private UserService userService;
+
+    private JwtUtil jwtUtil = new JwtUtil();
+
     @PostMapping("/createAuthAccount")
     public ResponseEntity<?> createAccount(@RequestBody @Valid User user) {
         System.out.println("Trying to print user");
@@ -37,6 +43,7 @@ public class AuthController {
     @PostMapping("/authLogin")
     public ResponseEntity<?> login(@RequestBody LoginDTO credentials){
         LoginDTO existingUser = this.authService.getProfileByEmail(credentials.getEmail());
+        System.out.println("user: " + existingUser.getEmail());
         if (existingUser != null && this.authService.getPasswordEncoder().matches(credentials.getUserPassword(), existingUser.getUserPassword())){
             String token = JwtUtil.generateToken(existingUser.getEmail());
             return ResponseEntity.ok(token);
@@ -44,6 +51,19 @@ public class AuthController {
         return ResponseEntity.status(401).body("Invalid Credentials");
     }
 
+    @GetMapping("/getOrganiser")
+    public Long getOrganiserId(@RequestParam(name = "token", defaultValue = "") String token){
+        System.out.println("Organiser");
+        String email = this.jwtUtil.extractEmail(token);
+        return this.userService.getProfileByEmail(email).getId();
+
+    }
+
+    @GetMapping("/getEmailById")
+    public String getEmailFromId(@RequestParam(name = "id", defaultValue = "") String token){
+        return this.jwtUtil.extractEmail(token);
+
+    }
 
 
 }
