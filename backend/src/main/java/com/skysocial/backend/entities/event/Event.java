@@ -56,5 +56,6 @@ public class Event implements Serializable {
     @NotNull
     private Long organiser;
 
-
+    @NotNull
+    private String category;
 }
