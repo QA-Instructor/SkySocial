@@ -9,6 +9,7 @@ import EventsRail from './EventsRail';
 import '../CSS/DiscoveryPage.css';
 import axios from 'axios';
 import config from '../config.json';
+import EventModal from './EventModal';
 
 
 const DiscoveryPage = () => {
@@ -16,6 +17,9 @@ const DiscoveryPage = () => {
   let navigate = useNavigate();
 
   const [eventList, setEventList] = useState([]);
+  const [show, setShow] = useState(false);
+
+  const eventTiles = events.events.map((event) => {
 
 
   const headers = {
@@ -45,19 +49,27 @@ const DiscoveryPage = () => {
 
 
 
-  const eventTiles = eventList.map((event) => {
-    return <EventTile title={event.eventTitle} image={event.image} tags={event.tags} />
+    return <EventTile title={event.eventTitle} image={event.image} tags={event.tags} onClick={() => setShow(true)}  />
   });
+
+
 
   return (
     <>
-      <Banner />
-      <EventsRail>
-        {eventTiles}
-      </EventsRail>
-      <EventsRail>
-        {eventTiles}
-      </EventsRail>
+    <div className='discovery-page-container'>
+        <Banner/>
+        <div className='discovery-page-content'>
+          {show && <EventModal event={events.events[1]} showFlag={()=>{setShow(false)}} />}
+          <div className='discovery-rail-container'>
+            <h1>Sports</h1>
+            <EventsRail>{eventTiles}</EventsRail>
+          </div>
+          <div className='discovery-rail-container'>
+          <h1>Social</h1>
+            <EventsRail>{eventTiles}</EventsRail>
+          </div>
+        </div>
+    </div>
     </>
   );
 };

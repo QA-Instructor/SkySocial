@@ -9,6 +9,7 @@ import axios from 'axios';
 import config from '../config.json';
 import { responsiveFontSizes } from '@mui/material'
 
+import SortMenu from './SortMenu'
 export const MyEvents = () => {
     let navigate = useNavigate();
 
@@ -72,28 +73,32 @@ export const MyEvents = () => {
     const createdEventTiles = createdEventList.map((event) => {
         return <EventTile title={event.eventTitle} image={event.image} tags={event.tags} width={"200px"} />
     });
-    return (
-        <div className='my-event-page'>
-            <div className='my-events-container'>
-                <h1>Upcoming Bookings</h1>
-                <EventsRail>
-                    {upcomingEventTiles}
-                </EventsRail>
+  return (
+    <div className='my-events-page'>
+        <div className='my-events-container'>
+            <h1>Upcoming Bookings</h1>
+            <div className='sort-container'>
+                <SortMenu />
             </div>
-            <div className='my-events-container'>
-                <h1>Booked Events</h1>
-                <EventsRail>
-                    {bookedEventTiles}
-                </EventsRail>
-            </div>
-            <div className='my-events-container'>
-                <h1>Created Events</h1>
-                <EventsRail>
-                    {createdEventTiles}
-                </EventsRail>
-            </div>
+            
+            <EventsRail>
+            {upcomingEventTiles}
+            </EventsRail>  
         </div>
-    )
+        <div className='my-events-container'>
+            <h1>Booked Events</h1>
+            <EventsRail>
+            {bookedEventTiles}
+            </EventsRail>  
+        </div>
+        <div className='my-events-container'>
+            <h1>Created Events</h1>
+            <EventsRail>
+            {createdEventTiles}
+            </EventsRail> 
+        </div> 
+    </div>
+  )
 }
 
 export default MyEvents
