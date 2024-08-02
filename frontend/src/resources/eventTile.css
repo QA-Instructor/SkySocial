@@ -19,6 +19,11 @@
 
 .card p{
     font-style: italic;
+    object-fit: contain;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+        
 }
 
 .card-img-top{
@@ -26,3 +31,21 @@
     height:200px;
     object-fit: cover;
 }
+
+.form-submit-button {
+    margin-top: 5%;
+    background: linear-gradient(white, white) padding-box, linear-gradient(90deg, rgba(2, 35, 255, 1) 25%, rgba(141, 39, 255, 1) 75%)border-box;
+    color: rgba(2, 35, 255, 1);
+    border: 1px solid transparent;
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 3%;
+    margin-left: 60%;
+}
+
+.form-submit-button:hover {
+    background: linear-gradient(90deg, rgba(2, 35, 255, 1) 25%, rgba(141, 39, 255, 1) 75%) padding-box, linear-gradient(white, white)border-box;
+    color: white;
+    border: 1px solid transparent;
+}
+
