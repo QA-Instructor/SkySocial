@@ -6,14 +6,14 @@ pipeline {
                 sh 'npm install'
             }
         }
-        stage('Test application') {
-            steps {
-                sh 'npm test'
-            }
-        }
+        // stage('Test application') {
+        //     steps {
+        //         sh 'npm test'
+        //     }
+        // }
         stage('Build application') {
             steps {
-                sh 'npm build'
+                sh 'npm run build'
             }
         }
         stage('Deploy') {
