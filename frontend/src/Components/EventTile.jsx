@@ -2,10 +2,12 @@ import React from 'react';
 import { useState, useEffect } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../resources/eventTile.css';
+import axios from 'axios';
 
 const EventTile = (props) => {
 
     const [event, setEvent] = useState({});
+    const [eventSelected, setEventSelected] = useState(false);
 
   
     const tags = props.tags.map((tag) => {
@@ -13,14 +15,21 @@ const EventTile = (props) => {
     });
 
     const onTileClick = () => {
-      //add useEffect to make the request
+      setEventSelected(!eventSelected);
     }
+
+    // useEffect(() => {
+    //   if (!eventSelected) return;
+
+    //   axios.get()
+
+    // }, [eventSelected]);
 
     return (
       <div id="cardContainer"   
           className="card shadow bg-white rounded zoom clickable" 
           style={{"min-width": props.width?props.width:"200px","max-width":props.width?props.width:"200px"}} 
-          onClick={() => alert(props.title)}>
+          onClick={onTileClick}>
           <img className="card-img-top" src={props.image} alt="Card image cap"/>
           <div className="card-body">
             <h5 className="card-title">{props.title}</h5>

@@ -3,18 +3,20 @@ import "../resources/LoginForm.css";
 import "bootstrap/dist/css/bootstrap.min.css"
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import config from '../config.json';
+
 const LoginForm = () => {
 
   const [loginData, setLoginData] = useState({
-    "username" : "",
+    "email" : "",
     "userPassword" : ""
   });
 
   const handleLogin = async () => {
     try {
-      const response = await axios.post('http://localhost:8080/authLogin', loginData);
+      const response = await axios.post(config.backend.SERVER_URL +'/authLogin', loginData);
       localStorage.setItem('token', response.data);
-      alert('Login successful');
+      navigate("/");
   } catch (error) {
       alert('Invalid credentials');
   }
@@ -29,7 +31,7 @@ const LoginForm = () => {
     e.preventDefault()
     setLoginData(loginData)
     //Make axios request
-    handleLogin().then(navigate("/"));
+    handleLogin().then();
   }
 
 
