@@ -13,7 +13,7 @@ import java.util.List;
 
 @NoArgsConstructor
 @RestController
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins = {"http://localhost:3000", "http://13.41.210.250:3000"})
 public class EventUserController {
 
     private EventUserService service;
