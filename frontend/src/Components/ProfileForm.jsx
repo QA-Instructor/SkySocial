@@ -36,7 +36,8 @@ const ProfileForm = () => {
   
   const onFormChange = (key, value) => {
     console.log("change: " + key)
-    profileData[key] = value;
+    // profileData[key] = value;
+    setProfileData(prevProfileData => ({ ...prevProfileData, [key]: value, }))
   } 
 
   const headers = {
@@ -44,10 +45,16 @@ const ProfileForm = () => {
     'Content-Type': 'application/json',
   };
 
-  const onFormSubmit = () => {
+  const onFormSubmit = async (e) => {
+    e.preventDefault()
     console.log(profileData)
     //Make axios request
-    axios.put(config.backend.SERVER_URL + "/updateAccount", profileData, {headers});
+    try{
+      axios.put(config.backend.SERVER_URL + "/updateAccount", profileData, {headers});
+    }catch(error){
+      alert('Unable to update profile')
+    }
+    
   }
 
   return (
@@ -56,7 +63,7 @@ const ProfileForm = () => {
         <form className='profile-form-form-container'>
         <div class="profile-form-btn-container">
             <a id="editBtn" className='profile-form-edit-button profile-form-save-text' onClick={handleEditable}>
-                {!isDisabled ? <span onClick={onFormSubmit}>Save</span> : <span id="editBtnText"><FaPencilAlt/></span>}
+                {!isDisabled ? <span onClick={e => onFormSubmit(e)}>Save</span> : <span id="editBtnText"><FaPencilAlt/></span>}
             </a>
         </div>
           {/* Integrate PictureUpload component */}

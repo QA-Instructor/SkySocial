@@ -97,7 +97,7 @@ return (
                 </FloatingLabel>
 
                 <FloatingLabel controlId="floatingInput" label="Upload an image" className="mb-3">
-                    <Form.Control type="file" placeholder="Upload an image" name="image" accept="image/*" onChange={e => handleChange(e.target.name, e.target.value)} />
+                    <Form.Control type="text" placeholder="Upload an image" name="image" accept="image/*" onChange={e => handleChange(e.target.name, e.target.value)} />
                 </FloatingLabel>
 
                 <FloatingLabel controlId="floatingTextarea" label="Event Location" className="mb-3">
