@@ -60,7 +60,7 @@ header{
     top:0;
     width:100%;
     background-color: white;
-    z-index: 10000;
+    z-index: 100;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 .side-menu {
