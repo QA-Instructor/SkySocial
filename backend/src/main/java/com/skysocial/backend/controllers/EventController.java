@@ -50,7 +50,7 @@ public class EventController {
         return this.service.getEventsCreatedBy(creatorId);
     }
 
-    @GetMapping("/getEventsByCateogry")
+    @GetMapping("/getEventsByCategory")
     public List<Event> getEventsByCategory(@RequestParam(name = "category", defaultValue = "sports") String category) {
         return this.service.getEventsByCategory(category);
     }
