@@ -40,6 +40,21 @@ const CreateEventForm = () => {
         'Content-Type': 'application/json',
     };
 
+    const formatDate = (dateString) => {
+        const date = new Date(dateString);
+    
+        const pad = (number) => number.toString().padStart(2, '0');
+    
+        const day = pad(date.getUTCDate());
+        const month = pad(date.getUTCMonth() + 1); 
+        const year = date.getUTCFullYear().toString().slice(-2);
+        const hours = pad(date.getUTCHours());
+        const minutes = pad(date.getUTCMinutes());
+        const seconds = pad(date.getUTCSeconds());
+    
+        return `${day}/${month}/${year} ${hours}:${minutes}:${seconds}`;
+    };
+
 
 
     const onSubmitForm = (e) => {
@@ -49,6 +64,7 @@ const CreateEventForm = () => {
         let organiserId = axios.get(config.backend.SERVER_URL + '/getOrganiser?token='+ localStorage.getItem('token'),  {headers})
             .then(response => {
                 eventInfo['organiser'] = response.data;
+                console.log(eventInfo);
                 setEventInfo(prevFormData => ({ ...prevFormData, ["organiser"]: response.data, }))
                 console.log(eventInfo)
                 axios.post(config.backend.SERVER_URL + '/createEvent', eventInfo, { headers }).then(navigate('/')).catch(err => alert(err))})
@@ -58,6 +74,10 @@ const CreateEventForm = () => {
     }
 
 const handleChange = (key, value) => {
+    if (key.includes("Time")){
+        value = formatDate(value)
+        console.log(value)
+    }
     setEventInfo(prevFormData => ({ ...prevFormData, [key]: value, }))
 }
 

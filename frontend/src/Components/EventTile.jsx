@@ -14,14 +14,7 @@ const EventTile = (props) => {
     const onTileClick = () => {
       props.onClick(props.id);
     }
-
-    const headers = {
-      'Authorization': 'Bearer ' + localStorage.getItem('token'),
-      'Content-Type': 'application/json',
-    };
-
     
-
     return (
       <div id="cardContainer"   
           className="card shadow bg-white rounded zoom clickable" 

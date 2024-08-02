@@ -10,6 +10,7 @@ import '../CSS/DiscoveryPage.css';
 import axios from 'axios';
 import config from '../config.json';
 import EventModal from './EventModal';
+import SortMenu from './SortMenu';
 
 
 const DiscoveryPage = () => {
@@ -33,14 +34,23 @@ const DiscoveryPage = () => {
     setSelectedId(0)
   }
 
-  const eventTiles = eventList.map((event) => {
-    return <EventTile key={event.eventTitle} id={event.id} title={event.eventTitle} image={event.image} tags={event.tags} onClick={handleModal}  />
-  });
-
   const headers = {
     'Authorization': 'Bearer ' + localStorage.getItem('token'),
     'Content-Type': 'application/json',
   };
+
+  const sortEvents = (field, ascending) => {
+    axios.get(config.backend.SERVER_URL + "/sortEvents?sortBy=" + field +  "&ascending=" + ascending, {headers}).then((response) => {
+        setEventList(response.data);
+    });
+
+}
+
+  const eventTiles = eventList.map((event) => {
+    return <EventTile key={event.eventTitle} id={event.id} title={event.eventTitle} image={event.image} tags={event.tags} onClick={handleModal}  />
+  });
+
+  
 
   useEffect(() => {
     console.log(selectedId)
@@ -82,6 +92,9 @@ const DiscoveryPage = () => {
         <Banner/>
         <div className='discovery-page-content'>
           {show && <EventModal event={event} showFlag={()=>{setShow(false)}} />}
+          <div className='sort-container'>
+                <SortMenu sortFn={sortEvents}/>
+            </div>
           <div className='discovery-rail-container'>
             <h1>Sports</h1>
             <EventsRail>{eventTiles}</EventsRail>

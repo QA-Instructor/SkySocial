@@ -17,12 +17,7 @@ export const MyEvents = () => {
     const [bookedEventList, setBookedEventList] = useState([]);
     const [createdEventList, setCreatedEventList] = useState([]);
 
-    // const sortEvents = (field, ascending) => {
-    //     axios.get(config.backend.SERVER_URL + "/sortEvents/sortBy=" + field + "/ascending=" + ascending, {headers}).then(() => {
-            
-    //     });
-    
-    // }
+  
 
 
     const headers = {
@@ -77,9 +72,7 @@ export const MyEvents = () => {
     <div className='my-events-page'>
         <div className='my-events-container'>
             <h1>Upcoming Bookings</h1>
-            <div className='sort-container'>
-                <SortMenu />
-            </div>
+           
             
             <EventsRail>
             {upcomingEventTiles}

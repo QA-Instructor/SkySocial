@@ -35,9 +35,9 @@ const SortMenu = ({ sortFn }) => {
            
             <ul className="sort-menu-dropdown-menu">
             <li> {isAscending ? <LiaSortAlphaDownSolid onClick={toggleAscending}/> : <LiaSortAlphaUpSolid onClick={toggleAscending}/>}</li>
-            <li><span className="sort-menu-dropdown-item" onClick={() => handleSort("alpha")}>Alphabetical</span>  </li>
-            <li><span className="sort-menu-dropdown-item" onClick={() => handleSort("date")}>Date</span></li>
-            <li><span className="sort-menu-dropdown-item" onClick={() => handleSort("capacity")}>Capacity</span></li>
+            <li><span className="sort-menu-dropdown-item" onClick={() => handleSort("ALPHABETICAL")}>Alphabetical</span>  </li>
+            <li><span className="sort-menu-dropdown-item" onClick={() => handleSort("CLOSEST_START_TIME")}>Date</span></li>
+            {/* <li><span className="sort-menu-dropdown-item" onClick={() => handleSort("capacity")}>Capacity</span></li> */}
             </ul>
             </div>
         </div>
