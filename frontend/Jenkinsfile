@@ -3,22 +3,22 @@ pipeline {
     stages {
         stage('Install dependencies') {
             steps {
-                sh 'npm install'
+                sh 'sudo npm install'
             }
         }
-        // stage('Test application') {
-        //     steps {
-        //         sh 'npm test'
-        //     }
-        // }
+        stage('Test application') {
+            steps {
+                sh 'sudo npm test'
+            }
+        }
         stage('Build application') {
             steps {
-                sh 'npm run build'
+                sh 'sudo npm run build'
             }
         }
         stage('Deploy') {
             steps { 
-                sh 'serve -s build'
+                sh 'sudo serve -s build'
             }
         }
     }
