@@ -8,7 +8,7 @@ import "../resources/header.css"
 import { AiOutlineArrowDown } from "react-icons/ai";
 
 export const Header = () => {
-    const [isOpen,setIsOpen] = useState(false);
+    const [isOpen,setIsOpen] = useState(true);
     const toggle = () => setIsOpen(!isOpen)
   return (
         
@@ -16,7 +16,7 @@ export const Header = () => {
         <header>
             <div className='header-logo-section'>
                 <img
-                    className='logo-img'
+                    className='header-logo-img'
                     src='skySocialWhite.png'
                     alt="Second Slide"
                 />

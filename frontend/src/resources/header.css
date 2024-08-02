@@ -17,7 +17,7 @@
     max-height: 300px;
 }
 
-.logo-img{
+.header-logo-img{
     height:60px;
     margin-top: 20px;
     background-color: none;
@@ -164,8 +164,5 @@ header{
         transform: rotate(45deg);
         top:0;
     }
-    /* .side-menu:checked ~  .navbar {
-        display:flex;
-    } */
     
 }

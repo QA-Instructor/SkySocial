@@ -12,9 +12,16 @@ export const LoginRegPage = (props) => {
             <div className='loginRegPage-logo'>
                 <img
                     className='logo-img'
-                    src='skySocialWhite.png'
+                    src='logocolour.png'
                     alt="Second Slide"
-      />
+                />
+            </div>
+            <div className='loginRegPage-image'>
+            <img
+                    className='login-img'
+                    src='login-image.png'
+                    alt="Second Slide"
+                />
             </div>
         </div>
         

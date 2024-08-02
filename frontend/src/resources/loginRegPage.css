@@ -1,32 +1,41 @@
 .loginRegPage{
-    display: inline-flex;
-    width: 90%;
-    margin-left: 5%;
-    margin-top: 120px;
-    overflow: hidden;
-    background: rgb(2, 35, 255);
-    background: linear-gradient(90deg, rgba(2, 35, 255, 1) 9%, rgba(141, 39, 255, 1) 34%, rgba(2, 35, 255, 1) 82%, rgba(141, 39, 255, 1) 96%);
-    
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    width: 100%;
+}
+.logo-img{
+    height:60px;
+    margin-top: 20px;
+    background-color: none;
 }
 .loginRegPage-logo-container{
-    margin-left: 5%;
+    width:50%;
+    background-color: white;
+    box-shadow: 0px 0px 16px -8px rgb(0 0 0 / 68%);
+    z-index: 10;
 }
 .loginRegPage-logo{
-    margin-top: 100px;
-    border-radius: 5px;
-    margin-left: 10%;
-    /* line-height: 100px; */
+    padding-top: 10vh;
     text-align: center;
+    height: 30vh;
+
 }
 .loginRegPage-form-container{
     width: 50%;
     margin-left: 5%;
     margin-right: 5%;
     background-color: white;
+    margin-bottom: 20px;
 }
-
-.background_image {
-    
+.login-img{
+    background-position: center center;
+    height:70vh;
+    width: 100%;
+    object-fit: cover;
+}
+.logo-img{
+    scale: 150%;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
@@ -43,4 +52,46 @@ div {
     font-optical-sizing: auto;
     font-weight: 700;
     font-style: normal;
+}
+
+@media (max-width:868px) {
+    .logo-img{
+        scale: 100%;
+    }
+    .loginRegPage{
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        width: 100%;
+        overflow: scroll;
+    }
+    .loginRegPage-logo-container{
+        width:100%;
+        height:25vh;
+        position: fixed;
+    }
+    .loginRegPage-logo{
+        padding-top: 10vh;
+        text-align: center;
+        height: 5vh;
+    }
+    .loginRegPage-logo{
+        padding-top: 0;
+        text-align: center;
+        height: 10vh;
+    }
+    .loginRegPage-form-container{
+        width: 90%;
+        margin-left: 5%;
+        margin-right: 5%;
+        background-color: white;
+        margin-top: 20vh;
+    }
+    .login-img{
+        background-position: center center;
+        height:15vh;
+        width: 100%;
+        object-fit: cover;
+    }
+    
 }

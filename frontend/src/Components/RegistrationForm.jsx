@@ -3,6 +3,7 @@ import FloatingLabel from 'react-bootstrap/FloatingLabel';
 import Form from 'react-bootstrap/Form';
 import { useNavigate } from 'react-router-dom';
 import '../CSS/registrationForm.css';
+import { FaRegUserCircle } from "react-icons/fa";
 
 const RegistrationForm = () => {
     const navigate = useNavigate();
@@ -29,7 +30,9 @@ const RegistrationForm = () => {
   
   return (
     <div className='registration-form-container'>
-        <h1 name='heading'>Create an account</h1>
+        <div className='user-icon'><FaRegUserCircle /></div>
+        <h1>Registration</h1>
+        <br/>
             <FloatingLabel controlId="floatingInput" label="Upload an image" className="mb-3">
                 <Form.Control type="file" placeholder="Upload an profile photo" name="profileImage" accept="image/*" onChange={e => onFormChange(e.target.name, e.target.value)}/>
             </FloatingLabel>

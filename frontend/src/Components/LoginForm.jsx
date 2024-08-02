@@ -4,6 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css"
 import FloatingLabel from 'react-bootstrap/FloatingLabel';
 import Form from 'react-bootstrap/Form';
 import { useNavigate } from 'react-router-dom';
+import { FaRegUserCircle } from "react-icons/fa";
 const LoginForm = () => {
 
   const loginData = {
@@ -26,7 +27,8 @@ const LoginForm = () => {
   const navigate = useNavigate();
   return (
     <form className='login-form-container'>
-        <h1>Welcome to Sky Social</h1>
+        <div className='user-icon'><FaRegUserCircle /></div>
+        <h1>Login</h1>
         <br />
         <form>
             <div className='login-form-input-container'>
