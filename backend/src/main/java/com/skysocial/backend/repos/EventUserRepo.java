@@ -1,5 +1,6 @@
 package com.skysocial.backend.repos;
 
+import com.skysocial.backend.entities.event.Event;
 import com.skysocial.backend.entities.eventUser.EventUser;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
@@ -11,4 +12,6 @@ public interface EventUserRepo extends JpaRepository<EventUser,Long> {
     int countByEventId(Long eventId);
     //List<Long> findUserById(Long id);
     int countByUserId(Long userId);
+
+    List<EventUser> findAllByUserId(Long id);
 }

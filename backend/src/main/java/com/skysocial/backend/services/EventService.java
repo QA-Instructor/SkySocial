@@ -36,7 +36,12 @@ public class EventService {
     }
 
     public List<Event> getAllEvents() {
-        return this.eventRepo.findAll();
+        List<Event> events =  this.eventRepo.findAll();
+        for(Event e : events){
+            System.out.println("e = " + e);
+        }
+        return events;
+
     }
 
     public Event getEventById(Long id) {
@@ -46,14 +51,6 @@ public class EventService {
     public EventDTO createEvent(Event event) {
         Event savedEvent = this.eventRepo.save(event);
         return this.mapToDTO(savedEvent);
-    }
-
-    public Event addParticipantToEvent(Long eventId, Long participantId) {
-        Event event = getEventById(eventId);
-        List<Long> participants = event.getParticipantIds();
-        participants.add(participantId);
-        event.setParticipantIds(participants);
-        return this.eventRepo.save(event);
     }
 
     public List<Event> sortEvents(EventSorter sorter, boolean ascending) {
@@ -67,8 +64,8 @@ public class EventService {
                 LocalDateTime eventStart = LocalDateTime.parse(event.getStartTime(), timeFormatter);
                 return ChronoUnit.SECONDS.between(eventStart, currentTime);
             }));
-            case NUMBER_OF_PARTICIPANTS ->
-                    eventToSort.sort(Comparator.comparing(event -> event.getParticipantIds().size()));
+//            case NUMBER_OF_PARTICIPANTS ->
+//                    eventToSort.sort(Comparator.comparing(event -> event.getParticipantIds().size()));
         }
 
         if (!ascending) {
@@ -78,14 +75,12 @@ public class EventService {
     }
 
     public List<Event> getEventsCreatedBy(Long userId) {
-        return getAllEvents().stream().filter(event -> event.getOrganiser().getId().equals(userId)).toList();
-    }
-    public List<Event> getEventsCreatedByEmail(String email) {
-        return getAllEvents().stream().filter(event -> event.getOrganiser().getEmail() == (email)).toList();
-    }
-
-    public List<Event> getRegisteredEvents(Long userId) {
-        return getAllEvents().stream().filter(event -> event.getParticipantIds().contains(userId)).toList();
+        System.out.println("Filtering: " + userId);
+        List<Event> events = getAllEvents();
+        for(Event e : events){
+            System.out.println("e = " + e);
+        }
+        return getAllEvents().stream().filter(event -> event.getOrganiser().equals(userId)).toList();
     }
 
 }

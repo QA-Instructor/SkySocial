@@ -35,10 +35,8 @@ public class Event implements Serializable {
     @Size(max = 200)
     private String image;
 
-    @Size(max = 20)
     private String startTime;
 
-    @Size(max = 20)
     private String endTime;
 
     @Min(2)
@@ -56,10 +54,7 @@ public class Event implements Serializable {
     private boolean emailConfirmation;
 
     @NotNull
-    @Lob
-    private ProfileDTO organiser;
-    
-    private List<Long> participantIds;
+    private Long organiser;
 
 
 }

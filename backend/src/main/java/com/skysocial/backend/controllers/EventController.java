@@ -27,11 +27,13 @@ public class EventController {
 
     @GetMapping("/getAllEvents")
     public List<Event> getAllEvents() {
+        System.out.println("All Events");
          return this.service.getAllEvents();
     }
 
     @GetMapping("/getEventById")
     public Event getEventById(@PathParam("id") Long id) {
+        System.out.println("GetById: " + id);
          return this.service.getEventById(id);
     }
 
@@ -40,28 +42,15 @@ public class EventController {
         return this.service.createEvent(event);
     }
 
-    @PutMapping("/addParticipant")
-    public Event addParticipant(@PathParam("eventId") Long eventId, @PathParam("participantId") Long participantId) {
-        return this.service.addParticipantToEvent(eventId, participantId);
-    }
-
     @GetMapping("/sortEvents")
     public List<Event> sortEvents(@RequestParam(name = "sortBy", defaultValue = "ALPHABETICAL") EventSorter sorter, @RequestParam(name = "ascending", defaultValue = "false") boolean ascending) {
          return this.service.sortEvents(sorter, ascending);
     }
 
     @GetMapping("/getEventsCreatedBy")
-    public List<Event> getEventsCreatedBy(@PathParam("id") Long creatorId) {
-        return this.service.getEventsCreatedBy(creatorId);
-    }
-
-    @GetMapping("/getEventsCreatedByEmail")
-    public List<Event> getEventsCreatedByEmail(@PathParam("email") String email) {
-        return this.service.getEventsCreatedByEmail(email);
-    }
-
-    @GetMapping("/getRegisteredEvents")
-    public List<Event> getEventsRegisteredTo(@PathParam("userId") Long userId) {
-         return this.service.getRegisteredEvents(userId);
+    public List<Event> getEventsCreatedBy(@RequestParam(name="id", defaultValue = "0") Long creatorId) {
+        List<Event> events = this.service.getEventsCreatedBy(creatorId);
+        System.out.println(events.size());
+        return events;
     }
 }
