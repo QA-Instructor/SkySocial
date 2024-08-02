@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.*;
 
 @NoArgsConstructor
 @RestController
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins = {"http://localhost:3000", "http://13.41.210.250:3000"})
 public class UserController {
 
     private UserService service;
