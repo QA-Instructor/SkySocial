@@ -4,25 +4,30 @@ import events from '../resources/skySocial.json'
 import EventsRail from './EventsRail'
 import EventTile from './EventTile'
 import '../resources/myEvents.css'
+import SortMenu from './SortMenu'
 export const MyEvents = () => {
 
     const [upcomingEventList, setUpcomingEventList] = useState([]);
     const [bookedEventList, setBookedEventList] = useState([]);
     const [createdEventList, setCreatedEventList] = useState([]);
 
-    const upcomingEventTiles = upcomingEventList.map((event) => {
-        return <EventTile title={event.eventTitle} image={event.image} tags = {event.tags} width = {"30%"}/>
+    const upcomingEventTiles = events.events.map((event) => {
+        return <EventTile title={event.eventTitle} image={event.image} tags = {event.tags} width = {"350px"}/>
     });
-    const bookedEventTiles = bookedEventList.map((event) => {
-        return <EventTile title={event.eventTitle} image={event.image} tags = {event.tags} width = {"200px"}/>
+    const bookedEventTiles = events.events.map((event) => {
+        return <EventTile title={event.eventTitle} image={event.image} tags = {event.tags} width = {"250px"}/>
     });
-    const createdEventTiles = createdEventList.map((event) => {
-        return <EventTile title={event.eventTitle} image={event.image} tags = {event.tags} width = {"200px"}/>
+    const createdEventTiles = events.events.map((event) => {
+        return <EventTile title={event.eventTitle} image={event.image} tags = {event.tags} width = {"250px"}/>
     });
   return (
-    <div className='my-event-page'>
+    <div className='my-events-page'>
         <div className='my-events-container'>
             <h1>Upcoming Bookings</h1>
+            <div className='sort-container'>
+                <SortMenu />
+            </div>
+            
             <EventsRail>
             {upcomingEventTiles}
             </EventsRail>  

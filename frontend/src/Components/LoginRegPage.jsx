@@ -3,17 +3,25 @@ import LoginForm from "./LoginForm"
 import RegistrationForm from "./RegistrationForm"
 import "../resources/loginRegPage.css"
 
+
 export const LoginRegPage = (props) => {
   return (
+    <>
     <div className='loginRegPage'>
         <div className='loginRegPage-logo-container'>
             <div className='loginRegPage-logo'>
-                Sky Social
+                <img
+                    className='logo-img'
+                    src='logocolour.png'
+                    alt="Second Slide"
+                />
             </div>
-            <div className='loginRegPage-info'>
-                Sky Social is your gateway to a social life at Sky.
-                Explore opportunities to get involved in sports and 
-                various socials around Sky.
+            <div className='loginRegPage-image'>
+            <img
+                    className='login-img'
+                    src='login-image.png'
+                    alt="Second Slide"
+                />
             </div>
         </div>
         
@@ -22,7 +30,8 @@ export const LoginRegPage = (props) => {
         {!props.displayLoginRegPage && <RegistrationForm/>}
         </div>
         
-    </div>
+      </div>
+      </>
   )
 }
 

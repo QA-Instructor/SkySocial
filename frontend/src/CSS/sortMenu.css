@@ -2,6 +2,11 @@
     position: relative;
     z-index: 3;
     width: 30%;
+    background: linear-gradient(white, white) padding-box, linear-gradient(90deg, rgba(2, 35, 255, 1) 25%, rgba(141, 39, 255, 1) 75%)border-box;
+    border-bottom: 1px solid transparent;
+    text-align: center;
+    border-radius: 2px;
+    padding: 10px 0;
 }
 
 .sort-menu-dropdown-toggle {
@@ -15,15 +20,17 @@
     display: flex;
     flex-direction: column;
     position: absolute;
-    background-color: white;
+    background: linear-gradient(white, white) padding-box, linear-gradient(90deg, rgba(2, 35, 255, 1) 25%, rgba(141, 39, 255, 1) 75%)border-box;
+    border-bottom: 5px solid transparent;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-    margin-top: 10px;
+    margin-top: 14px;
     padding: 0;
     list-style: none;
     border-radius: 4px;
     width: 100%; 
     z-index: 3;
 }
+
 
 .sort-menu-dropdown-menu ul{
     list-style: none;

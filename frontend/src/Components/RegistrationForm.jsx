@@ -3,6 +3,7 @@ import FloatingLabel from 'react-bootstrap/FloatingLabel';
 import Form from 'react-bootstrap/Form';
 import { useNavigate } from 'react-router-dom';
 import '../CSS/registrationForm.css';
+import { FaRegUserCircle } from "react-icons/fa";
 import axios from "axios";
 
 const RegistrationForm = () => {
@@ -31,7 +32,9 @@ const RegistrationForm = () => {
   
   return (
     <div className='registration-form-container'>
-        <h1 name='heading'>Create an account</h1>
+        <div className='user-icon'><FaRegUserCircle /></div>
+        <h1>Registration</h1>
+        <br/>
             <FloatingLabel controlId="floatingInput" label="Upload an image" className="mb-3">
                 <Form.Control type="file" placeholder="Upload an profile photo" name="profileImage" accept="image/*" onChange={e => onFormChange(e.target.name, e.target.value)}/>
             </FloatingLabel>
@@ -72,7 +75,7 @@ const RegistrationForm = () => {
               <button type="submit" className='btn btn-outline-primary form-submit-button' name="create" onClick={onFormSubmit}>Create Account</button>
         </form>
         <p>If you already have an account:</p>
-        <button type="submit" className='btn btn-outline-success' name="login" onClick={()=>navigate("/Login")}>Login</button>
+        <button type="submit" className='btn btn-outline-success form-submit-button' name="login" onClick={()=>navigate("/Login")}>Login</button>
     </div>
   )
 }

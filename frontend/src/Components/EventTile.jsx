@@ -6,7 +6,6 @@ import '../resources/eventTile.css';
 const EventTile = (props) => {
 
     const [event, setEvent] = useState({});
-
   
     const tags = props.tags.map((tag) => {
       return <b key={tag}>#{tag} </b>
@@ -14,18 +13,19 @@ const EventTile = (props) => {
 
     const onTileClick = () => {
       //add useEffect to make the request
+      props.onClick();
     }
 
     return (
       <div id="cardContainer"   
           className="card shadow bg-white rounded zoom clickable" 
-          style={{"min-width": props.width?props.width:"200px","max-width":props.width?props.width:"200px"}} 
-          onClick={() => alert(props.title)}>
+          style={{"min-width": props.width?props.width:"250px","max-width":props.width?props.width:"250px"}} 
+          onClick={onTileClick}>
           <img className="card-img-top" src={props.image} alt="Card image cap"/>
           <div className="card-body">
             <h5 className="card-title">{props.title}</h5>
             <p>{tags}</p>
-            <button className='btn btn-outline-primary'>Book</button>
+            <button className='btn btn-outline-primary event-tile-submit-button'>Book</button>
           </div>
     </div>
     )

@@ -1,10 +1,12 @@
 .registration-form-container {
-    padding: 30px 80px;
+    padding: 0px 20px;
     text-align: center;
     width: 100%;
-    border: black solid 2px;
-}
-
-p {
-    margin-top: 10px;
+    background: linear-gradient(white, white) padding-box, linear-gradient(90deg, rgba(2, 35, 255, 1) 25%, rgba(141, 39, 255, 1) 75%)border-box;
+    border-top: 10px solid transparent;
+    height: fit-content;
+    margin-top: 0vh;
+    box-shadow: 0px 0px 16px -8px rgb(0 0 0 / 68%);
+    border-radius: 5px;
+    padding-bottom: 20px;
 }

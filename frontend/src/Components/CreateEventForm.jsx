@@ -5,6 +5,8 @@ import Button from 'react-bootstrap/Button';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import { DesktopDateTimePicker } from '@mui/x-date-pickers/DesktopDateTimePicker';
+import { ToggleButtonGroup } from '@mui/material'
+import { MdEventNote } from "react-icons/md";
 import dayjs from 'dayjs';
 import CurrencyInput from 'react-currency-input-field';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -40,7 +42,9 @@ const CreateEventForm = () => {
   return (
       <>
       <div className='create-event-component-container'>
-        <h1 className='create-event-form-heading'>Create an Event</h1>
+        <div className='user-icon'><MdEventNote />
+        </div>
+        <h1>Create an Event</h1>
         <Form method='post'>
             <FloatingLabel controlId="floatingInput" label="Event Title" className="mb-3">
                 <Form.Control type="text" placeholder="Event Title" name="eventTitle" onChange={e => handleChange(e.target.name, e.target.value)}/>
@@ -81,17 +85,18 @@ const CreateEventForm = () => {
                     </LocalizationProvider>
                 </FloatingLabel>
 
-                <div className='create-event-form-ticket-price'>
+                <FloatingLabel controlId="floatingInput" label="Ticket Price (£xx.xx)" className='create-event-form-ticket-price'>
                     <CurrencyInput name="ticketPrice" placeholder="Ticket price" prefix='£' decimalsLimit={2} className='form-control' onChange={e => handleChange(e.target.name, e.target.value)}/>
-                </div>
+                </FloatingLabel>
                 <br />
 
-            </div>
-            <Form.Control type="text" placeholder="Tags (Social,Football,Allages) " name="eventTags" onChange={e => handleChange(e.target.name, e.target.value)}/>
-            <br />
-            
+                  </div>
+                  <FloatingLabel contentId="floatingInput" label="Tags (Social,Football,Allages) " className="mb-3 create-event-form-participant-field">
+                      <Form.Control type="text" placeholder="Tags (Social,Football,Allages) " name="tags" onChange={e => handleChange(e.target.name, e.target.value)} />
+                      </FloatingLabel>
+                  <br/>
             <FloatingLabel>
-                Email confirmations: <input type='checkbox' name='emailConfirmations' onChange={e => handleChange(e.target.name, e.target.value)}/>
+                Email confirmations: <input type='checkbox' name='emailConfirmation' onChange={e => handleChange(e.target.name, e.target.value)}/>
             </FloatingLabel>
             <Button variant="success" className='create-event-form-button' onClick={onSubmitForm}>Create Event</Button>{' '}
         </Form>

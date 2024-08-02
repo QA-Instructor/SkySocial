@@ -1,7 +1,18 @@
 .create-event-component-container {
     width:80%;
     margin-left: 10%;
+    padding:30px 10%;
+    margin-top: 200px;
+    padding-bottom: 80px;
+    margin-bottom: 40px;
+    text-align: center;
+    background: linear-gradient(white, white) padding-box, linear-gradient(90deg, rgba(2, 35, 255, 1) 25%, rgba(141, 39, 255, 1) 75%)border-box;
+    border-top: 10px solid transparent;
+    height: fit-content;
+    box-shadow: 0px 0px 16px -8px rgb(0 0 0 / 68%);
+    border-radius: 5px;
 }
+
 
 .create-event-form-datepicker {
     margin-left: 3%;
@@ -22,16 +33,54 @@
 .create-event-form-participant-fields {
     display: flex;
     justify-content: space-between;
-    width: 110%;
+    width: 100%;
     margin-top: 6%;
+    
 }
 
 .create-event-form-participant-field {
-    width: 50%;
-    margin-left: 1%;
+    width: 100%;
+    margin-left: 2px;
+    overflow: hidden;
+    font-size: 10px;
 }
 
 .create-event-form-ticket-price {
-    width: 110%;
+    width: 100%;
     margin-top: 9%;
+    object-fit: cover;
+}
+
+
+.create-event-form-button {
+    margin-top: 20px;
+    background: linear-gradient(white, white) padding-box, linear-gradient(90deg, rgba(2, 35, 255, 1) 25%, rgba(141, 39, 255, 1) 75%)border-box;
+    color: rgba(2, 35, 255, 1);
+    border: 1px solid transparent;
+}
+
+.create-event-form-button:hover {
+    background: linear-gradient(90deg, rgba(2, 35, 255, 1) 25%, rgba(141, 39, 255, 1) 75%) padding-box, linear-gradient(white, white)border-box;
+    color: white;
+    border: 1px solid transparent;
+
+}
+
+@media (max-width:768px){
+    .create-event-component-container {
+        width:100%;
+        font-size: 12px;
+        padding:40px 10px;
+        margin-left: 0;
+    }
+   
+    .create-event-form-fields {
+        display: block;
+        width: 100%;
+        margin: 0;
+    }
+    .create-event-form-datepicker {
+        margin-bottom: 2%;
+        width: 100%;
+    }
 }
